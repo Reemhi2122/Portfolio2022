@@ -1,0 +1,445 @@
+<template>
+  <div class="projects-grid">
+    <h1 class="tab-title">Projects</h1>
+
+    <div v-if="this.showFilters" class="tab-filter">
+      <h3>Filters:</h3>
+      <div class="filter-bubbles-container">
+        <a class="filter-bubbles" href="#" @click="ToggleFilter(0)"
+          :class="filters[0] ? 'filter-active' : 'filter-non-active'">
+          <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+        </a>
+        <a class="filter-bubbles" href="#" @click="ToggleFilter(1)"
+          :class="filters[1] ? 'filter-active' : 'filter-non-active'">
+          <span class="material-symbols-outlined">engineering</span> Engine programmer
+        </a>
+      </div>
+    </div>
+
+    <div class="tab-whiteline"></div>
+    <div id="projects-container-viewport">
+      <div class="projects-container">
+
+        <Transition>
+          <div v-if="filters[1]" class="portfolio-item large DR">
+            <RouterLink to="/DescentRaytraced">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Descent raytraced</p>
+                <p class="project-tags">Game-rework | C / C++ </p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Engine programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 7 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 1 year
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2022/2023
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
+          <div v-if="filters[0]" class="portfolio-item medium COTF">
+            <RouterLink to="/CryOfTheFox">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Cry of the fox</p>
+                <p class="project-tags">Game | Unreal Engine | C++</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 8 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2020
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
+          <div v-if="filters[0]" class="portfolio-item medium ISC">
+            <RouterLink to="/InSheepsClothing">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">InSheepsClothing</p>
+                <p class="project-tags">Game | C#</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 2 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 3 days
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2019
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
+          <div v-if="filters[1]" class="portfolio-item medium GE">
+            <RouterLink to="/GudenuffEngine">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Gudenuff Engine - Setsuko</p>
+                <p class="project-tags">Engine | C++</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Engine programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 11 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
+          <div v-if="filters[0]" class="portfolio-item medium DD">
+            <RouterLink to="/DonutDrifters">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Donut Drifters - Game Marmalade</p>
+                <p class="project-tags">Game | Unreal Engine | 2021</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 9 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 2 weeks
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      name: 'Projects',
+      filters: [true, true, true],
+      showFilters: true
+    }
+  },
+  beforeMount() {
+    this.$emit('OpenNavBar');
+  },
+  mounted() {
+    this.IsMobile();
+    window.addEventListener('resize', this.IsMobile);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.IsMobile);
+  },
+  methods: {
+    ToggleFilter(index) {
+      this.filters[index] = !this.filters[index];
+    },
+    IsMobile() {
+      if (window.innerWidth <= 1000) {
+        this.showFilters = false
+        this.filters = [1, 1, 1];
+      } else {
+        this.showFilters = true
+      }
+    }
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler(to, from) {
+        document.title = 'Stan Vogels | Projects';
+      }
+    },
+  }
+}
+</script>
+
+<style scoped>
+.projects-grid {
+  top: 0;
+  height: 80vh;
+  width: 70%;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 15%;
+}
+
+.tab-filter {
+  display: inline-block;
+  float: right;
+}
+
+.tab-filter>h3 {
+  color: white;
+  margin-left: 10px;
+  font-weight: 100;
+}
+
+.filter-bubbles-container {
+  display: flex;
+}
+
+.filter-bubbles {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.filter-bubbles:hover {
+  background-color: rgb(143, 143, 143);
+}
+
+.filter-active {
+  background-color: white;
+  color: black;
+}
+
+.filter-non-active {
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+.tab-title {
+  display: inline;
+  font-weight: 200;
+  font-size: 45px;
+  color: white;
+}
+
+.tab-whiteline {
+  height: 2px;
+  background-color: white;
+}
+
+#projects-container-viewport {
+  margin-top: 1.5vh;
+  overflow: hidden;
+  height: 90%;
+}
+
+.projects-container {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 200px);
+  grid-gap: 10px;
+  pointer-events: auto;
+  overflow-y: scroll;
+}
+
+#projects-container::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: auto;
+  background-position: center;
+  background-size: cover;
+}
+
+.portfolio-item.small {
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+  -ms-grid-row-span: 1;
+  grid-row: span 1;
+}
+
+.portfolio-item.medium {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+
+.portfolio-item.large {
+  -ms-grid-column-span: 4;
+  grid-column: span 4;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+
+.portfolio-item.ISC {
+  background-image: url(/src/assets/Image/Portfolio/ISC/Main.jpg);
+}
+
+.portfolio-item.COTF {
+  background-image: url(/src/assets/Image/Portfolio/COTF/Header.png);
+}
+
+.portfolio-item.GE {
+  background-image: url(/src/assets/Image/Portfolio/GE/GEHeader.jpg);
+}
+
+.portfolio-item.DD {
+  background-image: url(/src/assets/Image/Portfolio/DD/DDFront.jpg);
+}
+
+.portfolio-item.DR {
+  background-image: url(/src/assets/Image/Portfolio/DR/DescentLogo.png);
+}
+
+.portfolio-item>a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.project-description {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  color: white;
+}
+
+.project-title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.project-tags {
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: -5px;
+}
+
+.project-bubbles-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-bubbles {
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  margin-right: 10px;
+  margin-top: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.material-symbols-outlined {
+  margin-right: 5px;
+}
+
+.div-darken {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+}
+
+.portfolio-item:hover .div-darken {
+  opacity: 0.4;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+@media (max-width: 1700px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 250px);
+  }
+
+  .portfolio-item.small {
+    -ms-grid-column-span: 1;
+    grid-column: span 1;
+    -ms-grid-row-span: 1;
+    grid-row: span 1;
+  }
+
+  .portfolio-item.medium {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+    -ms-grid-row-span: 1;
+    grid-row: span 1;
+  }
+
+  .portfolio-item.large {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+    -ms-grid-row-span: 1;
+    grid-row: span 1;
+  }
+
+  @media (max-width: 1000px) {
+    .projects-grid {
+      height: 80vh;
+      width: 90%;
+      margin-top: 50px;
+      margin-left: 5%;
+    }
+  }
+
+  @media (max-width: 700px) {}
+}
+</style>
