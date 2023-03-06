@@ -32,11 +32,6 @@
                     <span class="material-symbols-outlined">calendar_month</span> 2020
                 </div>
             </div>
-
-            <!-- <div v-if="!this.mobile" class="see-more-div">
-                <h1>See more</h1>
-                <img src="/src/assets/Image/Logos/SeeMoreImage.svg" />
-            </div> -->
         </div>
 
         <p class="project-text">

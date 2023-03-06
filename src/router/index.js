@@ -61,6 +61,11 @@ const router = createRouter({
       path: '/DonutDrifters',
       name: 'DD',
       component: InProgress
+    },
+    {
+      path: '/RayTracer',
+      name: 'RT',
+      component: InProgress
     }
   ]
 })

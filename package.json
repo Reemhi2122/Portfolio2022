@@ -7,8 +7,9 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
+    "jsonp": "^0.2.1",
+    "prismjs": "^1.29.0",
     "vue": "^3.2.38",
-    "vue-embed-gist": "^1.2.0",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {

@@ -1,10 +1,10 @@
 <template>
     <div :class="[TaskBarOpen ? 'BarOpen' : '']" ref="NavBarCompRef">
         <ul :class="[TaskBarOpen ? 'BarOpen' : '']">
-            <li><RouterLink to="/">HOME</RouterLink></li>
-            <li><RouterLink to="/projects">PROJECTS</RouterLink></li>
-            <li><RouterLink to="/skills">SKILLS</RouterLink></li>
-            <li><RouterLink to="/about">ABOUT</RouterLink></li>
+            <li><RouterLink active-class="router-active" to="/">HOME</RouterLink></li>
+            <li><RouterLink active-class="router-active" to="/projects">PROJECTS</RouterLink></li>
+            <li><RouterLink active-class="router-active" to="/skills">SKILLS</RouterLink></li>
+            <li><RouterLink active-class="router-active" to="/about">ABOUT</RouterLink></li>
         </ul>
     </div>
 </template>
@@ -25,7 +25,8 @@ export default{
             BlackBarHalfWidth: 0 + 'px',
 
             blackBarLength: 0 + 'px',
-            BarTransition: 0.5 + 's',
+            // BarTransition: 0.5 + 's',
+            BarTransition: 0.0 + 's',
         }
     },
     created() {
@@ -39,6 +40,7 @@ export default{
     },
     methods: {
         myEventHandler() {
+            this.BarTransition = 0.0 + 's';
             var bodycontainer = document.getElementsByTagName("BODY")[0];
 
             var widthProcentage = bodycontainer.clientWidth < 1000 ? 70 : 40;
@@ -60,9 +62,11 @@ export default{
             this.BlackBarRotation = -blackbarAngle + 'deg';
         },
         OpenNavBar(){
+            this.BarTransition = 0.5 + 's',
             this.TaskBarOpen = true;
         },
         CloseNavBar(){
+            this.BarTransition = 0.5 + 's',
             this.TaskBarOpen = false;
         },
     }
@@ -109,9 +113,9 @@ ul{
     margin-top: calc(5vh - 1vw);
     margin-left: calc(5vw + 100px);
     margin-right: 100px;
-    -webkit-transition: 0.5s;
+    /* -webkit-transition: 0.5s;
     -o-transition: 0.5s;
-    transition: 0.5s;
+    transition: 0.5s; */
 }
 
 ul.BarOpen{
@@ -131,6 +135,14 @@ li a{
     font-size: 1.2vw;
     text-decoration: none;
     color: white;
+}
+
+li a:hover{
+    color: gray;
+}
+
+.router-active{
+    font-weight: 400;
 }
 
 @media (max-width: 1000px){

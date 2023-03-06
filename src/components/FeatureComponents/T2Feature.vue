@@ -1,8 +1,8 @@
 <template>
-  <RouterLink to="/projects" class="feature-project">
+  <RouterLink to="/DescentRaytraced" class="feature-project">
     <div class="feature-text-box">
-      <h1>Test1</h1>
-      <h2>Test2</h2>
+      <h1>Descent Raytraced</h1>
+      <h2>Descent (1995), but raytraced</h2>
     </div>
   </RouterLink>
 </template>
@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .feature-project {
-  background-image: url('../../Assets/Image/Portfolio/GE/GEHeader.jpg');
+  background-image: url('../../Assets/Image/Portfolio/DR/img2.png');
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -35,7 +35,7 @@ export default {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-right: 50px;
+  margin-right: 25px;
   margin-bottom: 20px;
   width: 800px;
   text-align: right;

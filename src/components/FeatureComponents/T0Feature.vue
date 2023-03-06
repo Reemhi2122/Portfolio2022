@@ -2,7 +2,7 @@
   <RouterLink to="/InSheepsClothing" class="feature-project">
     <div class="feature-text-box">
       <h1>Cry Of the Fox</h1>
-      <h2>Walking sim</h2>
+      <h2>Unreal engine</h2>
     </div>
   </RouterLink>
 </template>
@@ -35,7 +35,7 @@
   position:absolute;
   bottom:0;
   right:0;
-  margin-right: 50px;
+  margin-right: 25px;;
   margin-bottom: 20px;
   width: 800px;
   text-align: right;

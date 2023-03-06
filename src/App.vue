@@ -21,7 +21,7 @@ import MobileNav from './components/MobileNavComponent.vue'
 
       <div class="home-section">
         <h1 class="home-title">Stan Vogels</h1>
-        <h2 class="home-subtitle">Game programmer</h2>
+        <h2 class="home-subtitle">C++ gameplay programmer</h2>
       </div>
     </div>
 
@@ -32,9 +32,9 @@ import MobileNav from './components/MobileNavComponent.vue'
     </RouterLink>
 
     <div class="feature-buttons">
-      <button @click="ChangeFeatureTo('T0Feature')"></button>
-      <button @click="ChangeFeatureTo('T1Feature')"></button>
-      <button @click="ChangeFeatureTo('T2Feature')"></button>
+      <button class="feature-button" :class="[active[0] ? 'b-active' : '']"  @click="ChangeFeatureTo('T2Feature', 0)"></button>
+      <button class="feature-button" :class="[active[1] ? 'b-active' : '']" @click="ChangeFeatureTo('T1Feature', 1)"></button>
+      <button class="feature-button" :class="[active[2] ? 'b-active' : '']" @click="ChangeFeatureTo('T0Feature', 2)"></button>
     </div>
 
     <NavBar ref="NavBarRef"></NavBar>
@@ -48,14 +48,19 @@ import MobileNav from './components/MobileNavComponent.vue'
 </template>
 
 <script>
+
 export default {
   data() {
     return {
       name: 'app',
-      selectedComponent: "T1Feature",
+      selectedComponent: "",
       mobileNavRouterToggle: true,
       previousRoute: '/',
+      active: [false,true,false]
     }
+  },
+  mounted(){
+    this.ChangeFeatureTo("T2Feature", 0);
   },
   methods: {
     GetMobileNavRoute(){
@@ -72,8 +77,10 @@ export default {
     CloseNavBar() {
       this.$refs.NavBarRef.CloseNavBar();
     },
-    ChangeFeatureTo(id) {
+    ChangeFeatureTo(id, inc) {
       this.selectedComponent = id;
+      this.active = [false,false,false];
+      this.active[inc] = true;
     }
   },
   components: {
@@ -105,12 +112,21 @@ export default {
   margin-right: 10px;
 }
 
-.feature-buttons>button {
+.feature-button {
   width: 25px;
   height: 25px;
   margin-bottom: 10px;
   border: none;
   border-radius: 100px;
+  background-color: white;
+}
+
+.feature-button:hover{
+  background-color: #12616A;
+}
+
+.b-active{
+  background-color: #1CA3B2;
 }
 
 .white-overlay {
@@ -140,7 +156,6 @@ export default {
   align-content: center;
   flex-direction: column;
   text-align: center;
-  /* border: 3px dashed #1c87c9; */
 }
 
 .home-title {
@@ -149,7 +164,7 @@ export default {
 }
 
 .home-subtitle {
-  font-size: 1.2vw;
+  font-size: 1.0vw;
   margin-top: -0.5vw;
 }
 
@@ -208,7 +223,7 @@ export default {
   }
 
   .home-subtitle {
-    font-size: 3vw;
+    font-size: 2.4vw;
     margin-top: -1.2vw;
   }
 }

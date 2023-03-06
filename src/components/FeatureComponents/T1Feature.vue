@@ -50,7 +50,7 @@ export default {
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-right: 50px;
+  margin-right: 25px;
   margin-bottom: 20px;
   text-align: right;
 }
@@ -74,4 +74,4 @@ export default {
     margin-right: 10px;
   }
 }
-</style>>
+</style>

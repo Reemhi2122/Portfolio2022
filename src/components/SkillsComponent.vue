@@ -14,15 +14,6 @@
                             title="C#" /></li>
                     <li class="TextItem"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
                             title="C" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                            title="HTML" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                            title="CSS" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                            title="JavaScript" /></li>
                 </ul>
             </div>
 
@@ -64,29 +55,9 @@
                     <li class="TextItem"><img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg"
                             title="Cmake" /></li>
-                    <li class="TextItem"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg"
-                            title="Adobe XD" /></li>
                     <li class="TextItem"><img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
                             title="Adobe Photoshop" /></li>
-                </ul>
-            </div>
-
-            <div class="skill-container">
-                <h1>Web frameworks (Beginner)</h1>
-                <ul class="SkillIcons">
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
-                            title="Vuejs" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                            title="react" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg"
-                            title="Laravel" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                            title="NodeJS" /></li>
                 </ul>
             </div>
         </div>
