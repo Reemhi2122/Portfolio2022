@@ -9,6 +9,7 @@
   "dependencies": {
     "jsonp": "^0.2.1",
     "prismjs": "^1.29.0",
+    "v-img": "^0.2.0",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },

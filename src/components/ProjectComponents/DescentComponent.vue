@@ -4,7 +4,7 @@
             <div class="header-background">
                 <div class="header-text">
                     <h1 class="header-title">Descent raytraced</h1>
-                    <h2 class="header-subtitle">Old game | New renderer</h2>
+                    <h2 class="header-subtitle">Descent (1995) but raytraced</h2>
                 </div>
             </div>
 
@@ -12,6 +12,7 @@
                 <source src="/src/assets/Image/Portfolio/DR/DescentTrailer.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+
             <div class="indv-project-bubbles-container">
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">engineering</span> Gameplay programmer
@@ -34,23 +35,64 @@
             </div>
         </div>
 
+        <CarrouselComp :cards="this.images" class="carousel-comp"/>
+
         <p class="project-text">
             Discover the reworked Descent, now with raytracing technology. Experience
             dynamic light and shadow, highly reflective surfaces, and intense, fast-paced action like never before.
             Immerse yourself in a world brought to life with advanced graphics.
         </p>
 
+        <div class="findcode-github">
+            <h1>Find this project on</h1>
+            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+        </div>
+
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
             <div class="software-skills-icons">
-                <img class="software-skill-element"
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="C" />
-                <img class="software-skill-element"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                    title="C++" />
-                <img class="software-skill-element"
+                    <p class="software-skill-text">
+                        The Descent was orignally made in
+                        C and assembly, I didn't have any
+                        previous experience in C but by
+                        diving head first into the code base
+                        I learned a lot.
+                    </p>
+                </div>                
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" />
+                    <p class="software-skill-text">
+                        All the new classes we made in the
+                        raytracer was based on C++. I already
+                        had a lot of experience in C++ and learned
+                        how to work in a project that is written in both
+                        C and C++.
+                    </p>
+                </div>                
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" />
-                <img class="software-skill-element" src="../../assets/Image/Logos/PlayStation.svg" title="PS5" />
+                    <p class="software-skill-text">
+                        After using perforce for 2 years on school
+                        it was refreshing to get back to git. It took
+                        some time to get back in the workflow and improve
+                        my old skills.
+                    </p>
+                </div>                
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
+                    src="../../assets/Image/Logos/PlayStation.svg" title="PS5" />
+                    <p class="software-skill-text">
+                        One of the goals of this project was to get
+                        Descent running on the PS5. I took the responsibility
+                        for this and converted the whole project to the PS5
+                        including file reading/writing, input and allocation.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -99,7 +141,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Sam Boots | Lead & Engine programmer</p>
-                            <a href="https://www.linkedin.com/in/sam-boots-7b256b15b/"><img
+                            <a href="https://www.linkedin.com/in/sam-boots-7b256b15b/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -107,7 +149,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Wessel Frijters | Engine programmer</p>
-                            <a href="https://www.linkedin.com/in/wessel-frijters-b121b9164/"><img
+                            <a href="https://www.linkedin.com/in/wessel-frijters-b121b9164/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -115,7 +157,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Daniël Cornelisse | Graphics programmer</p>
-                            <!-- <a href="https://www.linkedin.com/in/stanvogels/"><img
+                            <!-- <a href="https://www.linkedin.com/in/stanvogels/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a> -->
                         </div>
                     </div>
@@ -125,7 +167,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Justin Kujawa | Graphics programmer </p>
-                            <a href="https://www.linkedin.com/in/justin-kujawa-37094718a/"><img
+                            <a href="https://www.linkedin.com/in/justin-kujawa-37094718a/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                         <!-- <p class="team-portfolio"><a
@@ -156,7 +198,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Stan Vogels | Engine programmer</p>
-                            <a href="https://www.linkedin.com/in/stanvogels/"><img
+                            <a href="https://www.linkedin.com/in/stanvogels/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -199,18 +241,53 @@
 
         <div class="findcode-github">
             <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing"><img src="/src/assets/Image/GithubIcon.png"></a>
+            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
         </div>
         <section class="empty-footer"></section>
     </div>
 </template>
 
 <script>
+import Image0 from '/src/assets/Image/Portfolio/DR/img1.png'
+import Image1 from '/src/assets/Image/Portfolio/DR/img2.png'
+import Image2 from '/src/assets/Image/Portfolio/DR/img3.png'
+import Image3 from '/src/assets/Image/Portfolio/DR/img1.png'
+import Image4 from '/src/assets/Image/Portfolio/DR/img2.png'
+import Image5 from '/src/assets/Image/Portfolio/DR/img3.png'
+
+import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
+
 export default {
     data() {
         return {
             name: 'DR',
-            mobile: false
+            mobile: false,
+            images: [
+            {
+                src: Image0,
+                index: 0
+            },            
+            {
+                src: Image1,
+                index: 1
+            },
+            {
+                src: Image2,
+                index: 2
+            },
+            {
+                src: Image3,
+                index: 3
+            },
+            {
+                src: Image4,
+                index: 4
+            },     
+            {
+                src: Image5,
+                index: 5
+            }
+            ],
         }
     },
     beforeMount() {
@@ -239,6 +316,9 @@ export default {
                 document.title = 'Stan Vogels | Descent Raytraced';
             }
         },
+    },
+    components:{
+        CarrouselComp,
     }
 }
 </script>

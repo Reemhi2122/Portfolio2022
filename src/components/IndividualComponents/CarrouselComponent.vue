@@ -1,26 +1,26 @@
 <template>
-    <div class="carousel-container">
-        <button @click="prev">
-          <span class="material-symbols-outlined">
-          arrow_back_ios
-          </span>
-        </button>
-        <div class="carousel">
-        <div class="inner" ref="inner" :style="innerStyles">
-            <div class="card" v-for="card in cards" :key="card">
-                <img class="inner-card" :src="card.src" :key="card.index">
-            </div>
-        </div>
-        </div>
-        <button @click="next">
-          <span class="material-symbols-outlined">
-          arrow_forward_ios
-          </span>
-        </button>
-    </div>
-  </template>
-  
-  <script>
+  <div class="carousel-container">
+      <button @click="prev">
+        <span class="material-symbols-outlined">
+        arrow_back_ios
+        </span>
+      </button>
+      <div class="carousel">
+      <div class="inner" ref="inner" :style="innerStyles">
+          <div class="card" v-for="card in cards" :key="card">
+              <img class="inner-card" :src="card.src" :key="card.index">
+          </div>
+      </div>
+      </div>
+      <button @click="next">
+        <span class="material-symbols-outlined">
+        arrow_forward_ios
+        </span>
+      </button>
+  </div>
+</template>
+
+<script>
   export default {
     data () {
       return {
@@ -130,4 +130,5 @@ button > span{
   margin-right: 0 !important;
   font-weight: 200;
 }
+
 </style>

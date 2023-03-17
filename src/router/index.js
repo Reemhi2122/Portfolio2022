@@ -7,6 +7,9 @@ import MobileNav from '../components/MobileNavComponent.vue'
 import ISCComponent from '../components/ProjectComponents/ISCComponent.vue'
 import COTFComponent from '../components/ProjectComponents/COTFComponent.vue'
 import DescentComponent from '../components/ProjectComponents/DescentComponent.vue'
+import GudenuffEngine from '../components/ProjectComponents/GEComponent.vue'
+import DDComponent from '../components/ProjectComponents/DDComponent.vue'
+import RTComponent from '../components/ProjectComponents/RTComponent.vue'
 import InProgress from '../components/ProjectComponents/InProgressComponent.vue'
 
 const router = createRouter({
@@ -55,12 +58,12 @@ const router = createRouter({
     {
       path: '/GudenuffEngine',
       name: 'GE',
-      component: InProgress
+      component: GudenuffEngine
     },
     {
       path: '/DonutDrifters',
       name: 'DD',
-      component: InProgress
+      component: DDComponent
     },
     {
       path: '/RayTracer',

@@ -2,7 +2,7 @@
   <div class="projects-grid">
     <h1 class="tab-title">Projects</h1>
 
-    <div v-if="this.showFilters" class="tab-filter">
+    <!-- <div v-if="this.showFilters" class="tab-filter">
       <h3>Filters:</h3>
       <div class="filter-bubbles-container">
         <a class="filter-bubbles" href="#" @click="ToggleFilter(0)"
@@ -14,7 +14,7 @@
           <span class="material-symbols-outlined">engineering</span> Engine programmer
         </a>
       </div>
-    </div>
+    </div> -->
 
     <div class="tab-whiteline"></div>
     <div id="projects-container-viewport">
@@ -40,33 +40,6 @@
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">calendar_month</span> 2022/2023
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition>
-
-        <Transition>
-          <div v-if="filters[0]" class="portfolio-item medium COTF">
-            <RouterLink to="/CryOfTheFox">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">Cry of the fox</p>
-                <p class="project-tags">Game | Unreal Engine | C++</p>
-
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 8 members
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 8 weeks
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2020
                   </div>
                 </div>
               </div>
@@ -115,6 +88,33 @@
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">group</span> 11 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
+          <div v-if="filters[0]" class="portfolio-item medium COTF">
+            <RouterLink to="/CryOfTheFox">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Cry of the fox</p>
+                <p class="project-tags">Game | Unreal Engine | C++</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 8 members
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">schedule</span> 8 weeks
@@ -209,7 +209,7 @@
           </div>
         </Transition>
 
-        <Transition>
+        <!-- <Transition>
           <div v-if="filters[0]" class="portfolio-item medium RTSE">
             <RouterLink to="/Raytracer">
               <div class="div-darken"></div>
@@ -234,7 +234,7 @@
               </div>
             </RouterLink>
           </div>
-        </Transition>
+        </Transition> -->
 
         <!-- <Transition>
           <div v-if="filters[0]" class="portfolio-item small RTSE">
@@ -437,10 +437,11 @@ export default {
   display: grid;
   height: 100%;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(10, 200px);
+  grid-template-rows: repeat(8, 200px);
   grid-gap: 10px;
   pointer-events: auto;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #projects-container::-webkit-scrollbar {
@@ -454,6 +455,12 @@ export default {
   pointer-events: auto;
   background-position: center;
   background-size: cover;
+
+  transition: transform 0.25s;
+}
+
+.portfolio-item:hover{
+  transform:scale(1.01);
 }
 
 .portfolio-item.small {
@@ -557,12 +564,15 @@ export default {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.6;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 50%);
+  opacity: 0.4;
   position: absolute;
+  transition: 0.4s;
 }
 
 .portfolio-item:hover .div-darken {
-  opacity: 0.4;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 50%);
+  opacity: 0.5;
 }
 
 .v-enter-active,
@@ -578,7 +588,7 @@ export default {
 @media (max-width: 1700px) {
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 250px);
+    grid-template-rows: repeat(7, 250px);
   }
 
   .portfolio-item.small {
@@ -608,6 +618,11 @@ export default {
       width: 90%;
       margin-top: 50px;
       margin-left: 5%;
+    }
+
+    .div-darken {
+      background: black;
+      opacity: 0.4;
     }
   }
 

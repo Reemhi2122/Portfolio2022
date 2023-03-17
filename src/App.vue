@@ -12,7 +12,7 @@ import MobileNav from './components/MobileNavComponent.vue'
 <template>
   <div class="home-wrapper">
 
-    <component :is="selectedComponent"></component>
+    <component :is="this.Components[this.selectedComponent]"></component>
 
     <div class="white-overlay">
       <svg class="triangle-parent" fill="#fff" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -21,7 +21,8 @@ import MobileNav from './components/MobileNavComponent.vue'
 
       <div class="home-section">
         <h1 class="home-title">Stan Vogels</h1>
-        <h2 class="home-subtitle">C++ gameplay programmer</h2>
+        <h2 class="home-subtitle">C++ Gameplay / Engine</h2>
+        <h2 class="home-subtitle">Programmer</h2>
       </div>
     </div>
 
@@ -32,9 +33,9 @@ import MobileNav from './components/MobileNavComponent.vue'
     </RouterLink>
 
     <div class="feature-buttons">
-      <button class="feature-button" :class="[active[0] ? 'b-active' : '']"  @click="ChangeFeatureTo('T2Feature', 0)"></button>
-      <button class="feature-button" :class="[active[1] ? 'b-active' : '']" @click="ChangeFeatureTo('T1Feature', 1)"></button>
-      <button class="feature-button" :class="[active[2] ? 'b-active' : '']" @click="ChangeFeatureTo('T0Feature', 2)"></button>
+      <button class="feature-button" :class="[active[0] ? 'b-active' : '']"  @click="ChangeFeatureTo(0)"></button>
+      <button class="feature-button" :class="[active[1] ? 'b-active' : '']" @click="ChangeFeatureTo(1)"></button>
+      <button class="feature-button" :class="[active[2] ? 'b-active' : '']" @click="ChangeFeatureTo(2)"></button>
     </div>
 
     <NavBar ref="NavBarRef"></NavBar>
@@ -48,19 +49,24 @@ import MobileNav from './components/MobileNavComponent.vue'
 </template>
 
 <script>
+import EmptyHomeComponentVue from './components/EmptyHomeComponent.vue'
 
 export default {
   data() {
     return {
       name: 'app',
-      selectedComponent: "",
       mobileNavRouterToggle: true,
       previousRoute: '/',
-      active: [false,true,false]
+      Components: ["T2Feature","T1Feature","T0Feature"],
+      active: [false,true,false],
+      selectedComponent: 0,
     }
   },
+  created () {
+    window.addEventListener('wheel', this.HomeScrolled);
+  },
   mounted(){
-    this.ChangeFeatureTo("T2Feature", 0);
+    this.ChangeFeatureTo(0);
   },
   methods: {
     GetMobileNavRoute(){
@@ -77,10 +83,13 @@ export default {
     CloseNavBar() {
       this.$refs.NavBarRef.CloseNavBar();
     },
-    ChangeFeatureTo(id, inc) {
+    ChangeFeatureTo(id) {
       this.selectedComponent = id;
       this.active = [false,false,false];
-      this.active[inc] = true;
+      this.active[id] = true;
+    },
+    HomeScrolled(){
+      this.ChangeFeatureTo((this.selectedComponent + 1) % 3);
     }
   },
   components: {
@@ -155,19 +164,22 @@ export default {
   justify-content: center;
   align-content: center;
   flex-direction: column;
+  /* padding-left: 4vw; */
   text-align: center;
 }
 
 .home-title {
   font-weight: 700;
   font-size: 3vw;
+  margin-bottom: -5px;
 }
 
 .home-subtitle {
   font-size: 1.0vw;
   margin-top: -0.5vw;
+  color: #222222;
+  font-weight: 300;
 }
-
 .mobile-nav-container {
   position: absolute;
   top: 0;

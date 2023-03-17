@@ -16,8 +16,7 @@
                         <a href="https://twitter.com/Stan_Vogels"><img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" /></a>
                     </div>
-                    <!-- <a href="/src/assets/Documents/CV_Stan_Vogels.pdf" class="resume-button">Resume</a>
-                     -->
+                    <a :href="this.cv" target="_blank" class="resume-button">Resume</a>
                 </div>
 
                 <div class="about-container">
@@ -74,10 +73,13 @@
 </template>
 
 <script>
+import data from '/src/assets/Documents/CV_Stan_Vogels_Copy.pdf'
+
 export default {
     data() {
         return {
             name: 'Contact',
+            cv: data
         }
     },
     methods: {

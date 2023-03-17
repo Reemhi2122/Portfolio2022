@@ -3,7 +3,7 @@
         <div class="front-page">
             <div class="header-background">
                 <div class="header-text">
-                    <h1 class="header-title">Cry Of The Fox</h1>
+                    <h1 class="header-title">Cry of the fox</h1>
                     <h2 class="header-subtitle">A true vertical slice</h2>
                 </div>
             </div>
@@ -12,6 +12,7 @@
                 <source src="/src/assets/Image/Portfolio/COTF/COTF.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+
             <div class="indv-project-bubbles-container">
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">engineering</span> Gameplay programmer
@@ -29,34 +30,70 @@
                     <span class="material-symbols-outlined">schedule</span> 4 weeks
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2020
+                    <span class="material-symbols-outlined">calendar_month</span> 2021
                 </div>
             </div>
-
-            <!-- <div v-if="!this.mobile" class="see-more-div">
-                <h1>See more</h1>
-                <img src="/src/assets/Image/Logos/SeeMoreImage.svg" />
-            </div> -->
         </div>
+
+        <CarrouselComp :cards="this.images" class="carousel-comp"/>
 
         <p class="project-text">
             After a virus in the late 19th century takes out all humans on earth, nature takes over again. You play as a
             fox who is all alone in an overgrown and abandoned Paris. As you travel to the edge of the city to find
-            other foxes, you find out what really happened to the humans…​
+            other foxes, you find out what really happened to the humans...
         </p>
+
+        <div class="findcode-github">
+            <h1>Find this project on</h1>
+            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+        </div>
 
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
             <div class="software-skills-icons">
-                <img class="software-skill-element"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                    title="C++" />
-                <img class="software-skill-element"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg"
-                    title="Unreal Engine" />
-                <img class="software-skill-element"
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" />
+                    <p class="software-skill-text">
+                        This project was made in blueprints and C++,
+                        this was my first experience in C++ in unreal engine
+                        and it proved to be quite the challenge. After the project
+                        I felt comfortable with C++ in UE.
+                    </p>
+                </div>
+
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" title="Unreal Engine" />
+                    <p class="software-skill-text">
+                        This project was made in Unreal Engine and even
+                        though I had some previous experience I still had
+                        A lot to learn. This project gave me more insights
+                        in things like UE AI and C++. 
+                    </p>
+                </div>
+
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" title="Jira" />
-                <img class="software-skill-element" src="../../assets/Image/Logos/Perforce.png" title="Perforce" />
+                    <p class="software-skill-text">
+                        This was the first project that I used Jira
+                        to plan our sprints. I really liked the experience
+                        and plan to use it more often. Having your personal
+                        dashboard to keep an eye on your own process besides
+                        the whole team was really usefull.
+                    </p>
+                </div>
+
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
+                    src="/src/assets/Image/Logos/Perforce.png" title="Perforce" />
+                    <p class="software-skill-text">
+                        This project we used Perforce as was 
+                        standard on our school. This block I used
+                        some new features in Perforce and got better.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -108,7 +145,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Lucas Zebeda | Programmer</p>
-                            <a href="https://www.linkedin.com/in/lucas-zebeda-347872229/"><img
+                            <a href="https://www.linkedin.com/in/lucas-zebeda-347872229/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -122,7 +159,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Stan Vogels | Programmer</p>
-                            <a href="https://www.linkedin.com/in/stanvogels/"><img
+                            <a href="https://www.linkedin.com/in/stanvogels/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -132,28 +169,28 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Luuk Ouwehand | Artist</p>
-                            <a href="https://www.linkedin.com/in/luuk-ouwehand-74b837244/"><img
+                            <a href="https://www.linkedin.com/in/luuk-ouwehand-74b837244/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                         <p class="team-portfolio"><a
-                                href="https://www.artstation.com/luukouwehand">https://www.artstation.com/luukouwehand</a>
+                                href="https://www.artstation.com/luukouwehand" target="_blank">https://www.artstation.com/luukouwehand</a>
                         </p>
                     </div>
 
                     <div class="team-element">
                         <div class="team-name">
                             <p>Olivier Dral | Artist</p>
-                            <a href="https://www.linkedin.com/in/olivierdral/"><img
+                            <a href="https://www.linkedin.com/in/olivierdral/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                         <p class="team-portfolio"><a
-                                href="https://oli4dral.artstation.com/">https://oli4dral.artstation.com/</a></p>
+                                href="https://oli4dral.artstation.com/" target="_blank">https://oli4dral.artstation.com/</a></p>
                     </div>
 
                     <div class="team-element">
                         <div class="team-name">
                             <p>Nathalie Stuit | Artist</p>
-                            <a href="https://www.linkedin.com/in/nathalie-stuit-38250124b/"><img
+                            <a href="https://www.linkedin.com/in/nathalie-stuit-38250124b/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -163,7 +200,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Radu Nenu | Designer</p>
-                            <a href="https://www.linkedin.com/in/radu-nicolae-nenu-0482901ba/"><img
+                            <a href="https://www.linkedin.com/in/radu-nicolae-nenu-0482901ba/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -171,7 +208,7 @@
                     <div class="team-element">
                         <div class="team-name">
                             <p>Lucas Dane | Designer</p>
-                            <a href="https://www.linkedin.com/in/lucas-dane-700494150/"><img
+                            <a href="https://www.linkedin.com/in/lucas-dane-700494150/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -221,19 +258,54 @@
 
         <div class="findcode-github">
             <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing"><img src="/src/assets/Image/GithubIcon.png"></a>
+            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
         </div>
         <section class="empty-footer"></section>
     </div>
 </template>
 
 <script>
+import Image0 from '/src/assets/Image/Portfolio/COTF/img1.png'
+import Image1 from '/src/assets/Image/Portfolio/COTF/img2.png'
+import Image2 from '/src/assets/Image/Portfolio/COTF/img3.png'
+import Image3 from '/src/assets/Image/Portfolio/COTF/img4.png'
+import Image4 from '/src/assets/Image/Portfolio/COTF/img5.png'
+import Image5 from '/src/assets/Image/Portfolio/COTF/img6.png'
+
+import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
+
 export default {
     data() {
         return {
             name: 'COTF',
             url: "/src/assets/Image/Portfolio/COTF/Header.png",
             mobile: false,
+            images: [
+            {
+                src: Image0,
+                index: 0
+            },            
+            {
+                src: Image1,
+                index: 1
+            },
+            {
+                src: Image2,
+                index: 2
+            },
+            {
+                src: Image3,
+                index: 3
+            },
+            {
+                src: Image4,
+                index: 4
+            },
+            {
+                src: Image5,
+                index: 5
+            }
+            ],
         }
     },
     beforeMount() {
@@ -262,6 +334,9 @@ export default {
                 document.title = 'Stan Vogels | Cry Of The Fox';
             }
         },
+    },
+    components:{
+        CarrouselComp,
     }
 }
 </script>

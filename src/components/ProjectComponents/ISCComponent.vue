@@ -3,7 +3,7 @@
     <div class="front-page">
       <div class="header-background">
         <div class="header-text">
-          <h1 class="header-title">IN SHEEP'S CLOTHING</h1>
+          <h1 class="header-title">In sheep's clothing</h1>
           <h2 class="header-subtitle">GameJam turned into full game</h2>
         </div>
       </div>
@@ -35,13 +35,18 @@
       </div>
     </div>
 
-    <CarrouselComp :cards="this.test" class="carousel-comp"/>
+    <CarrouselComp :cards="this.images" class="carousel-comp"/>
 
     <p class="project-text">
       Sheep have taken over politics. They are on their way to becoming the biggest political party in the world. You as
       a human were sent in to spy on one of their meetings. You are disguised as a sheep in a suit. Make sure they don’t
       suspect you and get as much information as you can!
     </p>
+
+    <div class="findcode-github">
+      <h1>Find this project on</h1>
+      <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+    </div>
 
     <section class="software-skills">
       <h2 class="section-header">Software skills improved this project</h2>
@@ -97,7 +102,7 @@
             and have to vote the same as the other sheep. This was done using events, and when a sheep notices you are
             not voting the correct answer, their suspicousness will go up.
           </p>  
-          <pre class="code-snippet">
+          <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[0]}">
 <code class="language-csharp">public enum VotingState
 {
 	VotingState_None,
@@ -280,8 +285,8 @@ namespace InSheepsClothing
             </code>
           </pre>
           <div class="code-snippet-button-container">
-            <button type="button" @click="ToggleCodeSnippet()" class="code-snippet-button">Code Snippet</button>
-            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/VotingSystem.cs" class="code-snippet-button">View on github</a>
+            <button type="button" @click="ToggleCodeSnippet(0)" class="code-snippet-button">Toggle Snippet</button>
+            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/VotingSystem.cs" class="code-snippet-button" target="_blank">View on github</a>
           </div>
         </div>
         <div class="contribution-element">
@@ -293,7 +298,7 @@ namespace InSheepsClothing
             would ensure
             an easy start for the player and gradually make it harder.
           </p>
-          <pre class="code-snippet">
+          <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[1]}">
 <code class="language-csharp">namespace InSheepsClothing
 {
     public class SheepSystem : MonoBehaviour
@@ -394,8 +399,8 @@ namespace InSheepsClothing
 </code>
           </pre>
           <div class="code-snippet-button-container">
-            <button type="button" @click="ToggleCodeSnippet()" class="code-snippet-button">Code Snippet</button>
-            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/SheepSystem.cs" class="code-snippet-button">View on github</a>
+            <button type="button" @click="ToggleCodeSnippet(1)" class="code-snippet-button">Toggle Snippet</button>
+            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/SheepSystem.cs" class="code-snippet-button" target="_blank">View on github</a>
           </div>
         </div>
         <div class="contribution-element">
@@ -409,7 +414,7 @@ namespace InSheepsClothing
             displayed on
             a dynamic ipad. This will tell the player all this information without having to add an actual HUD.
           </p>
-          <pre class="code-snippet">
+          <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[2]}">
 <code class="language-csharp">namespace InSheepsClothing
 {
     public class Ipad : MonoBehaviour
@@ -461,8 +466,8 @@ namespace InSheepsClothing
 </code>
           </pre>
           <div class="code-snippet-button-container">
-            <button type="button" @click="ToggleCodeSnippet()" class="code-snippet-button">Code Snippet</button>
-            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Ipad.cs" class="code-snippet-button">View on github</a>
+            <button type="button" @click="ToggleCodeSnippet(2)" class="code-snippet-button">Toggle Snippet</button>
+            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Ipad.cs" class="code-snippet-button" target="_blank">View on github</a>
           </div>
         </div>
         <div class="contribution-element">
@@ -474,7 +479,7 @@ namespace InSheepsClothing
             start looking
             at you more the longer the game goes on and had its own supsicous rating.
           </p>
-          <pre class="code-snippet">
+          <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[3]}">
 <code class="language-csharp">namespace InSheepsClothing
 {
     public class PeekSheep : Sheep
@@ -572,8 +577,8 @@ namespace InSheepsClothing
             </code>
           </pre>
           <div class="code-snippet-button-container">
-            <button type="button" @click="ToggleCodeSnippet()" class="code-snippet-button">Code Snippet</button>
-            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/PeekSheep.cs" class="code-snippet-button">View on github</a>
+            <button type="button" @click="ToggleCodeSnippet(3)" class="code-snippet-button">Toggle Snippet</button>
+            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/PeekSheep.cs" class="code-snippet-button" target="_blank">View on github</a>
           </div>
         </div>
 
@@ -601,16 +606,16 @@ namespace InSheepsClothing
           <div class="team-element">
             <div class="team-name">
               <p>Kylian Dekker | Programmer</p>
-              <a href="https://www.linkedin.com/in/kylian-dekker-26957015b/"><img
+              <a href="https://www.linkedin.com/in/kylian-dekker-26957015b/" target="_blank"><img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
             </div>
-            <p class="team-portfolio"><a href="www.kyliandekker.com">www.kyliandekker.com</a></p>
+            <p class="team-portfolio"><a href="https://www.kyliandekker.com" target="_blank">www.kyliandekker.com</a></p>
           </div>
 
           <div class="team-element">
             <div class="team-name">
               <p>Stan Vogels | Programmer</p>
-              <a href="https://www.linkedin.com/in/stanvogels/"><img
+              <a href="https://www.linkedin.com/in/stanvogels/" target="_blank"><img
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
             </div>
           </div>
@@ -661,7 +666,7 @@ namespace InSheepsClothing
 
     <div class="findcode-github">
       <h1>Find this project on</h1>
-      <a href="https://github.com/Reemhi2122/InSheepsClothing"><img src="/src/assets/Image/GithubIcon.png"></a>
+      <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
     </div>
     <section class="empty-footer"></section>
 </div>
@@ -671,6 +676,7 @@ namespace InSheepsClothing
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-csharp';
+
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
 
 import Image0 from '/src/assets/Image/Portfolio/ISC/Contributions/PeekSheep.jpg'
@@ -684,7 +690,7 @@ export default {
     return {
       name: 'ISC',
       mobile: false,
-      test: [
+      images: [
           {
               src: Image0,
               index: 0
@@ -706,6 +712,7 @@ export default {
               index: 4
           }
         ],
+      contributionState: [false, false, false, false],
     }
   },
   beforeMount() {
@@ -719,6 +726,9 @@ export default {
   beforeDestroy() {
     window.removeEventListener('resize', this.IsMobile);
   },
+  updated(){
+    Prism.highlightAll();
+  },
   methods: {
     IsMobile() {
       if (window.innerWidth <= 1000) {
@@ -727,8 +737,9 @@ export default {
         this.mobile = false
       }
     },
-    ToggleCodeSnippet(){
-      alert("test");
+    ToggleCodeSnippet(index){
+      this.contributionState[index] = !this.contributionState[index];
+      Prism.highlightAll();
     }
   },
   watch: {
@@ -802,7 +813,6 @@ export default {
 .project-video {
   width: 70%;
   height: 22.5vw;
-  /* max-height: 450px; */
   margin-left: 15%;
   border-radius: 20px;
   margin-top: -4vw;
@@ -935,21 +945,27 @@ export default {
   margin-top: auto;
 }
 
+.expanded-code-snippet{
+  max-height: 600px;
+}
+
 .code-snippet-button-container{
-  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .code-snippet-button{
   border: 2px solid black;
   text-align: center;
-  width: 120px;
-
-  font-size: 14px;
-
   text-decoration: none;
-  color: black;
-  margin: 0px 10px 0px 10px;
-  padding: 5px 10px 5px 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 120px;
+  white-space: nowrap;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
 }
 
 .team-section {
