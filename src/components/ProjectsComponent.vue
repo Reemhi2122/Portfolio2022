@@ -33,6 +33,9 @@
                     <span class="material-symbols-outlined">engineering</span> Engine programmer
                   </div>
                   <div class="project-bubbles">
+                    <span class="material-symbols-outlined">Devices</span> PlayStation
+                  </div>
+                  <div class="project-bubbles">
                     <span class="material-symbols-outlined">group</span> 7 members
                   </div>
                   <div class="project-bubbles">
@@ -182,7 +185,7 @@
           </div>
         </Transition>
 
-        <Transition>
+        <!-- <Transition>
           <div v-if="filters[0]" class="portfolio-item medium RLE">
             <RouterLink to="/Raytracer">
               <div class="div-darken"></div>
@@ -207,7 +210,7 @@
               </div>
             </RouterLink>
           </div>
-        </Transition>
+        </Transition> -->
 
         <!-- <Transition>
           <div v-if="filters[0]" class="portfolio-item medium RTSE">
@@ -371,7 +374,7 @@ export default {
   height: 80vh;
   width: 70%;
   position: absolute;
-  margin-top: 100px;
+  margin-top: calc(50px + 4vh);
   margin-left: 15%;
 }
 
@@ -501,7 +504,7 @@ export default {
 }
 
 .portfolio-item.DR {
-  background-image: url(/src/assets/Image/Portfolio/DR/DescentLogo.png);
+  background-image: url(/src/assets/Image/Portfolio/DR/Banner.png);
 }
 .portfolio-item.RT {
   background-image: url(/src/assets/Image/Portfolio/RT/Raytracer.jpg);

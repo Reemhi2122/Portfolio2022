@@ -847,8 +847,8 @@ export default {
 
 .carousel-comp{
   margin-top: 50px;
-  width: 70%;
-  margin-left: 15%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .project-text {
@@ -1134,6 +1134,12 @@ export default {
   .software-skills-icons {
     grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(1, auto);
+  }
+
+  .carousel-comp{
+    margin-top: 50px;
+    width: 100%;
+    margin-left: 0%;
   }
 }
 </style>

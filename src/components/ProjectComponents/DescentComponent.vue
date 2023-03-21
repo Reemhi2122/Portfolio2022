@@ -8,20 +8,17 @@
                 </div>
             </div>
 
-            <video class="project-video" poster="../../assets/Image/Portfolio/DR/img1.png" controls>
+            <video class="project-video" poster="../../assets/Image/Portfolio/DR/temp.png" controls>
                 <source src="/src/assets/Image/Portfolio/DR/DescentTrailer.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
             <div class="indv-project-bubbles-container">
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                    <span class="material-symbols-outlined">engineering</span> Engine programmer
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">code</span> C++ / Blueprint
-                </div>
-                <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">build</span> Unreal engine
+                    <span class="material-symbols-outlined">code</span> C++ | C
                 </div>
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">group</span> 8 members
@@ -32,15 +29,22 @@
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">calendar_month</span> 2020
                 </div>
+                <div class="indv-project-bubbles">
+                    <span class="material-symbols-outlined">Devices</span> Windows
+                </div>
+                <div class="indv-project-bubbles">
+                    <span class="material-symbols-outlined">Devices</span> PlayStation
+                </div>
             </div>
         </div>
 
         <CarrouselComp :cards="this.images" class="carousel-comp"/>
 
         <p class="project-text">
-            Discover the reworked Descent, now with raytracing technology. Experience
-            dynamic light and shadow, highly reflective surfaces, and intense, fast-paced action like never before.
-            Immerse yourself in a world brought to life with advanced graphics.
+            Experience the enhanced world of Descent with raytracing technology, now ported over to the PS5. 
+            Immerse yourself in a captivating environment filled with dynamic light and shadow, highly-reflective 
+            surfaces, and intricate details that bring the game to life. Discover Descent that 
+            looks and feels more immersive than ever before.
         </p>
 
         <div class="findcode-github">
@@ -100,31 +104,72 @@
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
                 <div class="contribution-element">
-                    <p class="contribution-element-title">PS5 configuration / building</p>
-                    <!-- <video class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/FollowingAI.mp4" autoplay loop></video> -->
-                    <p class="contribution-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </div>
-                <div class="contribution-element">
                     <p class="contribution-element-title">Converting Descent from PC to PS5 </p>
                     <!-- <img class="contribution-image"
                         src="/src/assets/Image/Portfolio/COTF/contributions/FollowingNPC.gif"> -->
-                    <p class="contribution-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <p class="contribution-text">
+                        This game was initially created in 1995 for MS-DOS. We found a Github repository that has 
+                        already converted it to modern Windows using SCons. We converted this to CMake and made sure 
+                        it also runs on x64 architecture. 
+                        
+                        <br><br>
+
+                        My job, was to convert this windows version to PS5, while making 
+                        sure it still worked for Windows. This was a challenge because documentation on using CMake for the 
+                        PS5 doesn't exist and the Windows version relied heavily on SDL.
                     </p>
+                    <p>*Cannot show code because of NDA with PlayStation</p>
                 </div>
                 <div class="contribution-element">
-                    <p class="contribution-element-title">PS5 reading / writing</p>
+                    <p class="contribution-element-title">Cross-platfrom reading / writing for PS5</p>
+                    <!-- <video class="contribution-image"
+                        src="/src/assets/Image/Portfolio/COTF/contributions/FollowingAI.mp4" autoplay loop></video> -->
+                    <p class="contribution-text">
+                        For the conversion to the PS5 platform, I had to rework the file handling of the original project
+                        that was using a library called Physfs. To do this, I had two choices: creating a new file handler
+                        or reworking the library so it can also work on PS5.
+                        
+                        <br><br>
+
+                        After doing some research on the library I
+                        found on their Github that it should be feasible to convert the library to work on platforms like
+                        Playstations etc. I chose to rework the library because I believed this would save me the most time,
+                        and still teach me a lot about how the PS5 file reading/writing works.
+                    </p>
+                    <p>*Cannot show code because of NDA with PlayStation</p>
+                </div>
+                <div class="contribution-element">
+                    <p class="contribution-element-title">Cross-platfrom input for PS5</p>
                     <!-- <img class="contribution-image" 
                         src="/src/assets/Image/Portfolio/COTF/contributions/DialogueSystem.gif"> -->
-                    <p class="contribution-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <p class="contribution-text">
+                        Because the original project used SDL for input, I also had to rework this. The biggest challenge with
+                        this was that the project also supported the remapping of keys so the system wasn't as easy to replace
+                        as a normal input system. I recreated the input system by creating a new input system myself that would
+                        use the remap function that is used in the original project.
                     </p>
+                    <p>*Cannot show code because of NDA with PlayStation</p>
+                </div>
+                <div class="contribution-element">
+                    <p class="contribution-element-title">Cross-platform allocation for PS5</p>
+                    <!-- <img class="contribution-image" 
+                        src="/src/assets/Image/Portfolio/COTF/contributions/DialogueSystem.gif"> -->
+                    <p class="contribution-text">
+                        To make the project work for PS5, I also had to make a custom allocator for PS5. There is 
+                        nothing fancy about the allocator and just replaces the original malloc, free, etc. to work for 
+                        PS5 and do some exception handling.
+                    </p>
+                    <p>*Cannot show code because of NDA with PlayStation</p>
+                </div>
+                <div class="contribution-element">
+                    <p class="contribution-element-title">Additional features include but are not limited to</p>
+                    <ul>
+                        <li>PC x64 build configuration</li>
+                        <li>Researching an old code base</li>
+                        <li>Making a diverse logger</li>
+                        <li>Create a cross-platform timer</li>
+                        <li>Abstracting windows dependend systems</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -211,29 +256,28 @@
             <div class="learned-container">
                 <div class="learned-element">
                     <h3>PS5 programming</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                </div>
-                <div class="learned-element">
-                    <h3>Reading old code bases</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <p>
+                        Before this project, I had some experience in programming for PS4. But this was the first time I created
+                        a project for PS5. Because a lot happened from PS4 to PS5, I had to learn how it worked all over again.
+                        This taught me a lot about how to program for PS5 and improved my skills in picking up new techniques 
+                        and platforms like PS5. 
                     </p>
                 </div>
                 <div class="learned-element">
-                    <h3>Converting old games</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <h3>Reading old code bases</h3>
+                    <p>
+                        Because this project was originally written in 1995 and with languages like C and some assembly, 
+                        I had to learn how to read and understand old code bases. Besides understanding it, I also had to add, 
+                        remove and improve features in it. This taught me a lot about reading code bases in general and gave 
+                        me the experience of working on a pre-existing game, engine, or application. 
+                    </p>
                 </div>
                 <div class="learned-element">
                     <h3>C programming</h3>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        I had no previous experience with programming in C, but I did in its extensions like C# and C++.
+                         Reading and programming C taught me a lot about the language and even improved my knowledge of C#
+                          and C++. After programming in it for 6+ months I can now say that I am experienced in the C language.
                     </p>
                 </div>
             </div>
@@ -325,7 +369,7 @@ export default {
 
 <style scoped>
 .header-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DR/descentLogo.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DR/Banner.png');
 }
 
 @media (max-width: 1000px) {

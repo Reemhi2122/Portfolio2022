@@ -131,4 +131,10 @@ button > span{
   font-weight: 200;
 }
 
+@media (max-width: 600px) {
+  .card {
+    width: 50%;
+  }
+}
+
 </style>

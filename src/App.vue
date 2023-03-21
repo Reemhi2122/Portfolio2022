@@ -1,18 +1,9 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import NavBar from './components/NavBarComponent.vue'
-import Projects from './components/ProjectsComponent.vue'
-
-import T0Feature from './components/FeatureComponents/T0Feature.vue'
-import T1Feature from './components/FeatureComponents/T1Feature.vue'
-import T2Feature from './components/FeatureComponents/T2Feature.vue'
-
-import MobileNav from './components/MobileNavComponent.vue'
-</script>
 <template>
   <div class="home-wrapper">
 
-    <component :is="this.Components[this.selectedComponent]"></component>
+    <transition :name="this.slideTransition">
+      <component :is="this.Components[this.selectedComponent]"></component>
+    </transition>
 
     <div class="white-overlay">
       <svg class="triangle-parent" fill="#fff" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -33,9 +24,9 @@ import MobileNav from './components/MobileNavComponent.vue'
     </RouterLink>
 
     <div class="feature-buttons">
-      <button class="feature-button" :class="[active[0] ? 'b-active' : '']"  @click="ChangeFeatureTo(0)"></button>
-      <button class="feature-button" :class="[active[1] ? 'b-active' : '']" @click="ChangeFeatureTo(1)"></button>
-      <button class="feature-button" :class="[active[2] ? 'b-active' : '']" @click="ChangeFeatureTo(2)"></button>
+      <button class="feature-button" :class="[active[0] ? 'b-active' : '']"  @click="ChangeFeatureTo(0, true)"></button>
+      <button class="feature-button" :class="[active[1] ? 'b-active' : '']" @click="ChangeFeatureTo(1, true)"></button>
+      <button class="feature-button" :class="[active[2] ? 'b-active' : '']" @click="ChangeFeatureTo(2, true)"></button>
     </div>
 
     <NavBar ref="NavBarRef"></NavBar>
@@ -49,7 +40,15 @@ import MobileNav from './components/MobileNavComponent.vue'
 </template>
 
 <script>
-import EmptyHomeComponentVue from './components/EmptyHomeComponent.vue'
+import { RouterLink, RouterView } from 'vue-router'
+import NavBar from './components/NavBarComponent.vue'
+import Projects from './components/ProjectsComponent.vue'
+
+import T0Feature from './components/FeatureComponents/T0Feature.vue'
+import T1Feature from './components/FeatureComponents/T1Feature.vue'
+import T2Feature from './components/FeatureComponents/T2Feature.vue'
+
+import MobileNav from './components/MobileNavComponent.vue'
 
 export default {
   data() {
@@ -60,6 +59,9 @@ export default {
       Components: ["T2Feature","T1Feature","T0Feature"],
       active: [false,true,false],
       selectedComponent: 0,
+      canSlide: true,
+      isNavBarOpen: false,
+      slideTransition: "slideup",
     }
   },
   created () {
@@ -79,17 +81,36 @@ export default {
     },
     OpenNavBar() {
       this.$refs.NavBarRef.OpenNavBar();
+      this.isNavBarOpen = true;
     },
     CloseNavBar() {
       this.$refs.NavBarRef.CloseNavBar();
+      this.isNavBarOpen = false;
     },
-    ChangeFeatureTo(id) {
+    ChangeFeatureTo(id, button) {
+      if(button) this.slideTransition = id > this.selectedComponent ? "slideup": "slidedown";
       this.selectedComponent = id;
       this.active = [false,false,false];
       this.active[id] = true;
     },
-    HomeScrolled(){
-      this.ChangeFeatureTo((this.selectedComponent + 1) % 3);
+    HomeScrolled(e){
+      if(this.canSlide && !this.isNavBarOpen){
+        this.canSlide = false;
+        if(e.deltaY > 0){
+          this.slideTransition = "slideup";
+          this.ChangeFeatureTo((this.selectedComponent + 1) % 3, false);
+        }
+
+        if(e.deltaY < 0){
+          this.slideTransition = "slidedown";
+          this.ChangeFeatureTo((3 + (this.selectedComponent - 1)) % 3, false);
+        }
+
+        setTimeout(() => { this.canSlide = true; }, 1000);
+      }
+    },
+    EnableSlide(){
+      this.canSlide = true;
     }
   },
   components: {
@@ -127,15 +148,15 @@ export default {
   margin-bottom: 10px;
   border: none;
   border-radius: 100px;
-  background-color: white;
+  background-color: #6d6d6d;
 }
 
 .feature-button:hover{
-  background-color: #12616A;
+  background-color: #e6e6e6;
 }
 
 .b-active{
-  background-color: #1CA3B2;
+  background-color: #fdfdfd;
 }
 
 .white-overlay {
@@ -164,7 +185,6 @@ export default {
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  /* padding-left: 4vw; */
   text-align: center;
 }
 
@@ -214,6 +234,48 @@ export default {
 .route-leave-active {
   transition: all 0.2s ease-in;
 }
+
+.slidedown-enter-active,
+.slidedown-leave-active,
+.slideup-enter-active,
+.slideup-leave-active {
+  transition: all 0.4s ease-out;
+}
+
+.slideup-enter-to {
+  position: absolute;
+  top: 0%;
+}
+.slideup-enter-from {
+  position: absolute;
+  top: 100%;
+}
+.slideup-leave-to {
+  position: absolute;
+  bottom: 100%;
+}
+.slideup-leave-from {
+  position: absolute;
+  bottom: 0%;
+}
+
+.slidedown-enter-to {
+  position: absolute;
+  bottom: 0%;
+}
+.slidedown-enter-from {
+  position: absolute;
+  bottom: 100%;
+}
+.slidedown-leave-to {
+  position: absolute;
+  top: 100%;
+}
+.slidedown-leave-from {
+  position: absolute;
+  top: 0%;
+}
+
 
 @media(max-width: 1000px) {
   .mobile-nav-container {

@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .feature-project {
-  background-image: url('../../Assets/Image/Portfolio/DR/img2.png');
+  background-image: url('../../Assets/Image/Portfolio/DR/Banner.png');
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;

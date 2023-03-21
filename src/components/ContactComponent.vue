@@ -6,7 +6,7 @@
 
             <div class="about-grid">
                 <div class="about-container">
-                    <img class="about-picture" src="/src/assets/Image/Stan/Stan2.jpg">
+                    <img class="about-picture" src="/src/assets/Image/Stan/Stan3.jpg">
                     <p class="contact-text"><b>E-mail:</b><br>stanvogels@live.nl</p>
                     <div>
                         <a href="https://www.linkedin.com/in/stanvogels/"><img
@@ -33,6 +33,25 @@
                             where this journey will take me.
                         </p>
                     </div>
+
+
+                    <!-- <div class="about-section">
+                        <h1 class="about-info-title">Education</h1>
+                        <div class="tab-whiteline"></div>
+                        <div class="about-info-container">
+                            <img class="about-info-image" src="/src/assets/Image/logos/BUAS.png" style="margin-right: 20px">
+                            <img class="about-info-image" src="/src/assets/Image/logos/sintlucas.png" style="margin-right: 20px">
+                            <p class="about-info-text">
+                                As a programmer, I have a passion for creativity and innovation. 
+                                Roadtrips offer a perfect escape from the screen and an opportunity to embrace adventure and discovery. 
+                                The open road gives me the chance to explore new places and cultures while being surrounded by new 
+                                sights and sounds. I find inspiration from my roadtrips, which I bring back to my work as a programmer. 
+                                Navigating new territories, discovering hidden gems, and making spontaneous stops is what makes 
+                                roadtripping so exciting for me. It's my way of taking a break from the familiar, staying connected to 
+                                my creative roots, and making unforgettable memories.
+                            </p>
+                        </div>
+                    </div> -->
 
                     <!-- <div class="about-section">
                         <h1 class="about-info-title">Roadtripping</h1>
@@ -73,7 +92,7 @@
 </template>
 
 <script>
-import data from '/src/assets/Documents/CV_Stan_Vogels_Copy.pdf'
+import data from '/src/assets/Documents/CV_Stan_Vogels_Portfolio.pdf'
 
 export default {
     data() {
@@ -181,7 +200,6 @@ export default {
 
 .about-info-image {
     width: 200px;
-    height: 200px;
     display: inline;
 }
 

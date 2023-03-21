@@ -25,7 +25,6 @@ export default{
             BlackBarHalfWidth: 0 + 'px',
 
             blackBarLength: 0 + 'px',
-            // BarTransition: 0.5 + 's',
             BarTransition: 0.0 + 's',
         }
     },
@@ -113,9 +112,7 @@ ul{
     margin-top: calc(5vh - 1vw);
     margin-left: calc(5vw + 100px);
     margin-right: 100px;
-    /* -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s; */
+    white-space:nowrap;
 }
 
 ul.BarOpen{
