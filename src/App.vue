@@ -62,6 +62,7 @@ export default {
       canSlide: true,
       isNavBarOpen: false,
       slideTransition: "slideup",
+      intervalId: 0,
     }
   },
   created () {
@@ -80,15 +81,22 @@ export default {
       return "/mobileNav";
     },
     OpenNavBar() {
+      window.clearInterval(this.intervalId);
       this.$refs.NavBarRef.OpenNavBar();
       this.isNavBarOpen = true;
     },
     CloseNavBar() {
+      this.intervalId = window.setInterval(() => {this.AutoScroll();},5000);
       this.$refs.NavBarRef.CloseNavBar();
       this.isNavBarOpen = false;
     },
     ChangeFeatureTo(id, button) {
-      if(button) this.slideTransition = id > this.selectedComponent ? "slideup": "slidedown";
+      if(button){ 
+        this.slideTransition = id > this.selectedComponent ? "slideup": "slidedown";
+        window.clearInterval(this.intervalId);
+        this.intervalId = window.setInterval(() => {this.AutoScroll();},8000);
+      }
+
       this.selectedComponent = id;
       this.active = [false,false,false];
       this.active[id] = true;
@@ -106,8 +114,13 @@ export default {
           this.ChangeFeatureTo((3 + (this.selectedComponent - 1)) % 3, false);
         }
 
+        window.clearInterval(this.intervalId);
+        this.intervalId = window.setInterval(() => {this.AutoScroll();},8000);
         setTimeout(() => { this.canSlide = true; }, 1000);
       }
+    },
+    AutoScroll(){
+      this.ChangeFeatureTo((this.selectedComponent + 1) % 3, false);
     },
     EnableSlide(){
       this.canSlide = true;
@@ -195,7 +208,7 @@ export default {
 }
 
 .home-subtitle {
-  font-size: 1.0vw;
+  font-size: 1.1vw;
   margin-top: -0.5vw;
   color: #222222;
   font-weight: 300;
@@ -293,12 +306,12 @@ export default {
   }
 
   .home-title {
-    font-size: 6vw;
+    font-size: calc(18px + 3vw);
   }
 
   .home-subtitle {
-    font-size: 2.4vw;
-    margin-top: -1.2vw;
+    font-size: calc(10px + 0.5vw);
+    margin-top: -0.8vw;
   }
 }
 </style>

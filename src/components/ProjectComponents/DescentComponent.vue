@@ -47,10 +47,10 @@
             looks and feels more immersive than ever before.
         </p>
 
-        <div class="findcode-github">
+        <!-- <div class="findcode-github">
             <h1>Find this project on</h1>
             <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div>
+        </div> -->
 
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
@@ -58,44 +58,32 @@
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="C" />
-                    <p class="software-skill-text">
-                        The Descent was orignally made in
-                        C and assembly, I didn't have any
-                        previous experience in C but by
-                        diving head first into the code base
-                        I learned a lot.
-                    </p>
+                    <p class="software-skill-title"> Language </p>
+                    <p class="software-skill-text"> C </p>
                 </div>                
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" />
-                    <p class="software-skill-text">
-                        All the new classes we made in the
-                        raytracer was based on C++. I already
-                        had a lot of experience in C++ and learned
-                        how to work in a project that is written in both
-                        C and C++.
-                    </p>
+                    <p class="software-skill-title"> Language </p>
+                    <p class="software-skill-text"> C++ </p>
                 </div>                
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" />
-                    <p class="software-skill-text">
-                        After using perforce for 2 years on school
-                        it was refreshing to get back to git. It took
-                        some time to get back in the workflow and improve
-                        my old skills.
-                    </p>
-                </div>                
+                    <p class="software-skill-title"> Source control </p>
+                    <p class="software-skill-text"> Git </p>
+                </div>
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" title="Windows" />
+                    <p class="software-skill-title"> Platform </p>
+                    <p class="software-skill-text"> Windows </p>
+                </div>           
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="../../assets/Image/Logos/PlayStation.svg" title="PS5" />
-                    <p class="software-skill-text">
-                        One of the goals of this project was to get
-                        Descent running on the PS5. I took the responsibility
-                        for this and converted the whole project to the PS5
-                        including file reading/writing, input and allocation.
-                    </p>
+                    <p class="software-skill-title"> Platform </p>
+                    <p class="software-skill-text"> Playstation </p>
                 </div>
             </div>
         </section>
@@ -283,10 +271,10 @@
             </div>
         </section>
 
-        <div class="findcode-github">
+        <!-- <div class="findcode-github">
             <h1>Find this project on</h1>
             <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div>
+        </div> -->
         <section class="empty-footer"></section>
     </div>
 </template>

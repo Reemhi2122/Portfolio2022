@@ -27,10 +27,10 @@
           <span class="material-symbols-outlined">group</span> 2 members
         </div>
         <div class="indv-project-bubbles">
-          <span class="material-symbols-outlined">schedule</span> 3 days
+          <span class="material-symbols-outlined">schedule</span> 6 months
         </div>
         <div class="indv-project-bubbles">
-          <span class="material-symbols-outlined">calendar_month</span> 2019
+          <span class="material-symbols-outlined">calendar_month</span> 2022 / 2023
         </div>
       </div>
     </div>
@@ -54,39 +54,31 @@
         <div class="software-skill-element">
           <img class="software-skill-image"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" title="Unity" />
-          <p class="software-skill-text">
-            We chose unity for this project because
-            we were familiar with the engine and didn't
-            need any of the advantages that other engines
-            like Unreal Engine give.
-          </p>
+          <p class="software-skill-title"> Engine </p>
+          <p class="software-skill-text"> Unity </p>
         </div>
         <div class="software-skill-element">
           <img class="software-skill-image"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" title="C#" />
-          <p class="software-skill-text">
-            With this project, I improved my C# skills
-            by using it in unreal engine as a scripting
-            language.
-          </p>
+          <p class="software-skill-title"> Language </p>
+          <p class="software-skill-text"> C# </p>
         </div>
         <div class="software-skill-element">
           <img class="software-skill-image"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" title="C#" />
-          <p class="software-skill-text">
-            In the project, we used git to collaborate
-            on one unity project and use it as our version
-            control. 
-          </p>
+          <p class="software-skill-title"> Source control </p>
+          <p class="software-skill-text"> Git </p>
         </div>
         <div class="software-skill-element">
           <img class="software-skill-image" src="../../assets/Image/Logos/OculusLogo.svg" title="Oculus" />
-          <p class="software-skill-text">
-            This project makes use of VR technology,
-            we chose to use Oculus because we had experience
-            with this technology and had the hardware
-            available.
-          </p>
+          <p class="software-skill-title"> VR System </p>
+          <p class="software-skill-text"> Oculus </p>
+        </div>
+        <div class="software-skill-element">
+            <img class="software-skill-image"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" title="Windows" />
+            <p class="software-skill-title"> Platform </p>
+            <p class="software-skill-text"> Windows </p>
         </div>
       </div>
     </section>
@@ -873,20 +865,18 @@ export default {
   width: 80%;
 }
 
-.software-skills-icons {
-  margin-top: 25px;
-  display: grid;
-  grid-template-rows: repeat(1, auto);
-  grid-template-columns: repeat(4, auto);
-  grid-gap: 0 2.5%;
+.software-skills-icons{
+
 }
 
 .software-skill-element {
-  width: 100%;
+  width: 175px;
+  display:inline-block;
   height: auto;
-  border: 2px dashed black;
+  border: 2px dotted rgb(0, 0, 0);
   border-radius: 15px;
-  margin: 0 auto;
+  margin-right: 15px;
+  margin-top: 15px;
 }
 
 .software-skill-image{
@@ -896,12 +886,19 @@ export default {
   margin-top: 10px; 
 }
 
+.software-skill-title{
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+  font-weight: 800;
+}
+
 .software-skill-text{
   text-align: center;
   width: 80%;
   margin-left: 10%;
   margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 .contribution-section {
@@ -1060,14 +1057,9 @@ export default {
 }
 
 @media (max-width: 1200px) {
-  .software-skills-icons {
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, auto);
-    grid-gap: 10px 2.5%;
-  }
-  
-  .software-skills {
-    margin-top: 5vw;
+  .software-skill-element {
+    width: 150px;
+    margin-right: 15px;
   }
 }
 
@@ -1131,11 +1123,6 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .software-skills-icons {
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: repeat(1, auto);
-  }
-
   .carousel-comp{
     margin-top: 50px;
     width: 100%;

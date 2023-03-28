@@ -3,12 +3,12 @@
         <div class="front-page">
             <div class="header-background">
                 <div class="header-text">
-                    <h1 class="header-title">Cry of the fox</h1>
-                    <h2 class="header-subtitle">A true vertical slice</h2>
+                    <h1 class="header-title">Cold Candy</h1>
+                    <h2 class="header-subtitle">Puzzle game</h2>
                 </div>
             </div>
 
-            <video class="project-video" poster="../../assets/Image/Portfolio/COTF/Test.png" controls>
+            <video class="project-video" poster="../../assets/Image/Portfolio/CC/img4.png" controls>
                 <source src="/src/assets/Image/Portfolio/COTF/COTF.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -18,16 +18,16 @@
                     <span class="material-symbols-outlined">engineering</span> Gameplay programmer
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">code</span> C++ / Blueprint
+                    <span class="material-symbols-outlined">code</span> Blueprint
                 </div>
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">build</span> Unreal engine
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 8 members
+                    <span class="material-symbols-outlined">group</span> 12 members
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 4 weeks
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
                 </div>
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">calendar_month</span> 2021
@@ -38,9 +38,7 @@
         <CarrouselComp :cards="this.images" class="carousel-comp"/>
 
         <p class="project-text">
-            After a virus in the late 19th century takes out all humans on earth, nature takes over again. You play as a
-            fox who is all alone in an overgrown and abandoned Paris. As you travel to the edge of the city to find
-            other foxes, you find out what really happened to the humans...
+            It's everybody's dream to be a kid in a candy factory. In cold candy you can make your dreams come true! Release your spirit animal to help solve puzzles and get candy!
         </p>
 
         <!-- <div class="findcode-github">
@@ -51,18 +49,12 @@
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
             <div class="software-skills-icons">
-                <div class="software-skill-element">
-                    <img class="software-skill-image"
-                    src="/src/assets/Image/Logos/Blueprint.png" title="C++" />
-                    <p class="software-skill-title"> Language </p>
-                    <p class="software-skill-text"> Blueprint </p>
-                </div>
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" />
+                    src="/src/assets/Image/Logos/blueprint.png" title="C++" />
                     <p class="software-skill-title"> Language </p>
-                    <p class="software-skill-text"> C++ </p>
+                    <p class="software-skill-text"> Blueprint </p>
                 </div>
 
                 <div class="software-skill-element">
@@ -74,9 +66,9 @@
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" title="Jira" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" title="Jira" />
                     <p class="software-skill-title"> Planning </p>
-                    <p class="software-skill-text"> Jira </p>
+                    <p class="software-skill-text"> Trello </p>
                 </div>
 
                 <div class="software-skill-element">
@@ -85,6 +77,7 @@
                     <p class="software-skill-title"> Source control </p>
                     <p class="software-skill-text"> Perforce </p>
                 </div>
+
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" title="Windows" />
@@ -98,34 +91,44 @@
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
                 <div class="contribution-element">
-                    <p class="contribution-element-title">Following wolf</p>
-                    <video class="contribution-image"
+                    <p class="contribution-element-title">Pressure plate system</p>
+                    <!-- <video class="contribution-image"
                         src="/src/assets/Image/Portfolio/COTF/contributions/FollowingAI.mp4" autoplay loop></video>
                     <p class="contribution-text">In the game, we wanted to create a thread for the player while
                         traversing the level. This is where we came up with the wolf that would hunt for the fox when it
                         would see it. I created this wolf with visual AI and movement AI. If the wolf would spot you, it
                         would follow you and depending if it will catch you it will attack or lose interest.
-                    </p>
+                    </p> -->
                 </div>
                 <div class="contribution-element">
-                    <p class="contribution-element-title">Following bird</p>
-                    <img class="contribution-image"
+                    <p class="contribution-element-title">Moving platform tool</p>
+                    <!-- <img class="contribution-image"
                         src="/src/assets/Image/Portfolio/COTF/contributions/FollowingNPC.gif">
                     <p class="contribution-text">We wanted a NPC to follow the player and show important parts of the
                         level to the player. eventually we decided this would be a bird that would fly around the player
                         when stationary, when the player would walk it would fly after it and would point out or sit at
                         important parts of the level.
-                    </p>
+                    </p> -->
                 </div>
                 <div class="contribution-element">
-                    <p class="contribution-element-title">Dialogue system</p>
-                    <img class="contribution-image"
+                    <p class="contribution-element-title">Pipe tool</p>
+                    <!-- <img class="contribution-image"
                         src="/src/assets/Image/Portfolio/COTF/contributions/DialogueSystem.gif">
                     <p class="contribution-text">As an objective we decided that the player would get requests from
                         different animals to help them with something they need. If they did this they would get
                         something in return. For example the bird could give him a key that he couldn't reach, but the
                         player had to do something for the bird first. I created the dialogue system for this.
-                    </p>
+                    </p> -->
+                </div>
+                <div class="contribution-element">
+                    <p class="contribution-element-title">Cube moving / selecting</p>
+                    <!-- <img class="contribution-image"
+                        src="/src/assets/Image/Portfolio/COTF/contributions/DialogueSystem.gif">
+                    <p class="contribution-text">As an objective we decided that the player would get requests from
+                        different animals to help them with something they need. If they did this they would get
+                        something in return. For example the bird could give him a key that he couldn't reach, but the
+                        player had to do something for the bird first. I created the dialogue system for this.
+                    </p> -->
                 </div>
             </div>
         </section>
@@ -133,23 +136,17 @@
         <section class="team-section">
             <h2 class="section-header">The team</h2>
             <div class="basic-info">
-                <p>Team size: 8 developers</p>
-                <p>Programmers: 3 | Artists: 3 | Designers: 2
+                <p>Team size: 12 developers</p>
+                <p>Programmers: 4 | Artists: 4 | Designers: 4
                 </p>
             </div>
             <div class="team-container">
                 <div class="team-container-box">
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Lucas Zebeda | Programmer</p>
-                            <a href="https://www.linkedin.com/in/lucas-zebeda-347872229/" target="_blank"><img
+                            <p>Ralph Warrand | Programmer</p>
+                            <a href="https://www.linkedin.com/in/ralph-warrand-6529a81a4/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
-                        </div>
-                    </div>
-
-                    <div class="team-element">
-                        <div class="team-name">
-                            <p>Jimmy Konings | Programmer</p>
                         </div>
                     </div>
 
@@ -160,34 +157,19 @@
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
-                </div>
 
-                <div class="team-container-box">
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Luuk Ouwehand | Artist</p>
-                            <a href="https://www.linkedin.com/in/luuk-ouwehand-74b837244/" target="_blank"><img
+                            <p>Boudewijn Witteveen | Programmer</p>
+                            <a href="https://www.linkedin.com/in/boudewijn-w-2bbb79131/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
-                        <p class="team-portfolio"><a
-                                href="https://www.artstation.com/luukouwehand" target="_blank">https://www.artstation.com/luukouwehand</a>
-                        </p>
                     </div>
 
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Olivier Dral | Artist</p>
-                            <a href="https://www.linkedin.com/in/olivierdral/" target="_blank"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
-                        </div>
-                        <p class="team-portfolio"><a
-                                href="https://oli4dral.artstation.com/" target="_blank">https://oli4dral.artstation.com/</a></p>
-                    </div>
-
-                    <div class="team-element">
-                        <div class="team-name">
-                            <p>Nathalie Stuit | Artist</p>
-                            <a href="https://www.linkedin.com/in/nathalie-stuit-38250124b/" target="_blank"><img
+                            <p>Pepijn van Loon | Programmer</p>
+                            <a href="https://www.linkedin.com/in/pepijn-van-loon-6795aa257/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
@@ -196,17 +178,65 @@
                 <div class="team-container-box">
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Radu Nenu | Designer</p>
-                            <a href="https://www.linkedin.com/in/radu-nicolae-nenu-0482901ba/" target="_blank"><img
+                            <p>Olimpia Di Nella | Artist</p>
+                            <a href="https://www.linkedin.com/in/olimpiadinella/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
 
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Lucas Dane | Designer</p>
-                            <a href="https://www.linkedin.com/in/lucas-dane-700494150/" target="_blank"><img
+                            <p>Anne Teunissen | Artist</p>
+                            <a href="https://www.linkedin.com/in/anne-teunissen-013186161/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
+                        </div>
+                    </div>
+
+                    <div class="team-element">
+                        <div class="team-name">
+                            <p>Dani Spaargaren | Artist</p>
+                            <a href="https://www.linkedin.com/in/dani-spaargaren-b78518159/" target="_blank"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
+                        </div>
+                    </div>
+
+                    <div class="team-element">
+                        <div class="team-name">
+                            <p>Roselyn Payne | Artist</p>
+                            <a href="https://www.linkedin.com/in/roselyn-payne-7374101b2/" target="_blank"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-container-box">
+                    <div class="team-element">
+                        <div class="team-name">
+                            <p>Jip Crombag | Designer</p>
+                            <a href="https://www.linkedin.com/in/jip-crombag/" target="_blank"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
+                        </div>
+                    </div>
+
+                    <div class="team-element">
+                        <div class="team-name">
+                            <p>Rick de Haan | Designer</p>
+                            <a href="https://www.linkedin.com/in/rick-de-haan-789a0a17a/" target="_blank"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
+                        </div>
+                    </div>
+
+                    <div class="team-element">
+                        <div class="team-name">
+                            <p>Victor Stanciu | Designer</p>
+                            <a href="https://www.linkedin.com/in/victor-stanciu-82416b16a/" target="_blank"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
+                        </div>
+                    </div>
+
+                    <div class="team-element">
+                        <div class="team-name">
+                            <p>Martin Vetsin | Designer</p>
                         </div>
                     </div>
                 </div>
@@ -217,37 +247,35 @@
             <h2 class="section-header">What I have learned form this project</h2>
             <div class="learned-container">
                 <div class="learned-element">
-                    <h3>Gameplay programming</h3>
-                    <p>As I want to become a engine programmer, it is also good to experience other disciplines of game
-                        development. It helps understand what a game programmer expects from an engine and what the best
-                        and most important features are to an gameplay programmer. In this case, I didn't have a choice
-                        to be an engine programmer and this can happen in my feature career as well. This project
-                        prepared me for when I was needed as a gameplay programmer.</p>
+                    <h3>Creating tools for designers</h3>
+                    <p>
+                        Creating tools for designers is a valuable skill in unreal engine 4. These tools, 
+                        such as moving platform systems and pressure plate systems, allow designers to 
+                        create complex game mechanics and environments without needing extensive programming 
+                        knowledge. By creating these tools, I gained experience in using Unreal Engine 4's 
+                        various systems and APIs. Additionally, creating tools for designers improved my 
+                        problem-solving skills and improve my ability to communicate with other members of a 
+                        game development team.
+                    </p>
                 </div>
                 <div class="learned-element">
                     <h3>Cross discipline collaboration</h3>
-                    <p>Working in a medium sized team with multiple disciplines give me the same experience as working
-                        in an indie game development studio. I gained experience in planning, debating, working,
-                        communicating and delivering in such a team. We delivered two games (other being Donut
-                        Drifters). A common disagreement would be between design and the other variations, with things
-                        we prototyped before they got designed and them reworking things after we made them.
+                    <p>
+                        Collaborating with a team of 3 programmers, 4 designers, and 4 artists provided me 
+                        with a realistic experience of indie game development. Working with different 
+                        disciplines required effective planning and communication. I had to assist 
+                        designers with tool setup and work with artists to import assets correctly. This
+                         valuable experience taught me to work effectively in a multidisciplinary team environment.
                     </p>
                 </div>
                 <div class="learned-element">
                     <h3>Unreal Engine 4</h3>
-                    <p>This was the second time I worked on a UE4 project, which was exiting and big learning
-                        opportunity. I mostly used blueprints this project, but also looked into some C++ within UE4
-                        because this was a goal of mine. Eventually I got the hang of UE4 and was able to reliably
-                        create mechanics that are used throughout the game.</p>
-                </div>
-                <div class="learned-element">
-                    <h3>Game marmalade</h3>
                     <p>
-                        This was my first time working on a game marmalade structure. This means working on a game for
-                        around 2 weeks, so its bigger than a game jam but it still limits time. This, together with an
-                        indie sized team created a unique form of fast concepting and teamwork. Big decisions had to be
-                        cut quickly and there was barley any time for prototyping. Eventually, we spend to much time on
-                        creating the level and lacked some gameplay.
+                        My first project using Unreal Engine 4 taught me valuable skills on working with C++
+                        and Blueprint-based engines. I learned a lot about working in Unreal Engine 4 and gained
+                        insights into creating games with it. Although Unreal Engine 5 was not available at 
+                        the time of the project, the skills I aquired when working in UE4 have been useful 
+                        for later project in UE5.
                     </p>
                 </div>
             </div>
@@ -262,20 +290,17 @@
 </template>
 
 <script>
-import Image0 from '/src/assets/Image/Portfolio/COTF/img1.png'
-import Image1 from '/src/assets/Image/Portfolio/COTF/img2.png'
-import Image2 from '/src/assets/Image/Portfolio/COTF/img3.png'
-import Image3 from '/src/assets/Image/Portfolio/COTF/img4.png'
-import Image4 from '/src/assets/Image/Portfolio/COTF/img5.png'
-import Image5 from '/src/assets/Image/Portfolio/COTF/img6.png'
+import Image0 from '/src/assets/Image/Portfolio/CC/img0.png'
+import Image1 from '/src/assets/Image/Portfolio/CC/img1.png'
+import Image2 from '/src/assets/Image/Portfolio/CC/img2.png'
+import Image3 from '/src/assets/Image/Portfolio/CC/img3.png'
 
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
 
 export default {
     data() {
         return {
-            name: 'COTF',
-            url: "/src/assets/Image/Portfolio/COTF/Header.png",
+            name: 'CC',
             mobile: false,
             images: [
             {
@@ -293,14 +318,6 @@ export default {
             {
                 src: Image3,
                 index: 3
-            },
-            {
-                src: Image4,
-                index: 4
-            },
-            {
-                src: Image5,
-                index: 5
             }
             ],
         }
@@ -340,7 +357,7 @@ export default {
 
 <style scoped>
 .header-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/COTF/Header.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/CC/CCHeader.jpg');
 }
 
 @media (max-width: 1000px) {

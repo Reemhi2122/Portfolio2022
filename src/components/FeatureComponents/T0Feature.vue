@@ -1,8 +1,8 @@
 <template>    
-  <RouterLink to="/InSheepsClothing" class="feature-project">
+  <RouterLink to="/GudenuffEngine" class="feature-project">
     <div class="feature-text-box">
-      <h1>Cry Of the Fox</h1>
-      <h2>Unreal engine</h2>
+      <h1>Gudenuff Engine - Setsuko</h1>
+      <h2>Game created in custom engine</h2>
     </div>
   </RouterLink>
 </template>
@@ -21,7 +21,7 @@
 
 <style scoped>
 .feature-project{
-  background-image: url('/src/Assets/Image/Portfolio/COTF/Header.png');
+  background-image: url('/src/Assets/Image/Portfolio/GE/GEHeader.jpg');
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;

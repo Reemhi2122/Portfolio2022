@@ -55,7 +55,7 @@
             <RouterLink to="/InSheepsClothing">
               <div class="div-darken"></div>
               <div class="project-description">
-                <p class="project-title">InSheepsClothing</p>
+                <p class="project-title">In sheep's clothing</p>
                 <p class="project-tags">Game | Unity | C#</p>
 
                 <div class="project-bubbles-container">
@@ -66,10 +66,10 @@
                     <span class="material-symbols-outlined">group</span> 2 members
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 3 days
+                    <span class="material-symbols-outlined">schedule</span> 6 months
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2019
+                    <span class="material-symbols-outlined">calendar_month</span> 2022/2023
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@
               <div class="div-darken"></div>
               <div class="project-description">
                 <p class="project-title">Gudenuff Engine - Setsuko</p>
-                <p class="project-tags">Engine | C++</p>
+                <p class="project-tags">Custom engine | C++</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
@@ -96,7 +96,7 @@
                     <span class="material-symbols-outlined">schedule</span> 8 weeks
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                    <span class="material-symbols-outlined">calendar_month</span> 2022
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@
             <RouterLink to="/DonutDrifters">
               <div class="div-darken"></div>
               <div class="project-description">
-                <p class="project-title">Donut Drifters - Game Marmalade</p>
+                <p class="project-title">Donut Drifters</p>
                 <p class="project-tags">Game | Unreal Engine | 2021</p>
 
                 <div class="project-bubbles-container">
@@ -239,17 +239,23 @@
           </div>
         </Transition> -->
 
-        <!-- <Transition>
-          <div v-if="filters[0]" class="portfolio-item small RTSE">
-            <RouterLink to="/Raytracer">
+        <Transition>
+          <div v-if="filters[0]" class="portfolio-item medium CC">
+            <RouterLink to="/ColdCandy">
               <div class="div-darken"></div>
               <div class="project-description">
-                <p class="project-title">RTS Engine</p>
-                <p class="project-tags">C++ | Engine | Playstation</p>
+                <p class="project-title">Cold Candy</p>
+                <p class="project-tags">Blueprints | Unreal Engine 4</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Engine programmer
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 12 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">calendar_month</span> 2021
@@ -260,6 +266,7 @@
           </div>
         </Transition>
 
+        <!--
         <Transition>
           <div v-if="filters[0]" class="portfolio-item small RTSE">
             <RouterLink to="/Raytracer">
@@ -507,13 +514,16 @@ export default {
   background-image: url(/src/assets/Image/Portfolio/DR/Banner.png);
 }
 .portfolio-item.RT {
-  background-image: url(/src/assets/Image/Portfolio/RT/Raytracer.jpg);
+  background-image: url(/src/assets/Image/Portfolio/RT/RT7.jpg);
 }
 .portfolio-item.RLE {
   background-image: url(/src/assets/Image/Portfolio/RLE/RLE.jpg);
 }
 .portfolio-item.RTSE {
   background-image: url(/src/assets/Image/Portfolio/RTSE/RTSEngine.jpg);
+}
+.portfolio-item.CC{
+  background-image: url(/src/assets/Image/Portfolio/CC/img1.png);
 }
 
 .portfolio-item>a {

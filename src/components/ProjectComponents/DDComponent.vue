@@ -43,56 +43,46 @@
             off by your opponement you lose all your stars.
         </p>
 
-        <div class="findcode-github">
+        <!-- <div class="findcode-github">
             <h1>Find this project on</h1>
             <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div>
+        </div> -->
 
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
             <div class="software-skills-icons">
                 <div class="software-skill-element">
                     <img class="software-skill-image"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" />
-                    <p class="software-skill-text">
-                        This project was made in blueprints and C++,
-                        this was my first experience in C++ in unreal engine
-                        and it proved to be quite the challenge. After the project
-                        I felt comfortable with C++ in UE.                        
-                    </p>
+                    src="/src/assets/Image/Logos/blueprint.png" title="C++" />
+                    <p class="software-skill-title"> Language </p>
+                    <p class="software-skill-text"> Blueprint </p>
                 </div>
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg" title="Unreal Engine" />
-                    <p class="software-skill-text">
-                        This project was made in Unreal Engine and even
-                        though I had some previous experience I still had
-                        A lot to learn. This project gave me more insights
-                        in things like UE AI and C++. 
-                    </p>
+                    <p class="software-skill-title"> Engine </p>
+                    <p class="software-skill-text"> Unreal Engine </p>
                 </div>
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" title="Jira" />
-                    <p class="software-skill-text">
-                        This was the first project that I used Jira
-                        to plan our sprints. I really liked the experience
-                        and plan to use it more often. Having your personal
-                        dashboard to keep an eye on your own process besides
-                        the whole team was really usefull.
-                    </p>
+                    <p class="software-skill-title"> Planning </p>
+                    <p class="software-skill-text"> Jira </p>
                 </div>
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="/src/assets/Image/Logos/Perforce.png" title="Perforce" />
-                    <p class="software-skill-text">
-                        This project we used Perforce as was 
-                        standard on our school. This block I used
-                        some new features in Perforce and got better.
-                    </p>
+                    <p class="software-skill-title"> Source control </p>
+                    <p class="software-skill-text"> Perforce </p>
+                </div>
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" title="Windows" />
+                    <p class="software-skill-title"> Platform </p>
+                    <p class="software-skill-text"> Windows </p>
                 </div>
             </div>
         </section>
@@ -247,10 +237,10 @@
             </div>
         </section>
 
-        <div class="findcode-github">
+        <!-- <div class="findcode-github">
             <h1>Find this project on</h1>
             <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div>
+        </div> -->
         <section class="empty-footer"></section>
     </div>
 </template>

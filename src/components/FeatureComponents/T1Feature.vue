@@ -5,8 +5,8 @@
     </video> -->
 
     <div class="feature-text-box">
-      <h1>In sheeps clothing</h1>
-      <h2>Arcade game</h2>
+      <h1>In sheep's clothing</h1>
+      <h2>VR arcade game</h2>
     </div>
   </RouterLink>
 </template>

@@ -10,6 +10,7 @@ import DescentComponent from '../components/ProjectComponents/DescentComponent.v
 import GudenuffEngine from '../components/ProjectComponents/GEComponent.vue'
 import DDComponent from '../components/ProjectComponents/DDComponent.vue'
 import RTComponent from '../components/ProjectComponents/RTComponent.vue'
+import CCComponent from '../components/ProjectComponents/CCComponent.vue'
 import InProgress from '../components/ProjectComponents/InProgressComponent.vue'
 
 const router = createRouter({
@@ -68,7 +69,12 @@ const router = createRouter({
     {
       path: '/RayTracer',
       name: 'RT',
-      component: InProgress
+      component: RTComponent
+    },
+    {
+      path: '/ColdCandy',
+      name: 'CC',
+      component: CCComponent
     }
   ]
 })

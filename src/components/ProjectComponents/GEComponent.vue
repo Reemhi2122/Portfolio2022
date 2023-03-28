@@ -30,7 +30,7 @@
                     <span class="material-symbols-outlined">schedule</span> 8 weeks
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                    <span class="material-symbols-outlined">calendar_month</span> 2022
                 </div>
             </div>
         </div>
@@ -44,10 +44,10 @@
             shoot and collect to deal with enemies and clear rooms, levels and zones...
         </p>
 
-        <div class="findcode-github">
+        <!-- <div class="findcode-github">
             <h1>Find this project on</h1>
             <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div>
+        </div> -->
         
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
@@ -55,43 +55,36 @@
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" />
-                    <p class="software-skill-text">
-                        This project was created in C++ in a custom engine.
-                        Because I was working on both the engine and gameplay for this project
-                        I got to see all aspects and was able to improve my C++ skills
-                        in a more diverse setting.
-                    </p>
+                    <p class="software-skill-title"> Language </p>
+                    <p class="software-skill-text"> C++ </p>
                 </div>
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
-                    src="/src/assets/Image/Portfolio/GE/Engine_Logo.png" title="Unreal Engine" />
-                    <p class="software-skill-text">
-                        We created this game in a custom engine created by students
-                        at my school. After I joined this project the goal was to create
-                        a game in this engine. I worked on both improving the engine and creating
-                        the game.
-                    </p>
+                    src="/src/assets/Image/Portfolio/GE/Engine_Logo.png" title="GE Engine" />
+                    <p class="software-skill-title"> Engine </p>
+                    <p class="software-skill-text"> GE Engine </p>
                 </div>
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" title="Jira" />
-                    <p class="software-skill-text">
-                        To plan this project, we used Jira to track the bi-weekly sprints
-                        and keep track of personal progress. This was the first block I worked
-                        with a dedicated producer who kept track of the planning.
-                    </p>
+                    <p class="software-skill-title"> Planning </p>
+                    <p class="software-skill-text"> Jira </p>
                 </div>
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
                     src="/src/assets/Image/Logos/Perforce.png" title="Perforce" />
-                    <p class="software-skill-text">
-                        For this project we used Perforce as our version control. This is an
-                        industry standard for game development and was usefull in collaborating
-                        together in such a big project.
-                    </p>
+                    <p class="software-skill-title"> Source control </p>
+                    <p class="software-skill-text"> Perforce </p>
+                </div>
+
+                <div class="software-skill-element">
+                    <img class="software-skill-image"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" title="Windows" />
+                    <p class="software-skill-title"> Platform </p>
+                    <p class="software-skill-text"> Windows </p>
                 </div>
             </div>
         </section>
@@ -766,10 +759,10 @@ StartTrapFunc(CrumblingTrapLeave)
             </div>
         </section>
 
-        <div class="findcode-github">
+        <!-- <div class="findcode-github">
             <h1>Find this project on</h1>
             <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div>
+        </div> -->
         <section class="empty-footer"></section>
     </div>
 </template>
