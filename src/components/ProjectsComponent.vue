@@ -2,26 +2,12 @@
   <div class="projects-grid">
     <h1 class="tab-title">Projects</h1>
 
-    <!-- <div v-if="this.showFilters" class="tab-filter">
-      <h3>Filters:</h3>
-      <div class="filter-bubbles-container">
-        <a class="filter-bubbles" href="#" @click="ToggleFilter(0)"
-          :class="filters[0] ? 'filter-active' : 'filter-non-active'">
-          <span class="material-symbols-outlined">engineering</span> Gameplay programmer
-        </a>
-        <a class="filter-bubbles" href="#" @click="ToggleFilter(1)"
-          :class="filters[1] ? 'filter-active' : 'filter-non-active'">
-          <span class="material-symbols-outlined">engineering</span> Engine programmer
-        </a>
-      </div>
-    </div> -->
-
     <div class="tab-whiteline"></div>
     <div id="projects-container-viewport">
       <div class="projects-container">
 
         <Transition>
-          <div v-if="filters[1]" class="portfolio-item large DR">
+          <div class="portfolio-item large DR">
             <RouterLink to="/DescentRaytraced">
               <div class="div-darken"></div>
               <div class="project-description">
@@ -51,7 +37,7 @@
         </Transition>
 
         <Transition>
-          <div v-if="filters[0]" class="portfolio-item medium ISC">
+          <div class="portfolio-item medium ISC">
             <RouterLink to="/InSheepsClothing">
               <div class="div-darken"></div>
               <div class="project-description">
@@ -78,7 +64,7 @@
         </Transition>
 
         <Transition>
-          <div v-if="filters[1]" class="portfolio-item medium GE">
+          <div class="portfolio-item medium GE">
             <RouterLink to="/GudenuffEngine">
               <div class="div-darken"></div>
               <div class="project-description">
@@ -90,7 +76,7 @@
                     <span class="material-symbols-outlined">engineering</span> Generalist programmer
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 11 members
+                    <span class="material-symbols-outlined">group</span> 12 members
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">schedule</span> 8 weeks
@@ -105,34 +91,7 @@
         </Transition>
 
         <Transition>
-          <div v-if="filters[0]" class="portfolio-item medium COTF">
-            <RouterLink to="/CryOfTheFox">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">Cry of the fox</p>
-                <p class="project-tags">Game | Unreal Engine | C++</p>
-
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 8 members
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 8 weeks
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition>
-
-        <Transition>
-          <div v-if="filters[0]" class="portfolio-item medium DD">
+          <div class="portfolio-item medium DD">
             <RouterLink to="/DonutDrifters">
               <div class="div-darken"></div>
               <div class="project-description">
@@ -159,7 +118,34 @@
         </Transition>
 
         <Transition>
-          <div v-if="filters[0]" class="portfolio-item medium RT">
+          <div class="portfolio-item medium CC">
+            <RouterLink to="/ColdCandy">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Cold Candy</p>
+                <p class="project-tags">Blueprints | Unreal Engine 4</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 12 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
+          <div class="portfolio-item medium RT">
             <RouterLink to="/Raytracer">
               <div class="div-darken"></div>
               <div class="project-description">
@@ -185,8 +171,35 @@
           </div>
         </Transition>
 
+        <Transition>
+          <div class="portfolio-item medium COTF">
+            <RouterLink to="/CryOfTheFox">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Cry of the fox</p>
+                <p class="project-tags">Game | Unreal Engine | C++</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 8 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
         <!-- <Transition>
-          <div v-if="filters[0]" class="portfolio-item medium RLE">
+          <div class="portfolio-item medium RLE">
             <RouterLink to="/Raytracer">
               <div class="div-darken"></div>
               <div class="project-description">
@@ -213,7 +226,7 @@
         </Transition> -->
 
         <!-- <Transition>
-          <div v-if="filters[0]" class="portfolio-item medium RTSE">
+          <div class="portfolio-item medium RTSE">
             <RouterLink to="/Raytracer">
               <div class="div-darken"></div>
               <div class="project-description">
@@ -229,94 +242,6 @@
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">schedule</span> 8 weeks
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition> -->
-
-        <Transition>
-          <div v-if="filters[0]" class="portfolio-item medium CC">
-            <RouterLink to="/ColdCandy">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">Cold Candy</p>
-                <p class="project-tags">Blueprints | Unreal Engine 4</p>
-
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 12 members
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 8 weeks
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition>
-
-        <!--
-        <Transition>
-          <div v-if="filters[0]" class="portfolio-item small RTSE">
-            <RouterLink to="/Raytracer">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">RTS Engine</p>
-                <p class="project-tags">C++ | Engine | Playstation</p>
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Engine programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition>
-
-        <Transition>
-          <div v-if="filters[0]" class="portfolio-item small RTSE">
-            <RouterLink to="/Raytracer">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">RTS Engine</p>
-                <p class="project-tags">C++ | Engine | Playstation</p>
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Engine programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition>
-
-        <Transition>
-          <div v-if="filters[0]" class="portfolio-item small RTSE">
-            <RouterLink to="/Raytracer">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">RTS Engine</p>
-                <p class="project-tags">C++ | Engine | Playstation</p>
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Engine programmer
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">calendar_month</span> 2021
@@ -378,7 +303,7 @@ export default {
 <style scoped>
 .projects-grid {
   top: 0;
-  height: 80vh;
+  height: calc(85vh - (50px + 4vh));
   width: 70%;
   position: absolute;
   margin-top: calc(50px + 4vh);
@@ -439,7 +364,7 @@ export default {
 #projects-container-viewport {
   margin-top: 1.5vh;
   overflow: hidden;
-  height: 90%;
+  height: 100%;
 }
 
 .projects-container {

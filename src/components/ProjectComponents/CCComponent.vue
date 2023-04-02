@@ -8,10 +8,15 @@
                 </div>
             </div>
 
-            <video class="project-video" poster="../../assets/Image/Portfolio/CC/img4.png" controls>
-                <source src="/src/assets/Image/Portfolio/COTF/COTF.mp4" type="video/mp4">
+            <!-- <video class="project-video" poster="../../assets/Image/Portfolio/CC/img4.png" controls>
+                <source src="" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+            </video> -->
+
+            
+            <iframe class="project-video" width="420" height="315"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
 
             <div class="indv-project-bubbles-container">
                 <div class="indv-project-bubbles">
@@ -41,10 +46,9 @@
             It's everybody's dream to be a kid in a candy factory. In cold candy you can make your dreams come true! Release your spirit animal to help solve puzzles and get candy!
         </p>
 
-        <!-- <div class="findcode-github">
-            <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div> -->
+        <iframe class="itchio" frameborder="0" src="https://itch.io/embed/1037497?linkback=true&amp;border_width=5" width="560" height="175"><a href="https://buas.itch.io/coldcandy">
+            Cold Candy by Breda University of Applied Sciences, Jip Crombag, martyrex, BountyVSGames, Holly_DNArt, 1GehaktBal1, RoselynPayne, Giralfe, Rick de Haan, Reemhi, Pipkadoodles, Veek, Dani Spaargaren</a>
+        </iframe>
 
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
@@ -92,43 +96,58 @@
             <div class="contribution-element-container">
                 <div class="contribution-element">
                     <p class="contribution-element-title">Pressure plate system</p>
-                    <!-- <video class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/FollowingAI.mp4" autoplay loop></video>
-                    <p class="contribution-text">In the game, we wanted to create a thread for the player while
-                        traversing the level. This is where we came up with the wolf that would hunt for the fox when it
-                        would see it. I created this wolf with visual AI and movement AI. If the wolf would spot you, it
-                        would follow you and depending if it will catch you it will attack or lose interest.
-                    </p> -->
+                    <video class="contribution-image"
+                        src="/src/assets/Image/Portfolio/CC/contributions/pressure_plate.mp4" autoplay loop></video>
+                    <p class="contribution-text">
+                        I created a pressure plate system where you can select an interactable, and link it to a pressure plate.
+                        This link will ensure the pressure plate will activate the interaction defined on the interactable.
+                        The pressure plate has multiple options on how you want to activate the interactable. These options include 
+                        activation when pressed, keep activated on press, and time based on pressed. 
+                        <br><br>
+                        The interactables and pressure 
+                        plates have different styling options, that the designer can change like the size of the dispenser shown in 
+                        the videos and the indicator and styling of the pressure plate changed by the function.
+                    </p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Moving platform tool</p>
-                    <!-- <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/FollowingNPC.gif">
-                    <p class="contribution-text">We wanted a NPC to follow the player and show important parts of the
-                        level to the player. eventually we decided this would be a bird that would fly around the player
-                        when stationary, when the player would walk it would fly after it and would point out or sit at
-                        important parts of the level.
-                    </p> -->
+                    <video class="contribution-image"
+                        src="/src/assets/Image/Portfolio/CC/contributions/platform_moving.mp4" autoplay loop></video>
+                    <p class="contribution-text">
+                        The moving platform was created to elevate the player to new positions and create cool puzzles. 
+                        But we needed a system where the designers could change all the properties dynamically. 
+                        So I created a platform system where the designers could adjust the path, speed, design, and waiting 
+                        time on return. It could also be linked to a pressure plate like all the other interactables to start 
+                        it on activation.
+                        <br><br>
+                        I also had to make sure the player could correctly interact with the platform, pushing the player instead 
+                        of going through it. And detect when it would crush the player. This would respawn the player to the 
+                        starting position.
+                    </p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Pipe tool</p>
-                    <!-- <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/DialogueSystem.gif">
-                    <p class="contribution-text">As an objective we decided that the player would get requests from
-                        different animals to help them with something they need. If they did this they would get
-                        something in return. For example the bird could give him a key that he couldn't reach, but the
-                        player had to do something for the bird first. I created the dialogue system for this.
-                    </p> -->
+                    <video class="contribution-image"
+                        src="/src/assets/Image/Portfolio/CC/contributions/pipe.mp4" autoplay loop></video>
+                    <p class="contribution-text">
+                        The pipe tool was created to provide clarity for the player, so the player could see what the 
+                        pressure plate is attached to and indicate if it's activated. I created this tool with the 
+                        spline tool integrated into UE4 so the designers and artists could adjust the pipes themself 
+                        and change them during playtesting. Later we also added the timer element, which would slowly 
+                        fill up the pipe until the timer is up, then it would drain again.
+                    </p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Cube moving / selecting</p>
-                    <!-- <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/DialogueSystem.gif">
-                    <p class="contribution-text">As an objective we decided that the player would get requests from
-                        different animals to help them with something they need. If they did this they would get
-                        something in return. For example the bird could give him a key that he couldn't reach, but the
-                        player had to do something for the bird first. I created the dialogue system for this.
-                    </p> -->
+                    <video class="contribution-image"
+                        src="/src/assets/Image/Portfolio/CC/contributions/cube.mp4" autoplay loop></video>
+                    <p class="contribution-text">
+                        The most important mechanic to get right was to move the block and drag it around the level. 
+                        This had to feel right to make the game feel good. I worked on the range and selecting, and 
+                        following the cursor. This came with some interesting challenges involving physics in UE4. 
+                        After a lot of playtesting and talking to the designers, we got the mechanic down with some 
+                        forgiveness in dragging.
+                    </p>
                 </div>
             </div>
         </section>
@@ -281,10 +300,9 @@
             </div>
         </section>
 
-        <!-- <div class="findcode-github">
-            <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div> -->
+        <iframe class="itchio" frameborder="0" src="https://itch.io/embed/1037497?linkback=true&amp;border_width=5" width="560" height="175"><a href="https://buas.itch.io/coldcandy">
+            Cold Candy by Breda University of Applied Sciences, Jip Crombag, martyrex, BountyVSGames, Holly_DNArt, 1GehaktBal1, RoselynPayne, Giralfe, Rick de Haan, Reemhi, Pipkadoodles, Veek, Dani Spaargaren</a>
+        </iframe>
         <section class="empty-footer"></section>
     </div>
 </template>
@@ -294,6 +312,10 @@ import Image0 from '/src/assets/Image/Portfolio/CC/img0.png'
 import Image1 from '/src/assets/Image/Portfolio/CC/img1.png'
 import Image2 from '/src/assets/Image/Portfolio/CC/img2.png'
 import Image3 from '/src/assets/Image/Portfolio/CC/img3.png'
+import Image4 from '/src/assets/Image/Portfolio/CC/img4.png'
+import Image5 from '/src/assets/Image/Portfolio/CC/img5.png'
+import Image6 from '/src/assets/Image/Portfolio/CC/img6.png'
+import Image7 from '/src/assets/Image/Portfolio/CC/img7.png'
 
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
 
@@ -318,6 +340,22 @@ export default {
             {
                 src: Image3,
                 index: 3
+            },
+            {
+                src: Image4,
+                index: 4
+            },
+            {
+                src: Image5,
+                index: 5
+            },
+            {
+                src: Image6,
+                index: 6
+            },            
+            {
+                src: Image7,
+                index: 7
             }
             ],
         }

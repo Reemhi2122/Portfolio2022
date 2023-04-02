@@ -24,13 +24,21 @@
                         <p class="about-text">
                             <b>I am a passionate programmer driven by a love for gaming.</b>
                             <br><br>
-                            Hi, I'm Stan Vogels, a game programming student at Breda University of Applied Sciences
-                            (BUas) in the Netherlands.
-                            Fueled by my curiosity and love for gaming, I discovered my passion for programming. I've
+                            
+                            Hi, I'm Stan Vogels, a game programming student at 
+                            Breda University of Applied Sciences
+                            (<a style="color: white; font-weight: 200;" href="https://www.buas.nl/en/programmes/creative-media-and-game-technologies" target="_blank">BUas</a>)
+                            in the Netherlands. Fueled by my curiosity and love for gaming, 
+                            I discovered my passion for programming. I've
                             sharpened my skills in both game and web development,
                             always eager to bring new ideas and experiences to life through code.
                             I'm driven to turn my love for gaming into a career in programming and I can't wait to see
                             where this journey will take me.
+                            <br><br>
+                            I am currently in my third year of studies and anticipate graduating in July 2024.
+                            <br><br>
+                            <u>I am actively looking for an internship position as a C++ gameplay programmer</u>, ideally for a 
+                            duration of six months to one year. 
                         </p>
                     </div>
 

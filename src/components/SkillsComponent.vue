@@ -6,58 +6,107 @@
             <div class="skill-container">
                 <h1>Languages</h1>
                 <ul class="SkillIcons">
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
-                            title="C++" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
-                            title="C#" /></li>
-                    <li class="TextItem"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-                            title="C" /></li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                        title="C++" />
+                        <p class="skill-title">C++</p>
+                        <p class="skill-level">advanced</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                        title="C#" />
+                        <p class="skill-title">C#</p>
+                        <p class="skill-level">intermediate</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                        title="C" />
+                        <p class="skill-title">C</p>
+                        <p class="skill-level">intermediate</p>
+                    </li>
                 </ul>
             </div>
 
             <div class="skill-container">
                 <h1>Platforms</h1>
                 <ul class="SkillIcons">
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
-                            title="Windows" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg"
-                            title="Raspberry Pi" /></li>
-                    <li class="TextItem"><img src="../assets/Image/Logos/PlayStation.svg" title="PlayStation" /></li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"
+                            title="Windows" />
+                        <p class="skill-title">Windows</p>
+                        <p class="skill-level">advanced</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="../assets/Image/Logos/PlayStation.svg" title="PlayStation" />
+                        <p class="skill-title">Playstation</p>
+                        <p class="skill-level">intermediate</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg"
+                            title="Raspberry Pi" />
+                        <p class="skill-title">Raspberry Pi</p>
+                        <p class="skill-level">Beginner</p>
+                    </li>
                 </ul>
             </div>
 
             <div class="skill-container">
                 <h1>Tools</h1>
                 <ul class="SkillIcons">
-                    <li class="TextItem"><img class="white-image"
+                    <li class="TextItem">
+                        <img class="white-image"
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg"
-                            title="Unreal Engine" /></li>
-                    <li class="TextItem"><img class="white-image"
+                            title="Unreal Engine" />
+                        <p class="skill-title">Unreal Engine</p>
+                        <p class="skill-level">intermediate</p>
+                        </li>
+                    <li class="TextItem">
+                        <img class="white-image"
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
-                            title="Unity" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" />
+                            title="Unity" />
+                        <p class="skill-title">Unity</p>
+                        <p class="skill-level">advanced</p>
+                        </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" />
+                        <p class="skill-title">Git</p>
+                        <p class="skill-level">advanced</p>
                     </li>
-                    <li class="TextItem"><img src="/src/assets/Image/Logos/Perforce.png" title="Perforce" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-                            title="Jira / Scrum" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
-                            title="Visual Studio" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                            title="Visual Studio Code" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg"
-                            title="Cmake" /></li>
-                    <li class="TextItem"><img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
-                            title="Adobe Photoshop" /></li>
+                    <li class="TextItem">
+                        <img src="/src/assets/Image/Logos/Perforce.png" title="Perforce" />
+                        <p class="skill-title">Perforce</p>
+                        <p class="skill-level">intermediate</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+                            title="Jira / Scrum" />
+                        <p class="skill-title">Jira</p>
+                        <p class="skill-level">intermediate</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
+                            title="Visual Studio" />
+                        <p class="skill-title">Visual Studio</p>
+                        <p class="skill-level">advanced</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                            title="Visual Studio Code" />
+                        <p class="skill-title">VS Code</p>
+                        <p class="skill-level">advanced</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg"
+                            title="Visual Studio Code" />
+                        <p class="skill-title">CMake</p>
+                        <p class="skill-level">Beginner</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                            title="Adobe Photoshop" />
+                        <p class="skill-title">Adobe PS</p>
+                        <p class="skill-level">Beginner</p>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -144,6 +193,18 @@ export default {
     max-width: 100px;
 }
 
+.skill-title{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.skill-level{
+    margin-top: -4px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
 .white-image {
     filter: brightness(0) invert(1);
 }
@@ -157,6 +218,10 @@ export default {
 
     .scroll-container {
         height: 80vh;
+    }
+
+    .skill-title{
+        font-size: 12px;
     }
 }
 </style>

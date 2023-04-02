@@ -1,19 +1,19 @@
 <template>
   <div class="carousel-container">
       <button @click="prev">
-        <span class="material-symbols-outlined">
+        <span style="width: 20px;" class="material-symbols-outlined">
         arrow_back_ios
         </span>
       </button>
       <div class="carousel">
-      <div class="inner" ref="inner" :style="innerStyles">
-          <div class="card" v-for="card in cards" :key="card">
-              <img class="inner-card" :src="card.src" :key="card.index">
-          </div>
-      </div>
+        <div class="inner" ref="inner" :style="innerStyles">
+            <div class="card" v-for="card in cards" :key="card">
+                <testcomp class="inner-card" :src="card.src" :key="card.index"/>
+            </div>
+        </div>
       </div>
       <button @click="next">
-        <span class="material-symbols-outlined">
+        <span style="width: 20px;" class="material-symbols-outlined">
         arrow_forward_ios
         </span>
       </button>
@@ -21,6 +21,8 @@
 </template>
 
 <script>
+import testcomp from '../IndividualComponents/testcomp.vue'
+
   export default {
     data () {
       return {
@@ -39,9 +41,9 @@
     },
     methods: {
       setStep () {
-        const innerWidth = this.$refs.inner.scrollWidth
-        const totalCards = this.cards.length
-        this.step = `${innerWidth / totalCards}px`
+        const innerWidth = this.$refs.inner.scrollWidth;
+        const totalCards = this.cards.length;
+        this.step = `${innerWidth / totalCards}px`;
         this.resetTranslate();
       },
       next () {
@@ -91,6 +93,9 @@
           transform: `translateX(-${this.step})`
         }
       }
+    },
+    components:{
+      testcomp
     },
     props: ['cards']
   }

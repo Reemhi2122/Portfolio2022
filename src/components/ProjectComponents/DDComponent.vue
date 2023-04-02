@@ -43,10 +43,9 @@
             off by your opponement you lose all your stars.
         </p>
 
-        <!-- <div class="findcode-github">
-            <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div> -->
+        <iframe class="itchio" src="https://itch.io/embed/1309796" width="552" height="167" frameborder="0"><a href="https://nradu.itch.io/donut-drifters">
+            Donut Drifters by Radu Nenu, Olivier Dral</a>
+        </iframe>
 
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
@@ -237,10 +236,9 @@
             </div>
         </section>
 
-        <!-- <div class="findcode-github">
-            <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div> -->
+        <iframe class="itchio" src="https://itch.io/embed/1309796" width="552" height="167" frameborder="0"><a href="https://nradu.itch.io/donut-drifters">
+            Donut Drifters by Radu Nenu, Olivier Dral</a>
+        </iframe>
         <section class="empty-footer"></section>
     </div>
 </template>
@@ -321,11 +319,4 @@ export default {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DD/DDFront.jpg');
 }
 
-@media (max-width: 1000px) {
-    .contribution-element-container {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-gap: 25px 5%;
-    }
-}
 </style>>

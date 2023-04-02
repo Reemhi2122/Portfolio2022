@@ -1045,6 +1045,12 @@ export default {
   width: 300px;
 }
 
+.itchio{
+  margin-top: 50px;
+  width: 40%;
+  margin-left: 27.5%;
+}
+
 .empty-footer {
   margin-top: 50px;
   height: 100px;
@@ -1120,6 +1126,11 @@ export default {
     margin-top: -4vw;
     object-fit: cover;
   }
+
+  .itchio{
+  width: 80%;
+  margin-left: 10%;
+}
 }
 
 @media (max-width: 600px) {
@@ -1127,6 +1138,11 @@ export default {
     margin-top: 50px;
     width: 100%;
     margin-left: 0%;
+  }
+
+  .software-skill-element {
+    width: 45%;
+    margin-right: 2.5%;
   }
 }
 </style>

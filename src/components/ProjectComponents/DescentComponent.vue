@@ -359,11 +359,4 @@ export default {
 .header-background {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DR/Banner.png');
 }
-
-@media (max-width: 1000px) {
-    .contribution-element-container {
-        grid-template-rows: repeat(3, auto);
-        grid-gap: 25px 5%;
-    }
-}
 </style>>

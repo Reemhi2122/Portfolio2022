@@ -24,7 +24,7 @@
                     <span class="material-symbols-outlined">build</span> Custom Engine
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">group</span>11 members
+                    <span class="material-symbols-outlined">group</span>12 members
                 </div>
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">schedule</span> 8 weeks
@@ -44,10 +44,9 @@
             shoot and collect to deal with enemies and clear rooms, levels and zones...
         </p>
 
-        <!-- <div class="findcode-github">
-            <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div> -->
+        <iframe class="itchio" frameborder="0" src="https://itch.io/embed/1572705?linkback=true" width="552" height="167"><a href="https://buas.itch.io/gudenuff-drumsofharmony">
+            Setsuko: Drums of Harmony by Breda University of Applied Sciences, Piinda, Clockweiz, lamci, Reemhi, Marivahlio, NeoSup, lyubomir_kostadinov, Alucard</a>
+        </iframe>
         
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
@@ -623,8 +622,8 @@ StartTrapFunc(CrumblingTrapLeave)
         <section class="team-section">
             <h2 class="section-header">The team</h2>
             <div class="basic-info">
-                <p>Team size: 11 developers</p>
-                <p>Programmers: 7 | Artists: 2 | Designers: 2
+                <p>Team size: 12 developers</p>
+                <p>Programmers: 8 | Artists: 2 | Designers: 2
                 </p>
             </div>
             <div class="team-container">
@@ -679,15 +678,15 @@ StartTrapFunc(CrumblingTrapLeave)
 
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Stan Vogels | Programmer</p>
-                            <a href="https://www.linkedin.com/in/stanvogels/" target="_blank"><img
+                            <p>Sam Boots | PR lead / programmer</p>
+                            <a href="https://www.linkedin.com/in/sam-boots-7b256b15b/" target="_blank"><img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
                     </div>
 
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Maria Ioannou | Artist</p>
+                            <p>Stan Vogels | Programmer</p>
                             <a href="https://www.linkedin.com/in/maria-ioannou-0898841b8/" target="_blank"><img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
@@ -695,6 +694,13 @@ StartTrapFunc(CrumblingTrapLeave)
                 </div>
 
                 <div class="team-container-box">
+                    <div class="team-element">
+                        <div class="team-name">
+                            <p>Maria Ioannou | Artist</p>
+                            <a href="https://www.linkedin.com/in/maria-ioannou-0898841b8/" target="_blank"><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
+                        </div>
+                    </div>
                     <div class="team-element">
                         <div class="team-name">
                             <p>Rembrandt van Leeuwen | Artist</p>
@@ -705,7 +711,7 @@ StartTrapFunc(CrumblingTrapLeave)
 
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Wesley Cats | Designer</p>
+                            <p>Wesley Cats | Producer</p>
                             <a href="https://www.linkedin.com/in/wesley-cats-games/" target="_blank"><img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
@@ -713,7 +719,7 @@ StartTrapFunc(CrumblingTrapLeave)
 
                     <div class="team-element">
                         <div class="team-name">
-                            <p>Luca Yavuzok | Designer</p>
+                            <p>Luca Yavuzok | Design Lead</p>
                             <a href="https://www.linkedin.com/in/luca-yavuzok-04067815b/" target="_blank"><img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
@@ -759,10 +765,9 @@ StartTrapFunc(CrumblingTrapLeave)
             </div>
         </section>
 
-        <!-- <div class="findcode-github">
-            <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div> -->
+        <iframe class="itchio" frameborder="0" src="https://itch.io/embed/1572705?linkback=true" width="552" height="167"><a href="https://buas.itch.io/gudenuff-drumsofharmony">
+            Setsuko: Drums of Harmony by Breda University of Applied Sciences, Piinda, Clockweiz, lamci, Reemhi, Marivahlio, NeoSup, lyubomir_kostadinov, Alucard</a>
+        </iframe>
         <section class="empty-footer"></section>
     </div>
 </template>
@@ -875,12 +880,4 @@ export default {
 .header-background {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/GE/banner.png');
 }
-
-@media (max-width: 1000px) {
-    .contribution-element-container {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-gap: 25px 5%;
-    }
-}
-</style>>
+</style>
