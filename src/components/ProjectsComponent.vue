@@ -91,25 +91,25 @@
         </Transition>
 
         <Transition>
-          <div class="portfolio-item medium DD">
-            <RouterLink to="/DonutDrifters">
+          <div class="portfolio-item medium RT">
+            <RouterLink to="/Raytracer">
               <div class="div-darken"></div>
               <div class="project-description">
-                <p class="project-title">Donut Drifters</p>
-                <p class="project-tags">Game | Unreal Engine | 2021</p>
+                <p class="project-title">Raytracer</p>
+                <p class="project-tags">C++ | Math</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                    <span class="material-symbols-outlined">engineering</span> Generalist programmer
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 9 members
+                    <span class="material-symbols-outlined">group</span> 1 members
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 2 weeks
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                    <span class="material-symbols-outlined">calendar_month</span> 2020
                   </div>
                 </div>
               </div>
@@ -145,33 +145,6 @@
         </Transition>
 
         <Transition>
-          <div class="portfolio-item medium RT">
-            <RouterLink to="/Raytracer">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">Raytracer</p>
-                <p class="project-tags">C++ | Math</p>
-
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Generalist programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 1 members
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 8 weeks
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2020
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition>
-
-        <Transition>
           <div class="portfolio-item medium COTF">
             <RouterLink to="/CryOfTheFox">
               <div class="div-darken"></div>
@@ -188,6 +161,33 @@
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">schedule</span> 8 weeks
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
+          <div class="portfolio-item medium DD">
+            <RouterLink to="/DonutDrifters">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Donut Drifters</p>
+                <p class="project-tags">Game | Unreal Engine | 2021</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 9 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 2 weeks
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">calendar_month</span> 2021

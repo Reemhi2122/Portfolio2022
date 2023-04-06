@@ -94,7 +94,7 @@
                 <div class="contribution-element">
                     <p class="contribution-element-title">Combat System</p>
                     <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/GE/contributions/GifCombatSystem.gif">
+                        src="/src/assets/Image/Portfolio/GE/contributions/GifCombatSystem.gif"/>
                     <p class="contribution-text">
                         When the player walks inside of a room which is defined by a door
                         and an enclosed area with trees. We wanted the player to enter a combat state.
@@ -309,7 +309,7 @@ namespace gudenuff {
                 <div class="contribution-element">
                     <p class="contribution-element-title">Enemy spawning</p>
                     <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/GE/contributions/GifEnemySpawning.gif">
+                        src="/src/assets/Image/Portfolio/GE/contributions/GifEnemySpawning.gif"/>
                     <p class="contribution-text">
                         I was responsible for the spawning of all the enemies once the player enters
                         the room. This was part of the combat system but used different systems. We had
@@ -321,7 +321,7 @@ namespace gudenuff {
                 <div class="contribution-element">
                     <p class="contribution-element-title">Weapon creation tool</p>
                     <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/GE/contributions/GifWeaponCreationTool.gif">
+                        src="/src/assets/Image/Portfolio/GE/contributions/GifWeaponCreationTool.gif"/>
                     <p class="contribution-text">
                         We wanted a dynamic way of adjusting weapons in the game. For this, I made an
                         editor for in the engine to create multiple weapons fast. Sadly, this got discontinued
@@ -549,7 +549,7 @@ namespace gudenuff {
                 <div class="contribution-element">
                     <p class="contribution-element-title">Crumbling tile</p>
                     <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/GE/contributions/GifCrumbling.gif">
+                        src="/src/assets/Image/Portfolio/GE/contributions/GifCrumbling.gif"/>
                     <p class="contribution-text">
                         I was also involved in creating some of the traps for the game. This was done
                         using a trap system, and I had to create the crumbling trap. This trap would be walkable
@@ -773,6 +773,8 @@ StartTrapFunc(CrumblingTrapLeave)
 </template>
 
 <script>
+import expandableimage from '../IndividualComponents/expandableimage.vue'
+
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-csharp';
@@ -872,6 +874,7 @@ export default {
     },
     components:{
         CarrouselComp,
+        expandableimage,
     }
 }
 </script>

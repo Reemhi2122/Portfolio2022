@@ -14,8 +14,8 @@
             </video> -->
 
             
-            <iframe class="project-video" width="420" height="315"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            <iframe poster="../../assets/Image/Portfolio/CC/img4.png" class="project-video" width="420" height="315"
+            src="https://www.youtube.com/embed/K4WDixP40vM">
             </iframe>
 
             <div class="indv-project-bubbles-container">

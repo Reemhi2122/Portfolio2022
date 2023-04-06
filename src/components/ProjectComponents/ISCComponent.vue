@@ -804,11 +804,12 @@ export default {
 
 .project-video {
   width: 70%;
-  height: 22.5vw;
+  height: 25vw;
   margin-left: 15%;
   border-radius: 20px;
   margin-top: -4vw;
   object-fit: cover;
+  background: black;
 }
 
 .indv-project-bubbles-container {

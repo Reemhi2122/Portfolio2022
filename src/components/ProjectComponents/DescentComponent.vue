@@ -8,7 +8,7 @@
                 </div>
             </div>
 
-            <video class="project-video" poster="../../assets/Image/Portfolio/DR/temp.png" controls>
+            <video class="project-video" controls>
                 <source src="/src/assets/Image/Portfolio/DR/DescentTrailer.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -21,13 +21,13 @@
                     <span class="material-symbols-outlined">code</span> C++ | C
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 8 members
+                    <span class="material-symbols-outlined">group</span> 7 members
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 4 weeks
+                    <span class="material-symbols-outlined">schedule</span> 1 year
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2020
+                    <span class="material-symbols-outlined">calendar_month</span> 2022 / 2023
                 </div>
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">Devices</span> Windows
