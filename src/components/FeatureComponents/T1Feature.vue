@@ -7,6 +7,22 @@
     <div class="feature-text-box">
       <h1>In sheep's clothing</h1>
       <h2>VR arcade game</h2>
+    
+      <div class="project-bubbles-container-feature">
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">group</span> 2 members
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">schedule</span> 6 months
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">calendar_month</span> 2022/2023
+        </div>
+      </div>
+
     </div>
   </RouterLink>
 </template>
@@ -35,15 +51,6 @@ export default {
   background-size: cover;
   position: fixed;
   color: white;
-}
-
-.video {
-  height: 100%;
-  width: 177.77777778vh;
-  /* 100 * 16 / 9 */
-  min-width: 100%;
-  min-height: 56.25vw;
-  /* 100 * 9 / 16 */
 }
 
 .feature-text-box {

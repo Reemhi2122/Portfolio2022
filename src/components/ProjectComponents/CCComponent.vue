@@ -8,15 +8,10 @@
                 </div>
             </div>
 
-            <!-- <video class="project-video" poster="../../assets/Image/Portfolio/CC/img4.png" controls>
-                <source src="" type="video/mp4">
+            <video class="project-video" poster="../../assets/Image/Portfolio/CC/img4.png" controls>
+                <source src="/src/assets/Image/Portfolio/CC/CCVideo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video> -->
-
-            
-            <iframe poster="../../assets/Image/Portfolio/CC/img4.png" class="project-video" width="420" height="315"
-            src="https://www.youtube.com/embed/K4WDixP40vM">
-            </iframe>
+            </video>
 
             <div class="indv-project-bubbles-container">
                 <div class="indv-project-bubbles">
@@ -43,14 +38,14 @@
         <CarrouselComp :cards="this.images" class="carousel-comp"/>
 
         <p class="project-text">
-            It's everybody's dream to be a kid in a candy factory. In cold candy you can make your dreams come true! Release your spirit animal to help solve puzzles and get candy!
+            It's everybody's dream to be a kid in a candy factory. In cold candy, you can make your dreams come true! Release your spirit animal to help solve puzzles and get candy!
         </p>
 
         <iframe class="itchio" frameborder="0" src="https://itch.io/embed/1037497?linkback=true&amp;border_width=5" width="560" height="175"><a href="https://buas.itch.io/coldcandy">
             Cold Candy by Breda University of Applied Sciences, Jip Crombag, martyrex, BountyVSGames, Holly_DNArt, 1GehaktBal1, RoselynPayne, Giralfe, Rick de Haan, Reemhi, Pipkadoodles, Veek, Dani Spaargaren</a>
         </iframe>
 
-        <section class="software-skills">
+        <section class="software-skills"> 
             <h2 class="section-header">Software skills improved this project</h2>
             <div class="software-skills-icons">
 
@@ -96,8 +91,8 @@
             <div class="contribution-element-container">
                 <div class="contribution-element">
                     <p class="contribution-element-title">Pressure plate system</p>
-                    <video class="contribution-image"
-                        src="/src/assets/Image/Portfolio/CC/contributions/pressure_plate.mp4" autoplay loop></video>
+                    <Expandablevideo class="contribution-image"
+                        :src="this.contributionImages[0]" autoplay loop></Expandablevideo>
                     <p class="contribution-text">
                         I created a pressure plate system where you can select an interactable, and link it to a pressure plate.
                         This link will ensure the pressure plate will activate the interaction defined on the interactable.
@@ -108,11 +103,12 @@
                         plates have different styling options, that the designer can change like the size of the dispenser shown in 
                         the videos and the indicator and styling of the pressure plate changed by the function.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Moving platform tool</p>
-                    <video class="contribution-image"
-                        src="/src/assets/Image/Portfolio/CC/contributions/platform_moving.mp4" autoplay loop></video>
+                    <Expandablevideo class="contribution-image"
+                        :src="this.contributionImages[1]" autoplay loop></Expandablevideo>
                     <p class="contribution-text">
                         The moving platform was created to elevate the player to new positions and create cool puzzles. 
                         But we needed a system where the designers could change all the properties dynamically. 
@@ -124,11 +120,12 @@
                         of going through it. And detect when it would crush the player. This would respawn the player to the 
                         starting position.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Pipe tool</p>
-                    <video class="contribution-image"
-                        src="/src/assets/Image/Portfolio/CC/contributions/pipe.mp4" autoplay loop></video>
+                    <Expandablevideo class="contribution-image"
+                        :src="this.contributionImages[2]" autoplay loop></Expandablevideo>
                     <p class="contribution-text">
                         The pipe tool was created to provide clarity for the player, so the player could see what the 
                         pressure plate is attached to and indicate if it's activated. I created this tool with the 
@@ -136,11 +133,12 @@
                         and change them during playtesting. Later we also added the timer element, which would slowly 
                         fill up the pipe until the timer is up, then it would drain again.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Cube moving / selecting</p>
-                    <video class="contribution-image"
-                        src="/src/assets/Image/Portfolio/CC/contributions/cube.mp4" autoplay loop></video>
+                    <expandablevideo class="contribution-image"
+                    :src="this.contributionImages[3]" autoplay loop></expandablevideo>
                     <p class="contribution-text">
                         The most important mechanic to get right was to move the block and drag it around the level. 
                         This had to feel right to make the game feel good. I worked on the range and selecting, and 
@@ -148,6 +146,7 @@
                         After a lot of playtesting and talking to the designers, we got the mechanic down with some 
                         forgiveness in dragging.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
             </div>
         </section>
@@ -278,23 +277,22 @@
                     </p>
                 </div>
                 <div class="learned-element">
-                    <h3>Cross discipline collaboration</h3>
+                    <h3>Cross-discipline collaboration</h3>
                     <p>
                         Collaborating with a team of 3 programmers, 4 designers, and 4 artists provided me 
                         with a realistic experience of indie game development. Working with different 
                         disciplines required effective planning and communication. I had to assist 
                         designers with tool setup and work with artists to import assets correctly. This
-                         valuable experience taught me to work effectively in a multidisciplinary team environment.
+                        valuable experience taught me to work effectively in a multidisciplinary team environment.
                     </p>
                 </div>
                 <div class="learned-element">
                     <h3>Unreal Engine 4</h3>
                     <p>
-                        My first project using Unreal Engine 4 taught me valuable skills on working with C++
-                        and Blueprint-based engines. I learned a lot about working in Unreal Engine 4 and gained
-                        insights into creating games with it. Although Unreal Engine 5 was not available at 
-                        the time of the project, the skills I aquired when working in UE4 have been useful 
-                        for later project in UE5.
+                        My first project using Unreal Engine 4 taught me valuable skills in working with C++ and 
+                        Blueprint-based engines. I learned a lot about working in Unreal Engine 4 and gained insights 
+                        into creating games with it. Although Unreal Engine 5 was not available at the time of the 
+                        project, the skills I acquired when working in UE4 have been useful for later projects in UE5.
                     </p>
                 </div>
             </div>
@@ -317,7 +315,13 @@ import Image5 from '/src/assets/Image/Portfolio/CC/img5.png'
 import Image6 from '/src/assets/Image/Portfolio/CC/img6.png'
 import Image7 from '/src/assets/Image/Portfolio/CC/img7.png'
 
-import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
+import con0 from "/src/assets/Image/Portfolio/CC/contributions/pressure_plate.mp4";
+import con1 from "/src/assets/Image/Portfolio/CC/contributions/platform_moving.mp4";
+import con2 from "/src/assets/Image/Portfolio/CC/contributions/pipe.mp4";
+import con3 from "/src/assets/Image/Portfolio/CC/contributions/cube.mp4";
+
+import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue'
+import Expandablevideo from '../IndividualComponents/ExpandableVideo.vue'
 
 export default {
     data() {
@@ -335,7 +339,7 @@ export default {
             },
             {
                 src: Image2,
-                index: 2
+                index: 2    
             },
             {
                 src: Image3,
@@ -357,6 +361,12 @@ export default {
                 src: Image7,
                 index: 7
             }
+            ],
+            contributionImages: [
+                con0,
+                con1,
+                con2,
+                con3
             ],
         }
     },
@@ -389,6 +399,7 @@ export default {
     },
     components:{
         CarrouselComp,
+        Expandablevideo
     }
 }
 </script>
@@ -405,4 +416,4 @@ export default {
         grid-gap: 25px 5%;
     }
 }
-</style>>
+</style>

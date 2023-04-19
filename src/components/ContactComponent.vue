@@ -6,7 +6,7 @@
 
             <div class="about-grid">
                 <div class="about-container">
-                    <img class="about-picture" src="/src/assets/Image/Stan/Stan3.jpg">
+                    <img class="about-picture" src="/src/assets/Image/Stan/Stan3New.png">
                     <p class="contact-text"><b>E-mail:</b><br>stanvogels@live.nl</p>
                     <div>
                         <a href="https://www.linkedin.com/in/stanvogels/"><img

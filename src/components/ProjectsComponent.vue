@@ -11,8 +11,8 @@
             <RouterLink to="/DescentRaytraced">
               <div class="div-darken"></div>
               <div class="project-description">
-                <p class="project-title">Descent raytraced</p>
-                <p class="project-tags">Game-rework | C / C++ | Playstation</p>
+                <p class="project-title">Descent raytraced [WIP]</p>
+                <p class="project-tags">Game-rework | C | C++</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
@@ -96,11 +96,11 @@
               <div class="div-darken"></div>
               <div class="project-description">
                 <p class="project-title">Raytracer</p>
-                <p class="project-tags">C++ | Math</p>
+                <p class="project-tags">Rendering | C++ | Math</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Generalist programmer
+                    <span class="material-symbols-outlined">engineering</span> Graphics programmer
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">group</span> 1 members
@@ -118,12 +118,39 @@
         </Transition>
 
         <Transition>
+          <div class="portfolio-item medium COTF">
+            <RouterLink to="/CryOfTheFox">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">Cry of the fox</p>
+                <p class="project-tags">Game | Unreal Engine | Blueprint | C++</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 8 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 8 weeks
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2021
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
           <div class="portfolio-item medium CC">
             <RouterLink to="/ColdCandy">
               <div class="div-darken"></div>
               <div class="project-description">
                 <p class="project-title">Cold Candy</p>
-                <p class="project-tags">Blueprints | Unreal Engine 4</p>
+                <p class="project-tags">Game | Unreal Engine 4 | Blueprints</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
@@ -145,12 +172,12 @@
         </Transition>
 
         <Transition>
-          <div class="portfolio-item medium COTF">
-            <RouterLink to="/CryOfTheFox">
+          <div class="portfolio-item medium DD">
+            <RouterLink to="/DonutDrifters">
               <div class="div-darken"></div>
               <div class="project-description">
-                <p class="project-title">Cry of the fox</p>
-                <p class="project-tags">Game | Unreal Engine | C++</p>
+                <p class="project-title">Donut Drifters</p>
+                <p class="project-tags">Game | Unreal Engine 4 | 2021</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
@@ -158,33 +185,6 @@
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">group</span> 8 members
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 8 weeks
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition>
-
-        <Transition>
-          <div class="portfolio-item medium DD">
-            <RouterLink to="/DonutDrifters">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">Donut Drifters</p>
-                <p class="project-tags">Game | Unreal Engine | 2021</p>
-
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 9 members
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">schedule</span> 2 weeks
@@ -197,61 +197,6 @@
             </RouterLink>
           </div>
         </Transition>
-
-        <!-- <Transition>
-          <div class="portfolio-item medium RLE">
-            <RouterLink to="/Raytracer">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">Roguelike engine</p>
-                <p class="project-tags">C++ | Engine</p>
-
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Engine Programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 8 members
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 8 weeks
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition> -->
-
-        <!-- <Transition>
-          <div class="portfolio-item medium RTSE">
-            <RouterLink to="/Raytracer">
-              <div class="div-darken"></div>
-              <div class="project-description">
-                <p class="project-title">RTS Engine</p>
-                <p class="project-tags">C++ | Engine | Playstation</p>
-
-                <div class="project-bubbles-container">
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Engine programmer
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 3 members
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 8 weeks
-                  </div>
-                  <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2021
-                  </div>
-                </div>
-              </div>
-            </RouterLink>
-          </div>
-        </Transition> -->
-
       </div>
     </div>
   </div>
@@ -303,26 +248,17 @@ export default {
 <style scoped>
 .projects-grid {
   top: 0;
-  height: calc(85vh - (50px + 4vh));
   width: 70%;
   position: absolute;
   margin-top: calc(50px + 4vh);
+  height: calc(92.5vh - (50px + 4vh));
   margin-left: 15%;
-}
-
-.tab-filter {
-  display: inline-block;
-  float: right;
 }
 
 .tab-filter>h3 {
   color: white;
   margin-left: 10px;
   font-weight: 100;
-}
-
-.filter-bubbles-container {
-  display: flex;
 }
 
 .filter-bubbles {
@@ -363,8 +299,8 @@ export default {
 
 #projects-container-viewport {
   margin-top: 1.5vh;
+  height: calc(100% - (1.5vh + 52px + 2px));
   overflow: hidden;
-  height: 100%;
 }
 
 .projects-container {
@@ -439,7 +375,7 @@ export default {
   background-image: url(/src/assets/Image/Portfolio/DR/Banner.png);
 }
 .portfolio-item.RT {
-  background-image: url(/src/assets/Image/Portfolio/RT/RT7.jpg);
+  background-image: url(/src/assets/Image/Portfolio/RT/RT8.jpg);
 }
 .portfolio-item.RLE {
   background-image: url(/src/assets/Image/Portfolio/RLE/RLE.jpg);

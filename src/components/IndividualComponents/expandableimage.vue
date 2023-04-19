@@ -114,7 +114,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .expandable-image {
     position: relative;
     transition: 0.25s opacity;

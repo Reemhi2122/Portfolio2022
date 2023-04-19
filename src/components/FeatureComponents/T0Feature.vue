@@ -3,6 +3,22 @@
     <div class="feature-text-box">
       <h1>Gudenuff Engine - Setsuko</h1>
       <h2>Game created in custom engine</h2>
+
+      <div class="project-bubbles-container-feature">
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">engineering</span> Generalist programmer
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">group</span> 12 members
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">schedule</span> 8 weeks
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">calendar_month</span> 2022
+        </div>
+      </div>
+
     </div>
   </RouterLink>
 </template>
@@ -21,7 +37,7 @@
 
 <style scoped>
 .feature-project{
-  background-image: url('/src/Assets/Image/Portfolio/GE/GEHeader.jpg');
+  background-image: url('/src/Assets/Image/Portfolio/GE/GEHeaderNoLogo.jpg');
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -37,7 +53,6 @@
   right:0;
   margin-right: 25px;;
   margin-bottom: 20px;
-  width: 800px;
   text-align: right;
 }
 
@@ -60,4 +75,4 @@
     margin-right: 10px;
   }
 }
-</style>>
+</style>

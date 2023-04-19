@@ -15,7 +15,7 @@
 
             <div class="indv-project-bubbles-container">
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Generalist programmer
+                    <span class="material-symbols-outlined">engineering</span> Graphics programmer
                 </div>
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">code</span> C++
@@ -59,9 +59,9 @@
 
                 <div class="software-skill-element">
                     <img class="software-skill-image"
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" title="Jira" />
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" title="Github Projects" />
                     <p class="software-skill-title"> Planning </p>
-                    <p class="software-skill-text"> Github Projects </p>
+                    <p class="software-skill-text"> GitHub Projects </p>
                 </div>
 
                 <div class="software-skill-element">
@@ -84,9 +84,9 @@
             <h2 class="section-header">Highlights of this Projects</h2>
             <div class="contribution-element-container">
                 <div class="contribution-element">
-                    <p class="contribution-element-title">Multi threading</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/RT/contributions/RT_CON_1.jpg">
+                    <p class="contribution-element-title">Multithreading</p>
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[0]"/>
                     <p class="contribution-text">My raytracer project used multi-threading, with each block calculated by a separate CPU thread. While this 
                         pattern may not be the most optimized for the scene shown, it's generally effective for raytracing, leading to significant 
                         speed improvements.
@@ -182,17 +182,18 @@ void RayTracer::Thread(Color* a_ColorBuffer, int a_StartPointx, int a_StartPoint
                     </pre>
                     <div class="code-snippet-button-container">
                         <button type="button" @click="ToggleCodeSnippet(0)" class="code-snippet-button">Toggle Snippet</button>
-                        <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/PeekSheep.cs" class="code-snippet-button" target="_blank">View on github</a>
+                        <a href="https://github.com/Reemhi2122/Raytracer/blob/main/RayTracer/RayTracer.cpp" class="code-snippet-button" target="_blank">View on github</a>
                     </div>
                 </div>
                 
                 <div class="contribution-element">
-                    <p class="contribution-element-title">Illumination</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/RT/contributions/RT_CON_2.jpg">
+                    <p class="contribution-element-title">Illumination and shading</p>
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[1]"/>
                     <p class="contribution-text">
-                        The raytracer included simple functionality like phong shading, soft shading and light attenuation. These functions
-                        used the custom made math library included in the project.
+                        The raytracer included simple functionality like Phong shading and light attenuation. These functions
+                        used the custom-made math library included in the project. These were the first steps in creating the
+                        raytracer and taught me the basics of lighting and raytracing.
                     </p>
                     <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[1]}">
 <code class="language-csharp">Color RayTracer::Illumination(Ray& a_Ray, int a_Index, float a_ImpactFactor)
@@ -279,16 +280,16 @@ Color RayTracer::PhongShading(Ray& a_Ray, Color a_Color, int a_index)
                     </pre>
                     <div class="code-snippet-button-container">
                         <button type="button" @click="ToggleCodeSnippet(1)" class="code-snippet-button">Toggle Snippet</button>
-                        <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/PeekSheep.cs" class="code-snippet-button" target="_blank">View on github</a>
+                        <a href="https://github.com/Reemhi2122/Raytracer/blob/main/RayTracer/RayTracer.cpp" class="code-snippet-button" target="_blank">View on github</a>
                     </div>
                 </div>
 
                 <div class="contribution-element">
-                    <p class="contribution-element-title">Reflection and Refraction</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/RT/contributions/RT_CON_3.jpg">
+                    <p class="contribution-element-title">Reflection and Refraction and beers law</p>
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[2]"/>
                     <p class="contribution-text">
-                        In the example above you can see the implementation of reflections and refraction.
+                        In the example above you can see the implementation of reflections and refraction and Beers law.
                         As you can see they both cast different shadows and have an effect on each other. The
                         maximum bounce count of a ray in this scene is 5.
                     </p>
@@ -348,11 +349,176 @@ Ray RayTracer::GetReflectionRay(Ray& a_Ray, int a_Intersection)
 		m_CurScene.GetShape(a_Intersection)->GetNormal(intersectionPoint)) * m_CurScene.GetShape(a_Intersection)->GetNormal(intersectionPoint);
 	return Ray(intersectionPoint + hitNormal, Normalized(ReflectDirection));
 }
+
+Color RayTracer::BeersLaw(Ray a_Ray, Color a_Color, float a_Ior, int a_Index)
+{
+	Vec3 InterSectionPoint = a_Ray.PositionAt(a_Ray.m_Length);
+	Color absorb = Color(1, 1, 1) - a_Color;
+	if (dot(a_Ray.m_Direction, m_CurScene.GetShape(a_Index)->GetNormal(InterSectionPoint)) > 0){
+		float length = a_Ray.m_Length;
+		 Color returnCol = absorb * a_Ior * -length;
+		 return Color(expf(returnCol.x), expf(returnCol.y), expf(returnCol.z));
+	}
+	return a_Color;
+}
 </code>
                     </pre>
                     <div class="code-snippet-button-container">
                         <button type="button" @click="ToggleCodeSnippet(2)" class="code-snippet-button">Toggle Snippet</button>
-                        <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/PeekSheep.cs" class="code-snippet-button" target="_blank">View on github</a>
+                        <a href="https://github.com/Reemhi2122/Raytracer/blob/main/RayTracer/RayTracer.cpp" class="code-snippet-button" target="_blank">View on github</a>
+                    </div>
+                </div>
+
+                <div class="contribution-element">
+                    <p class="contribution-element-title">Math library</p>
+                    <p class="contribution-text">
+                        I also created my own math library where I created my own vector and matrix 
+                        structures. This comes with all the operator overloading and mathematical 
+                        functions for operations like the dot product, cross product, and multiplication. 
+                        I also learned the importance of a copy constructor and how to use it properly.
+                    </p>
+                    <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[3]}">
+<code class="language-csharp">#pragma once
+#include &lt;cmath>
+
+class Vec3
+{
+public:
+	Vec3() : x(0), y(0), z(0) {};
+	Vec3(float x, float y, float z) : x(x), y(y), z(z) {};
+	~Vec3() = default;
+
+	Vec3& operator=(const Vec3& rhs) {
+		if (this == &rhs)
+			return *this;
+
+		x = rhs.x;
+		y = rhs.y;
+		z = rhs.z;
+
+		return *this;
+	}
+
+	bool operator==(const Vec3& v) const {
+		return x == v.x && y == v.y && z == v.z;
+	}
+
+	bool operator!=(const Vec3& v) const {
+		return !(*this == v);
+	}
+
+	Vec3 operator-() const {
+		return Vec3(-x, -y, -z);
+	}
+
+	Vec3& operator+=(const Vec3& v) {
+		x += v.x;
+		y += v.y;
+		z += v.z;
+		return *this;
+	}
+
+	Vec3& operator-=(const Vec3& v) {
+		x -= v.x;
+		y -= v.y;
+		z -= v.z;
+		return *this;
+	}
+
+	Vec3& operator*=(const float t) {
+		x *= t;
+		y *= t;
+		z *= t;
+		return *this;
+	}
+
+	Vec3& operator/=(const float t) {
+		return *this *= 1.f / t;
+	}
+
+	float dot(const Vec3 v) {
+		return x * v.x + y * v.y + z * v.z;
+	}
+
+	Vec3 Cross(const Vec3 v) {
+		return Vec3(
+			y * v.z - z * v.y,
+			z * v.x - x * v.z,
+			x * v.y - y * v.x);
+	}
+
+	float length() const {
+		return sqrtf(length_squared());
+	}
+
+	float length_squared() const {
+		return x * x + y * y + z * z;
+	}
+
+	Vec3 Normalize() {
+		return *this /= length();
+	}
+
+	Vec3 Clear() {
+		x = y = z = 0;
+		return *this;
+	}
+
+public:
+	float x, y, z;
+};
+
+const static Vec3 up = Vec3(0, 1, 0);
+const static Vec3 right = Vec3(1, 0, 0);
+const static Vec3 left = Vec3(0, -1, 0);
+const static Vec3 down = Vec3(-1, 1, 0);
+
+using Color = Vec3;
+using Point3 = Vec3;
+
+inline Vec3 operator+(const Vec3& v1, const Vec3& v2) {
+	return Vec3(v1.x + v2.x, v1.y + v2.y, v1.z + v2.z);
+}
+
+inline Vec3 operator-(const Vec3& v1, const Vec3& v2) {
+	return Vec3(v1.x - v2.x, v1.y - v2.y, v1.z - v2.z);
+}
+
+inline Vec3 operator*(const Vec3& v1, const Vec3& v2) {
+	return Vec3(v1.x * v2.x, v1.y * v2.y, v1.z * v2.z);
+}
+
+inline Vec3 operator*(const float& i, const Vec3& v) {
+	return Vec3(i * v.x, i * v.y, i * v.z);
+}
+
+inline Vec3 operator*(const Vec3& v, const float& i) {
+	return i * v;
+}
+
+inline Vec3 operator/(const Vec3& v, float t) {
+	return (1 / t) * v;
+}
+
+inline float dot(const Vec3& v1, const Vec3 v2) {
+	return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
+}
+
+inline Vec3 Cross(const Vec3& v1, const Vec3 v2) {
+	return Vec3(
+		v1.y * v2.z - v1.z * v2.y,
+		v1.z * v2.x - v1.x * v2.z,
+		v1.x * v2.y - v1.y * v2.x);
+}
+
+inline Vec3 Normalized(Vec3& v) {
+	return v / v.length();
+}
+</code>
+                    </pre>
+                    <div class="code-snippet-button-container">
+                        <button type="button" @click="ToggleCodeSnippet(3)" class="code-snippet-button">Toggle Snippet</button>
+                        <a href="https://github.com/Reemhi2122/Raytracer/blob/main/RayTracer/RayTracer.cpp" class="code-snippet-button" target="_blank">View on github</a>
                     </div>
                 </div>
             </div>
@@ -410,8 +576,14 @@ import Image3 from '/src/assets/Image/Portfolio/RT/RT5.jpg'
 import Image4 from '/src/assets/Image/Portfolio/RT/RT6.jpg'
 import Image5 from '/src/assets/Image/Portfolio/RT/Raytracer.jpg'
 import Image6 from '/src/assets/Image/Portfolio/RT/RT7.jpg'
+import Image7 from '/src/assets/Image/Portfolio/RT/RT9.png'
+
+import con0 from "/src/assets/Image/Portfolio/RT/contributions/RT_CON_1.jpg";
+import con1 from "/src/assets/Image/Portfolio/RT/contributions/RT_CON_2.jpg";
+import con2 from "/src/assets/Image/Portfolio/RT/contributions/RT_CON_3.png";
 
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
+import ExpandableImage from '../IndividualComponents/ExpandableImage.vue';
 
 export default {
     data() {
@@ -422,6 +594,10 @@ export default {
             {
                 src: Image1,
                 index: 0
+            },
+            {
+                src: Image7,
+                index: 1
             },
             {
                 src: Image5,
@@ -445,6 +621,11 @@ export default {
             },
             ],
             contributionState: [false, false, false, false],
+            contributionImages: [
+                con0,
+                con1,
+                con2
+            ],
         }
     },
     beforeMount() {
@@ -471,7 +652,6 @@ export default {
         },
         ToggleCodeSnippet(index){
             this.contributionState[index] = !this.contributionState[index];
-            Prism.highlightAll();
         }
     },
     watch: {
@@ -484,12 +664,13 @@ export default {
     },
     components:{
         CarrouselComp,
+        ExpandableImage
     }
 }
 </script>
 
 <style scoped>
 .header-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/RT/RT7.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/RT/RT8.jpg');
 }
 </style>

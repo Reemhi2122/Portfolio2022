@@ -41,7 +41,7 @@
             Drums of Harmony is a 2D rhythm-based roguelike, where you as a spirit bard are trying 
             to cleanse evil Yokai in order to save your village from mysterious creatures.
             Play as a spirit bard that can move, 
-            shoot and collect to deal with enemies and clear rooms, levels and zones...
+            shoot and collect to deal with enemies and clear rooms, levels, and zones...
         </p>
 
         <iframe class="itchio" frameborder="0" src="https://itch.io/embed/1572705?linkback=true" width="552" height="167"><a href="https://buas.itch.io/gudenuff-drumsofharmony">
@@ -93,16 +93,17 @@
             <div class="contribution-element-container">
                 <div class="contribution-element">
                     <p class="contribution-element-title">Combat System</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/GE/contributions/GifCombatSystem.gif"/>
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[0]"/>
                     <p class="contribution-text">
-                        When the player walks inside of a room which is defined by a door
-                        and an enclosed area with trees. We wanted the player to enter a combat state.
-                        In this state, the doors would close with a fire blocking their way out. And
-                        The player would enter a state where it can only move or attack on the beat
-                        visualized by a beat matcher spawned at the same time. The tricky part was to
-                        check if the player entered the room. Once all the enemies were killed, the room
-                        would open up again.
+                        When the player walks inside a room that is defined by a door 
+                        and an enclosed area with trees. We wanted the player to enter 
+                        a combat state. In this state, the doors would close with fire 
+                        blocking their way out. And The player would enter a state where it 
+                        can only move or attack on the beat visualized by a beat matcher 
+                        spawned at the same time. The tricky part was to check if the 
+                        player entered the room. Once all the enemies were killed, the 
+                        room would open up again.
                     </p>
                     <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[0]}">
 <code class="language-csharp">#include "world/CombatSystem.h"
@@ -308,26 +309,26 @@ namespace gudenuff {
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Enemy spawning</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/GE/contributions/GifEnemySpawning.gif"/>
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[1]"/>
                     <p class="contribution-text">
-                        I was responsible for the spawning of all the enemies once the player enters
-                        the room. This was part of the combat system but used different systems. We had
-                        a tools programmer who made a map generation tool. Where I had to read out the enemies
-                        location and spawning the enemies at the location. Also keeping track if they are alive
-                        to then open the room.
+                        I was responsible for the spawning of all the enemies once the player enters 
+                        the room. This was part of the combat system but used different systems. 
+                        We had a tools programmer who made a map generation tool where I had to 
+                        read out the enemy's locations and spawn the enemies at the correct location. 
+                        Also keeping track of if they are alive to then open the room.
                     </p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Weapon creation tool</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/GE/contributions/GifWeaponCreationTool.gif"/>
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[2]"/>
                     <p class="contribution-text">
-                        We wanted a dynamic way of adjusting weapons in the game. For this, I made an
-                        editor for in the engine to create multiple weapons fast. Sadly, this got discontinued
-                        because we wanted to simplify the weapon system to get it done in time. But I learned a lot
-                        from this experience, I created this in the first 1/2 weeks and learned me how to quickly get
-                        to know a new code base like a custom engine. 
+                        We wanted a dynamic way of adjusting weapons in the game. For this, I made 
+                        an editor for the engine to create multiple weapons fast. Sadly, this got 
+                        discontinued because we wanted to simplify the weapon system to get it done 
+                        in time. But I learned a lot from this experience, I created this in the first 
+                        1/2 weeks and learned how to quickly get to know a new code base like a custom engine. 
                     </p>
                     <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[2]}">
 <code class="language-csharp">#include "tools/WeaponCreationTool.h"
@@ -548,14 +549,14 @@ namespace gudenuff {
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Crumbling tile</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/GE/contributions/GifCrumbling.gif"/>
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[3]"/>
                     <p class="contribution-text">
-                        I was also involved in creating some of the traps for the game. This was done
-                        using a trap system, and I had to create the crumbling trap. This trap would be walkable
-                        at first, but once you walked over it will become a hole where you cannot walk over. For this
-                        a new trigger had to be created for when the player left the tile, instead of the already existing
-                        on tile enter.
+                        I was also involved in creating some of the traps for the game. 
+                        This was managed using a trap system, and I had to create the crumbling trap. 
+                        This trap would be walkable at first, but once you walked over it becomes a hole 
+                        that is not walkable. For this, a new trigger had to be created for when the 
+                        player left the tile, instead of the already existing tile events.
                     </p>
                     <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[3]}">
 <code class="language-csharp">void CreateCrumblingTile(gudenuff::EntityID& a_Id, glm::ivec2 a_GridPos)
@@ -742,10 +743,10 @@ StartTrapFunc(CrumblingTrapLeave)
                 <div class="learned-element">
                     <h3>Working with a producer</h3>
                     <p>
-                        This was the first project where I worked with a dedicated producer to manage the planning, make sure
-                        everyone kept to the planning and we were working in an efficient workflow. This included doing extensive
-                        burndown after every sprint, a good sprint planning and daily updates. I really enjoyed having this element
-                        in the team and not having to worry about this myself.
+                        This was the first project where I worked with a dedicated producer to manage the planning, 
+                        making sure everyone kept to the planning, and that we were working in an efficient workflow. 
+                        This included doing extensive burndowns after every sprint, good sprint planning, and daily updates. 
+                        I enjoyed having a producer in the team so I could focus myself on programming.
                     </p>
                 </div>
                 <div class="learned-element">
@@ -754,12 +755,6 @@ StartTrapFunc(CrumblingTrapLeave)
                         Working in an engine which uses an ECS system was really interesting to me. I have created my own
                         ECS system before but never actually created an engine with this system. After using the system designed
                         by my peers I got really excited to implement my own version of an ECS system in my own custom engine.
-                    </p>
-                </div>
-                <div class="learned-element">
-                    <h3></h3>
-                    <p>
-                        
                     </p>
                 </div>
             </div>
@@ -773,8 +768,6 @@ StartTrapFunc(CrumblingTrapLeave)
 </template>
 
 <script>
-import expandableimage from '../IndividualComponents/expandableimage.vue'
-
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-csharp';
@@ -789,7 +782,14 @@ import Image6 from '/src/assets/Image/Portfolio/GE/img5.png'
 import Image7 from '/src/assets/Image/Portfolio/GE/img6.png'
 import Image8 from '/src/assets/Image/Portfolio/GE/img7.jpg'
 
+import con0 from "/src/assets/Image/Portfolio/GE/contributions/GifCombatSystem.gif";
+import con1 from "/src/assets/Image/Portfolio/GE/contributions/GifEnemySpawning.gif";
+import con2 from "/src/assets/Image/Portfolio/GE/contributions/GifWeaponCreationTool.gif";
+import con3 from "/src/assets/Image/Portfolio/GE/contributions/GifCrumbling.gif";
+
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
+import ExpandableImage from '../IndividualComponents/ExpandableImage.vue'
+
 
 export default {
     data() {
@@ -834,6 +834,12 @@ export default {
                 index: 8
             }
             ],
+            contributionImages: [
+                con0,
+                con1,
+                con2,
+                con3
+            ],
             contributionState: [false, false, false, false],
         }
     },
@@ -861,7 +867,6 @@ export default {
         },
         ToggleCodeSnippet(index){
             this.contributionState[index] = !this.contributionState[index];
-            Prism.highlightAll();
         }
     },
     watch: {
@@ -874,7 +879,7 @@ export default {
     },
     components:{
         CarrouselComp,
-        expandableimage,
+        ExpandableImage,
     }
 }
 </script>

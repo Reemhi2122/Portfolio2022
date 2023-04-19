@@ -3,6 +3,25 @@
     <div class="feature-text-box">
       <h1>Descent Raytraced</h1>
       <h2>Descent (1995), but raytraced</h2>
+      
+      <div class="project-bubbles-container-feature">
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">engineering</span> Engine programmer
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">Devices</span> PlayStation
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">group</span> 7 members
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">schedule</span> 1 year
+        </div>
+        <div class="project-bubbles-feature">
+          <span class="material-symbols-outlined">calendar_month</span> 2022/2023
+        </div>
+      </div>
+
     </div>
   </RouterLink>
 </template>
@@ -37,7 +56,6 @@ export default {
   right: 0;
   margin-right: 25px;
   margin-bottom: 20px;
-  width: 800px;
   text-align: right;
 }
 
@@ -60,4 +78,25 @@ export default {
     margin-right: 10px;
   }
 }
-</style>>
+</style>
+
+<style>
+.project-bubbles-container-feature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.project-bubbles-feature {
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 5px;
+  margin-left: 10px;
+  
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+</style>

@@ -88,11 +88,11 @@
       <div class="contribution-element-container">
         <div class="contribution-element">
           <p class="contribution-element-title">Voting System</p>
-          <img class="contribution-image" src="/src/assets/Image/Portfolio/ISC/contributions/VotingSystem.jpg">
-          <p class="contribution-text">The main mechanic in the game is the voting, this is where you as a player are in
-            the spotlight
-            and have to vote the same as the other sheep. This was done using events, and when a sheep notices you are
-            not voting the correct answer, their suspicousness will go up.
+          <ExpandableImage class="contribution-image" :src="this.contributionImages[0]"/>
+          <p class="contribution-text">The main mechanic in the game is voting, this is where you 
+            as a player are in the spotlight and have to vote the same as the other sheep. This was 
+            done using events, and when a sheep notices you are not voting the correct answer, 
+            its suspiciousness will go up.
           </p>  
           <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[0]}">
 <code class="language-csharp">public enum VotingState
@@ -283,12 +283,12 @@ namespace InSheepsClothing
         </div>
         <div class="contribution-element">
           <p class="contribution-element-title">Sheep spawning</p>
-          <img class="contribution-image" src="/src/assets/Image/Portfolio/ISC/contributions/SheepSpawning.jpg">
-          <p class="contribution-text"> We didn't want all sheep to be there all the time, so we decided to start with a
-            fixed amount of sheep
-            in the beginning of the game, and added more when the player managed to get further into the game. This
-            would ensure
-            an easy start for the player and gradually make it harder.
+          <ExpandableImage class="contribution-image" :src="this.contributionImages[1]"/>
+          <p class="contribution-text"> 
+            We didn't want all sheep to be there all the time, so we decided to 
+            start with a fixed amount of sheep at the beginning of the game and 
+            added more when the player managed to get further into the game. This 
+            would ensure an easy start for the player and gradually make it harder.
           </p>
           <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[1]}">
 <code class="language-csharp">namespace InSheepsClothing
@@ -396,15 +396,14 @@ namespace InSheepsClothing
           </div>
         </div>
         <div class="contribution-element">
-          <p class="contribution-element-title">Suspicousness</p>
-          <img class="contribution-image" src="/src/assets/Image/Portfolio/ISC/contributions/Suspicousness.jpg">
-          <p class="contribution-text">All the sheep have an individual suspicousness bar, which if full is hard to
-            remove. All these bars
-            together act as a total suspicous bar and when this one is full, the game is over. The sheep will only get
-            more
-            suspicous when they look at the player while they are doing something suspicous. The suspicousness is
-            displayed on
-            a dynamic ipad. This will tell the player all this information without having to add an actual HUD.
+          <p class="contribution-element-title">Suspiciousness</p>
+          <ExpandableImage class="contribution-image" :src="this.contributionImages[2]"/>
+          <p class="contribution-text">
+            All the sheep have an individual suspiciousness bar, which if full is hard to remove. 
+            All these bars together act as a totally suspicious bar and when this one is full, 
+            the game is over. The sheep will only get more suspicious when they look at the player 
+            while they are doing something suspicious. The suspiciousness is displayed on a dynamic 
+            iPad. This will tell the player all this information without having to add an actual HUD.
           </p>
           <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[2]}">
 <code class="language-csharp">namespace InSheepsClothing
@@ -464,12 +463,12 @@ namespace InSheepsClothing
         </div>
         <div class="contribution-element">
           <p class="contribution-element-title">Peek sheep</p>
-          <img class="contribution-image" src="/src/assets/Image/Portfolio/ISC/contributions/PeekSheep.jpg">
-          <p class="contribution-text">I also created the peek sheep that you can see in the right corner, this sheep
-            will peek at you at certain
-            intervals and will make it harder for the player to do his work and report back to the FBI. This sheep will
-            start looking
-            at you more the longer the game goes on and had its own supsicous rating.
+          <ExpandableImage class="contribution-image" :src="this.contributionImages[3]"/>
+          <p class="contribution-text">
+            I also created the peek sheep that you can see in the right corner, 
+            this sheep will peek at you at certain intervals and will make it harder 
+            for the player to do his work and report back to the FBI. This sheep will 
+            start looking at you more the longer the game goes on and had its own suspicious rating.
           </p>
           <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[3]}">
 <code class="language-csharp">namespace InSheepsClothing
@@ -579,7 +578,7 @@ namespace InSheepsClothing
           <ul>
             <li>Designing key game elements</li>
             <li>Returning of objects after falling on the ground</li>
-            <li>Sheep looking behaviour</li>
+            <li>Sheep looking behavior</li>
             <li>Picture counting</li>
           </ul>
         </div>
@@ -620,12 +619,13 @@ namespace InSheepsClothing
       <div class="learned-container">
         <div class="learned-element">
           <h3>Making a VR game</h3>
-          <p>This was my first time stepping into the exciting world of virtual reality.
-            I was eager to learn and explore this new technology, but I quickly realized that it was not going to be an
-            easy journey.
-            Despite the steep learning curve, I was determined to get a grip on it. Luckily I had kylian as a team mate
-            with prior experience
-            in VR. This project teached me how to make a game interesting and playable for a VR game.
+          <p>
+            This was my first time stepping into the exciting world of virtual reality. 
+            I was eager to learn and explore this new technology, but I quickly realized 
+            that it was not going to be an easy journey. Despite the steep learning curve, 
+            I was determined to get a grip on it. Luckily I had Kylian as a teammate with 
+            prior experience in VR. This project taught me how to make a game interesting 
+            and playable for a VR game.
           </p>
         </div>
         <div class="learned-element">
@@ -669,13 +669,19 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-csharp';
 
-import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
-
 import Image0 from '/src/assets/Image/Portfolio/ISC/Contributions/PeekSheep.jpg'
 import Image1 from '/src/assets/Image/Portfolio/ISC/Contributions/SheepSpawning.jpg'
 import Image2 from '/src/assets/Image/Portfolio/ISC/Contributions/Suspicousness.jpg'
 import Image3 from '/src/assets/Image/Portfolio/ISC/Contributions/VotingSystem.jpg'
 import Image4 from '/src/assets/Image/Portfolio/ISC/main.jpg'
+
+import con0 from "/src/assets/Image/Portfolio/ISC/contributions/VotingSystem.jpg";
+import con1 from "/src/assets/Image/Portfolio/ISC/contributions/SheepSpawning.jpg";
+import con2 from "/src/assets/Image/Portfolio/ISC/contributions/Suspicousness.jpg";
+import con3 from "/src/assets/Image/Portfolio/ISC/contributions/PeekSheep.jpg";
+
+import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
+import ExpandableImage from '../IndividualComponents/ExpandableImage.vue'
 
 export default {
   data() {
@@ -705,6 +711,12 @@ export default {
           }
         ],
       contributionState: [false, false, false, false],
+      contributionImages: [
+                con0,
+                con1,
+                con2,
+                con3
+            ],
     }
   },
   beforeMount() {
@@ -731,7 +743,6 @@ export default {
     },
     ToggleCodeSnippet(index){
       this.contributionState[index] = !this.contributionState[index];
-      Prism.highlightAll();
     }
   },
   watch: {
@@ -744,6 +755,7 @@ export default {
   },
   components:{
     CarrouselComp,
+    ExpandableImage
   }
 }
 </script>

@@ -27,7 +27,7 @@
                     <span class="material-symbols-outlined">group</span> 8 members
                 </div>
                 <div class="indv-project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 3 weeks
+                    <span class="material-symbols-outlined">schedule</span> 2 weeks
                 </div>
                 <div class="indv-project-bubbles">
                     <span class="material-symbols-outlined">calendar_month</span> 2021
@@ -91,24 +91,28 @@
             <div class="contribution-element-container">
                 <div class="contribution-element">
                     <p class="contribution-element-title">Obstacle spawner tool</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/DD/contributions/Spawner.gif">
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[0]"/>
                     <p class="contribution-text">For this game, I created an obstacle spawner tool that the
                         designers in my team could use by adjusting all the settings. This tool was used for the
                         falling obstacles, the stars and the powerups. All of these mechanics are seperate spawners
                         that they adjusted to have different amount of spawn points, different heights and how much
                         they encapsulate the donut.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Obstacle gravity</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/DD/contributions/Gravity.gif">
-                    <p class="contribution-text">Because the level was a donut, it was a challenge to make the
-                        gravity system for it. What I did to make it work was calculate a circle in the middle of the
-                        donut and calculate the nearest point for every object that was falling towards the donut. Then
-                        I just moved the object towards this nearest point, which looked like realistic gravity behaviour.
+                    <ExpandableImage class="contribution-image"
+                        :src="this.contributionImages[1]"/>
+                    <p class="contribution-text">
+                        Because the level was a donut, it was a challenge to make the gravity system for it. 
+                        What I did to make it work was calculate a circle in the middle of the donut and 
+                        calculate the nearest point for every object that was falling towards the donut. 
+                        Then I just moved the object towards the nearest point, which looked like realistic 
+                        gravity behavior.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
             </div>
         </section>
@@ -200,37 +204,30 @@
             <h2 class="section-header">What I have learned form this project</h2>
             <div class="learned-container">
                 <div class="learned-element">
-                    <h3>Gameplay programming</h3>
-                    <p>As I want to become a engine programmer, it is also good to experience other disciplines of game
-                        development. It helps understand what a game programmer expects from an engine and what the best
-                        and most important features are to an gameplay programmer. In this case, I didn't have a choice
-                        to be an engine programmer and this can happen in my feature career as well. This project
-                        prepared me for when I was needed as a gameplay programmer.</p>
+                    <h3>Fast concepting and prototyping</h3>
+                    <p>
+                        Because we only had two weeks for this project, we needed to create a concept fast which looked like
+                        the process of a game jam but in a team of 8 people. After getting the concept, the production phase
+                        looked more like a fast prototyping phase where we quickly created tools and blueprints to create a 
+                        working and adjustable game. Even though we only had two weeks for this project, we got some tooling in 
+                        for the designers.</p>
                 </div>
                 <div class="learned-element">
-                    <h3>Cross discipline collaboration</h3>
-                    <p>Working in a medium sized team with multiple disciplines give me the same experience as working
+                    <h3>Cross-discipline collaboration</h3>
+                    <p>Working in a medium-sized team with multiple disciplines gave me the same experience as working
                         in an indie game development studio. I gained experience in planning, debating, working,
-                        communicating and delivering in such a team. We delivered two games (other being Donut
+                        communicating, and delivering in such a team. We delivered two games (the other being Donut
                         Drifters). A common disagreement would be between design and the other variations, with things
                         we prototyped before they got designed and them reworking things after we made them.
                     </p>
                 </div>
                 <div class="learned-element">
-                    <h3>Unreal Engine 4</h3>
-                    <p>This was the second time I worked on a UE4 project, which was exiting and big learning
-                        opportunity. I mostly used blueprints this project, but also looked into some C++ within UE4
-                        because this was a goal of mine. Eventually I got the hang of UE4 and was able to reliably
-                        create mechanics that are used throughout the game.</p>
-                </div>
-                <div class="learned-element">
-                    <h3>Game marmalade</h3>
+                    <h3>Tool creation in UE4</h3>
                     <p>
-                        This was my first time working on a game marmalade structure. This means working on a game for
-                        around 2 weeks, so its bigger than a game jam but it still limits time. This, together with an
-                        indie sized team created a unique form of fast concepting and teamwork. Big decisions had to be
-                        cut quickly and there was barley any time for prototyping. Eventually, we spend to much time on
-                        creating the level and lacked some gameplay.
+                        This was the first project where I created reusable tools in UE4. As you can see in the contrubtions above, 
+                        I created a tool where you could set spawning positions around a thorus. This was usefull because we had three
+                        different spawnables, which all needed different configurations. After explaining the tool to designers they could 
+                        adjust all the settings while playtesting.
                     </p>
                 </div>
             </div>
@@ -250,7 +247,11 @@ import Image2 from '/src/assets/Image/Portfolio/DD/img3.jpg'
 import Image3 from '/src/assets/Image/Portfolio/DD/img4.jpg'
 import Image4 from '/src/assets/Image/Portfolio/DD/img5.jpg'
 
-import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
+import con0 from "/src/assets/Image/Portfolio/DD/contributions/Spawner.gif"
+import con1 from "/src/assets/Image/Portfolio/DD/contributions/Gravity.gif"
+
+import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue'
+import ExpandableImage from '../IndividualComponents/ExpandableImage.vue'
 
 export default {
     data() {
@@ -278,6 +279,10 @@ export default {
                 src: Image3,
                 index: 4
             },
+            ],
+            contributionImages: [
+                con0,
+                con1
             ],
         }
     },
@@ -310,6 +315,7 @@ export default {
     },
     components:{
         CarrouselComp,
+        ExpandableImage
     }
 }
 </script>

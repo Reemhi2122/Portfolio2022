@@ -38,7 +38,7 @@
         <CarrouselComp :cards="this.images" class="carousel-comp"/>
 
         <p class="project-text">
-            After a virus in the late 19th century takes out all humans on earth, nature takes over again. You play as a
+            After a virus in the late 19th century takes out all humans on Earth, nature takes over again. You play as a
             fox who is all alone in an overgrown and abandoned Paris. As you travel to the edge of the city to find
             other foxes, you find out what really happened to the humans...
         </p>
@@ -98,34 +98,37 @@
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
                 <div class="contribution-element">
-                    <p class="contribution-element-title">Following wolf</p>
-                    <video class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/FollowingAI.mp4" autoplay loop></video>
+                    <p class="contribution-element-title">The following wolf</p>
+                    <ExpandableVideo class="contribution-image"
+                        :src="this.contributionImages[0]" autoplay loop></ExpandableVideo>
                     <p class="contribution-text">In the game, we wanted to create a thread for the player while
                         traversing the level. This is where we came up with the wolf that would hunt for the fox when it
-                        would see it. I created this wolf with visual AI and movement AI. If the wolf would spot you, it
-                        would follow you and depending if it will catch you it will attack or lose interest.
+                        would see it. I created this wolf with visual AI and movement AI. If the wolf would spot you, 
+                        it would follow you, and depending on if it will catch you it will attack or lose interest.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
                 <div class="contribution-element">
-                    <p class="contribution-element-title">Following bird</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/FollowingNPC.gif">
-                    <p class="contribution-text">We wanted a NPC to follow the player and show important parts of the
-                        level to the player. eventually we decided this would be a bird that would fly around the player
+                    <p class="contribution-element-title">The following bird</p>
+                    <ExpandableVideo class="contribution-image"
+                        :src="this.contributionImages[1]" autoplay loop></ExpandableVideo>
+                    <p class="contribution-text">We wanted an NPC to follow the player and show important parts of the
+                        level to the player. Eventually, we decided this would be a bird that would fly around the player
                         when stationary, when the player would walk it would fly after it and would point out or sit at
                         important parts of the level.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
                 <div class="contribution-element">
                     <p class="contribution-element-title">Dialogue system</p>
-                    <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/DialogueSystem.gif">
-                    <p class="contribution-text">As an objective we decided that the player would get requests from
+                    <ExpandableVideo class="contribution-image"
+                        :src="this.contributionImages[2]" autoplay loop></ExpandableVideo>
+                    <p class="contribution-text">As an objective, we decided that the player would get requests from
                         different animals to help them with something they need. If they did this they would get
-                        something in return. For example the bird could give him a key that he couldn't reach, but the
+                        something in return. For example, the bird could give him a key that he couldn't reach, but the
                         player had to do something for the bird first. I created the dialogue system for this.
                     </p>
+                    <p>*No code example due to blueprints</p>
                 </div>
             </div>
         </section>
@@ -218,27 +221,29 @@
             <div class="learned-container">
                 <div class="learned-element">
                     <h3>Gameplay programming</h3>
-                    <p>As I want to become a engine programmer, it is also good to experience other disciplines of game
+                    <p>As I want to become an engine programmer, it is also good to experience other disciplines of game
                         development. It helps understand what a game programmer expects from an engine and what the best
-                        and most important features are to an gameplay programmer. In this case, I didn't have a choice
+                        and most important features are to a gameplay programmer. In this case, I didn't have a choice
                         to be an engine programmer and this can happen in my feature career as well. This project
                         prepared me for when I was needed as a gameplay programmer.</p>
                 </div>
                 <div class="learned-element">
-                    <h3>Cross discipline collaboration</h3>
-                    <p>Working in a medium sized team with multiple disciplines give me the same experience as working
+                    <h3>Cross-discipline collaboration</h3>
+                    <p>Working in a medium-sized team with multiple disciplines gives me the same experience as working
                         in an indie game development studio. I gained experience in planning, debating, working,
-                        communicating and delivering in such a team. We delivered two games (other being Donut
+                        communicating, and delivering in such a team. We delivered two games (the other being Donut
                         Drifters). A common disagreement would be between design and the other variations, with things
                         we prototyped before they got designed and them reworking things after we made them.
                     </p>
                 </div>
                 <div class="learned-element">
                     <h3>Unreal Engine 4</h3>
-                    <p>This was the second time I worked on a UE4 project, which was exiting and big learning
-                        opportunity. I mostly used blueprints this project, but also looked into some C++ within UE4
-                        because this was a goal of mine. Eventually I got the hang of UE4 and was able to reliably
-                        create mechanics that are used throughout the game.</p>
+                    <p>
+                        This was the second time I worked on a UE4 project, which was an exiting and big learning opportunity. 
+                        I mostly used blueprints for this project but also looked into some C++ within UE4 because this 
+                        was a goal of mine. Eventually, I got the hang of UE4 and was able to reliably create mechanics 
+                        that are used throughout the game.
+                    </p>
                 </div>
                 <div class="learned-element">
                     <h3>Game marmalade</h3>
@@ -269,7 +274,13 @@ import Image3 from '/src/assets/Image/Portfolio/COTF/img4.png'
 import Image4 from '/src/assets/Image/Portfolio/COTF/img5.png'
 import Image5 from '/src/assets/Image/Portfolio/COTF/img6.png'
 
-import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
+import con0 from "/src/assets/Image/Portfolio/COTF/contributions/COTFWolf.mp4"
+import con1 from "/src/assets/Image/Portfolio/COTF/contributions/COTFCrow.mp4"
+import con2 from "/src/assets/Image/Portfolio/COTF/contributions/COTFDialogue.mp4"
+
+import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue'
+import ExpandableVideo from '../IndividualComponents/ExpandableVideo.vue'
+import ExpandableImage from '../IndividualComponents/ExpandableImage.vue'
 
 export default {
     data() {
@@ -303,6 +314,11 @@ export default {
                 index: 5
             }
             ],
+            contributionImages: [
+                con0,
+                con1,
+                con2
+            ],
         }
     },
     beforeMount() {
@@ -334,6 +350,8 @@ export default {
     },
     components:{
         CarrouselComp,
+        ExpandableVideo,
+        ExpandableImage
     }
 }
 </script>

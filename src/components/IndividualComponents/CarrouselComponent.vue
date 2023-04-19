@@ -8,7 +8,7 @@
       <div class="carousel">
         <div class="inner" ref="inner" :style="innerStyles">
             <div class="card" v-for="card in cards" :key="card">
-                <expandableimage class="inner-card" :src="card.src" :key="card.index"/>
+                <ExpandableImage class="inner-card" :src="card.src" :key="card.index"/>
             </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import expandableimage from '../IndividualComponents/expandableimage.vue'
+import ExpandableImage from '../IndividualComponents/ExpandableImage.vue'
 
   export default {
     data () {
@@ -95,7 +95,7 @@ import expandableimage from '../IndividualComponents/expandableimage.vue'
       }
     },
     components:{
-      expandableimage
+      ExpandableImage
     },
     props: ['cards']
   }
