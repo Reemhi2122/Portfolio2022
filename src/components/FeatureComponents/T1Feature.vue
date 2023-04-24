@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .feature-project {
-  background-image: url('/src/Assets/Image/Portfolio/ISC/Header.png');
+  background-image: url('/src/Assets/Image/Portfolio/ISC/header.png');
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
