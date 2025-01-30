@@ -47,10 +47,10 @@
             looks and feels more immersive than ever before.
         </p>
 
-        <!-- <div class="findcode-github">
+        <div class="findcode-github">
             <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div> -->
+            <a href="https://github.com/BredaUniversityGames/DXX-Raytracer" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+        </div>
 
         <section class="software-skills">
             <h2 class="section-header">Software skills improved this project</h2>
@@ -97,11 +97,12 @@
         <section class="contribution-section">
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Converting Descent from PC to PS5 </p>
-                    <!-- <img class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/FollowingNPC.gif"> -->
-                    <p class="contribution-text">
+                <CodeSnippetComponent>
+                    <template v-slot:Title>
+                        Converting Descent from PC to PS5
+                    </template>
+
+                    <template v-slot:Text>
                         This game was initially created in 1995 for MS-DOS. We found a Github repository that has 
                         already converted it to modern Windows using SCons. We converted this to CMake and made sure 
                         it also runs on x64 architecture. 
@@ -111,14 +112,19 @@
                         My job, was to convert this windows version to PS5, while making 
                         sure it still worked for Windows. This was a challenge because documentation on using CMake for the 
                         PS5 doesn't exist and the Windows version relied heavily on SDL.
-                    </p>
-                    <p>*Cannot show code due to an NDA with PlayStation</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Cross-platform reading / writing for PS5</p>
-                    <!-- <video class="contribution-image"
-                        src="/src/assets/Image/Portfolio/COTF/contributions/FollowingAI.mp4" autoplay loop></video> -->
-                    <p class="contribution-text">
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*Cannot show code due to an NDA with PlayStation</p>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent>
+                    <template v-slot:Title>
+                        Cross-platform reading / writing for PS5
+                    </template>
+
+                    <template v-slot:Text>
                         For the conversion to the PS5 platform, I had to rework the file handling of the original project
                         that was using a library called Physfs. To do this, I had two choices: creating a new file handler
                         or reworking the library so it can also work on PS5.
@@ -129,154 +135,105 @@
                         found on their Github that it should be feasible to convert the library to work on platforms like
                         Playstations etc. I chose to rework the library because I believed this would save me the most time,
                         and still teach me a lot about how the PS5 file reading/writing works.
-                    </p>
-                    <p>*Cannot show code due to an NDA with PlayStation</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Cross-platform input for PS5</p>
-                    <!-- <img class="contribution-image" 
-                        src="/src/assets/Image/Portfolio/COTF/contributions/DialogueSystem.gif"> -->
-                    <p class="contribution-text">
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*Cannot show code due to an NDA with PlayStation</p>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent>
+                    <template v-slot:Title>
+                        Cross-platform input for PS5
+                    </template>
+
+                    <template v-slot:Text>
                         Because the original project used SDL for input, I also had to rework this. The biggest challenge with
                         this was that the project also supported the remapping of keys so the system wasn't as easy to replace
                         as a normal input system. I recreated the input system by creating a new input system myself that would
                         use the remap function that is used in the original project.
-                    </p>
-                    <p>*Cannot show code due to an NDA with PlayStation</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Runtime texture loading</p>
-                    <Expandablevideo class="contribution-image"
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*Cannot show code due to an NDA with PlayStation</p>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent></CodeSnippetComponent>
+
+                <CodeSnippetComponent hascode="true">
+                    <template v-slot:Title>
+                        Runtime texture loading
+                    </template>
+
+                    <template v-slot:Image>
+                        <Expandablevideo class="contribution-image"
                         :src="this.contributionImages[0]" autoplay loop></Expandablevideo>
-                    <p class="contribution-text">
+                    </template>
+
+                    <template v-slot:Text>
                         In this project, we wanted artists to upscale the textures to PBR textures so the light would
                         better interact with the surfaces of the game. This is because the game is quite flat by itself. 
                         To improve the workflow of the artists I created the runtime texture loading tool, which would upload 
                         all the adjusted textures in the assets folder and link them to the materials.
-                    </p>
-                    <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[3]}">
-<code class="language-csharp">void RT_LoadRuntimeBitmaps(void)
-{
-	//Funcion loads bitmaps changed in runtime, currently only works for
-	//files using the 0000_x.extension format. It also updates material values
-	//changed in 0000.txt
+                    </template>
 
-	//Getting list of files in the directory.
-	char** directory_list = PHYSFS_enumerateFiles("assets/textures/");
+                    <template v-slot:Code>
+                        <code0/>
+                    </template>
+                </CodeSnippetComponent>
 
-	//Going over all the files in the directory
-	for (char** i = directory_list; *i != NULL; i++) {
-		char file_path[128];
-		sprintf(file_path, "assets/textures/%s", *i);
-		
-		//Check if file changed or has been created since last check.
-		//If its old, continue to next element.
-		PHYSFS_Stat stat;
-		PHYSFS_stat(file_path, &stat);
-		if (stat.createtime &lt;= g_LastTextureUpdate && stat.accesstime &lt;= g_LastTextureUpdate)
-			continue;
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        Free camera
+                    </template>
 
-		//Getting the file name, example: {999.png}.
-		char file_name[128];
-		strcpy(file_name, *i);
-		printf(" * NEW = [%s].\n", file_name);
+                    <template v-slot:Image>
+                        <Expandablevideo class="contribution-image"
+                        :src="this.contributionImages[1]" autoplay loop></Expandablevideo>
+                    </template>
 
-		//Getting the extension and numb of the file, example: {.png, 999}.
-		char* extension = strrchr(file_name, '.');
-		char* num = strtok(file_name, "_");
-		if (!num || !extension)
-			continue;
+                    <template v-slot:Text>
+                        I created the free camera tool because we wanted to be able to freely roam the level without the boundaries 
+                        and difficulties of the game. This so we can check mistakes in the level loading, texture loading or enemy 
+                        placement or if we needed to create marketing material for the game in the form of pictures or videos. 
+                        The game, when in freemode, would pause and allow the user to make pictures of action shots. There is an 
+                        option for collision to be turned off and on.
+                    </template>
+                    
+                    <template v-slot:Code>
+                        <Code1/>
+                    </template>
 
-		//converting numb to integer  data
-		uint16_t bm_index = atoi(num);
-		RT_MaterialDefinition current_material = materials[bm_index];
+                </CodeSnippetComponent>
 
-		//Upating a .txt
-		if (strcmp(extension, ".txt") == 0) {
-			RT_MaterialDefinitionFile def_file;
-			def_file = RT_ParseMaterialDefinitionFile(bm_index);
+                <CodeSnippetComponent>
+                    <template v-slot:Title>
+                        Additional contributions include but are not limited to
+                    </template>
 
-			current_material.roughness = def_file.roughness;
-			current_material.metalness = def_file.metalness;
-			current_material.emissive_factor = (RT_Vec3){
-				def_file.emissive_r,
-				def_file.emissive_g,
-				def_file.emissive_b,
-			};
-		}
+                    <template v-slot:Text>
+                        <ul>
+                            <li>PC x64 build configuration</li>
+                            <li>Cross-platform allocation for PS5</li>
+                            <li>Cross patform diverse logger</li>
+                            <li>A cross-platform timer</li>
+                            <li>Abstracting windows dependend systems</li>
+                            <li>Researching an old code base</li>
+                        </ul>
+                    </template>
+                </CodeSnippetComponent>
 
-		//Updating a .png
-		if (strcmp(extension, ".png") == 0) {
-				
-			RT_ResourceHandle texture_handle;
-			int w, h, c;
-
-			//Getting the type from file, example: {E} from 999_E.png
-			char* type = strtok(strtok(NULL, "_"), ".");
-
-			if (type != NULL) {
-				if (strcmp(type, "C") == 0) {
-					RT_UploadRuntimeBitmap(*i, bm_index, &current_material.albedo_texture);
-				}
-				else if (strcmp(type, "N") == 0) {
-					RT_UploadRuntimeBitmap(*i, bm_index, &current_material.normal_texture);
-				}
-				else if (strcmp(type, "MR") == 0) {
-					RT_UploadRuntimeBitmap(*i, bm_index, &current_material.metallic_roughness_texture);
-				}
-				else if (strcmp(type, "E") == 0) {
-					RT_UploadRuntimeBitmap(*i, bm_index, &current_material.emissive_texture);
-				}
-			}
-		}
-		
-		//Updating the material for rendering
-		materials[bm_index] = current_material;
-		RT_UpdateMaterial(bm_index, &current_material);
-	}
-
-	//Set last texture update
-	//Free the files list
-	g_LastTextureUpdate = time(NULL);
-	PHYSFS_freeList(directory_list);
-}
-
-void RT_UploadRuntimeBitmap(char* fileName, uint16_t bm_index, RT_ResourceHandle* curResourceHandle) {
-	RT_ResourceHandle texture_handle;
-	int w, h, c;
-
-	RT_ArenaMemoryScope(&g_thread_arena)
-	{
-		const char* filename = RT_ArenaPrintF(&g_thread_arena, "assets/textures/%s", fileName);
-		const unsigned char* image_data = RT_LoadImageFromDisk(&g_thread_arena, filename, &w, &h, &c, 4);
-		texture_handle = RT_UploadTexture(&(RT_UploadTextureParams) {
-			.width = w,
-				.height = h,
-				.pixels = image_data,
-				.name = RT_ArenaPrintF(&g_thread_arena, "Game Texture #%i (substituted: %s)", bm_index, fileName),
-				.format = RT_TextureFormat_SRGBA8,
-		});
-		*curResourceHandle = texture_handle;
-	}
-}
-</code>
-                    </pre>
-                    <div class="code-snippet-button-container">
-                        <button type="button" @click="ToggleCodeSnippet(3)" class="code-snippet-button">Toggle Snippet</button>
-                        <!-- <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/PeekSheep.cs" class="code-snippet-button" target="_blank">View on github</a> -->
-                    </div>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Additional contributions include but are not limited to</p>
-                    <ul>
-                        <li>PC x64 build configuration</li>
-                        <li>Cross-platform allocation for PS5</li>
-                        <li>Cross patform diverse logger</li>
-                        <li>A cross-platform timer</li>
-                        <li>Abstracting windows dependend systems</li>
-                        <li>Researching an old code base</li>
-                    </ul>
-                </div>
+                <CodeSnippetComponent>
+                    <template v-slot:Text>
+                        <ul>
+                            <li>Shareware support implementation</li>
+                            <li>Added splash screen</li>
+                            <li>Texture reworks and emissive adjustments</li>
+                            <li>Light flashing on level endings</li>
+                        </ul>
+                    </template>
+                </CodeSnippetComponent>
             </div>
         </section>
 
@@ -389,23 +346,28 @@ void RT_UploadRuntimeBitmap(char* fileName, uint16_t bm_index, RT_ResourceHandle
             </div>
         </section>
 
-        <!-- <div class="findcode-github">
+        <div class="findcode-github">
             <h1>Find this project on</h1>
-            <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
-        </div> -->
+            <a href="https://github.com/BredaUniversityGames/DXX-Raytracer" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+        </div>
         <section class="empty-footer"></section>
     </div>
 </template>
 
 <script>
-import Image0 from '/src/assets/Image/Portfolio/DR/img10.png'
-import Image1 from '/src/assets/Image/Portfolio/DR/img11.png'
-import Image2 from '/src/assets/Image/Portfolio/DR/img12.png'
-import Image3 from '/src/assets/Image/Portfolio/DR/img13.png'
-import Image4 from '/src/assets/Image/Portfolio/DR/img14.png'
+import Image0 from '/src/assets/Image/Portfolio/DR/img10.webp'
+import Image1 from '/src/assets/Image/Portfolio/DR/img11.webp'
+import Image2 from '/src/assets/Image/Portfolio/DR/img12.webp'
+import Image3 from '/src/assets/Image/Portfolio/DR/img13.webp'
+import Image4 from '/src/assets/Image/Portfolio/DR/img14.webp'
 
 import con0 from "/src/assets/Image/Portfolio/DR/contributions/DR_CON_1.mp4"
+import con1 from "/src/assets/Image/Portfolio/DR/contributions/DR_CON_2.mp4"
 
+import code0 from "../CodeSnippets/Descent/Code0.vue"
+import Code1 from "../CodeSnippets/Descent/Code1.vue"
+
+import CodeSnippetComponent from '../IndividualComponents/CodeSnippetComponent.vue'
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue'
 import Expandablevideo from '../IndividualComponents/ExpandableVideo.vue'
 
@@ -413,7 +375,6 @@ export default {
     data() {
         return {
             name: 'DR',
-            mobile: false,
             images: [
             {
                 src: Image0,
@@ -437,36 +398,13 @@ export default {
             }
             ],
             contributionImages: [
-                con0
+                con0,
+                con1
             ],
-            contributionState: [false, false, false, false],
         }
     },
     beforeMount() {
         this.$emit('OpenNavBar');
-    },
-    mounted() {
-        this.IsMobile();
-        window.addEventListener('resize', this.IsMobile);
-        Prism.highlightAll();
-    },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.IsMobile);
-    },
-    updated(){
-        Prism.highlightAll();
-    },
-    methods: {
-        IsMobile() {
-            if (window.innerWidth <= 1000) {
-                this.mobile = true
-            } else {
-                this.mobile = false
-            }
-        },
-        ToggleCodeSnippet(index){
-            this.contributionState[index] = !this.contributionState[index];
-        }
     },
     watch: {
         $route: {
@@ -478,13 +416,16 @@ export default {
     },
     components:{
         CarrouselComp,
-        Expandablevideo
+        Expandablevideo,
+        CodeSnippetComponent,
+        code0,
+        Code1
     }
 }
 </script>
 
 <style scoped>
 .header-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DR/Banner.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DR/Banner.webp');
 }
-</style>>
+</style>

@@ -37,7 +37,7 @@
 
 <style scoped>
 .feature-project{
-  background-image: url('/src/Assets/Image/Portfolio/GE/GEHeaderNoLogo.jpg');
+  background-image: url('/src/Assets/Image/Portfolio/GE/GEHeaderNoLogo.webp');
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -51,7 +51,7 @@
   position:absolute;
   bottom:0;
   right:0;
-  margin-right: 25px;;
+  margin-right: 25px;
   margin-bottom: 20px;
   text-align: right;
 }

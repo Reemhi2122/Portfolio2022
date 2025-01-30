@@ -6,15 +6,13 @@
 
             <div class="about-grid">
                 <div class="about-container">
-                    <img class="about-picture" src="/src/assets/Image/Stan/Stan3New.png">
+                    <img class="about-picture" src="/src/assets/Image/Stan/stan.jpg">
                     <p class="contact-text"><b>E-mail:</b><br>stanvogels@live.nl</p>
                     <div>
                         <a href="https://www.linkedin.com/in/stanvogels/"><img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         <a href="https://github.com/Reemhi2122"><img class="white-image"
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /></a>
-                        <a href="https://twitter.com/Stan_Vogels"><img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" /></a>
                     </div>
                     <a :href="this.cv" target="_blank" class="resume-button">Resume</a>
                 </div>

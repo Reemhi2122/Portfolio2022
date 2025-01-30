@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 .feature-project {
-  background-image: url('../../Assets/Image/Portfolio/DR/Banner.png');
+  background-image: url('../../Assets/Image/Portfolio/DR/Banner.webp');
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -85,6 +85,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  float: right;
+  max-width: 80vw;
+  margin: 0;
 }
 
 .project-bubbles-feature {

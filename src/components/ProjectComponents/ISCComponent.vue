@@ -8,7 +8,7 @@
         </div>
       </div>
 
-      <video class="project-video" poster="../../assets/Image/Portfolio/ISC/Main.jpg" controls>
+      <video class="project-video" poster="../../assets/Image/Portfolio/ISC/Header.webp" controls>
         <source src="/src/assets/Image/Portfolio/ISC/InSheepsClothing.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -43,9 +43,16 @@
       suspect you and get as much information as you can!
     </p>
 
-    <div class="findcode-github">
-      <h1>Find this project on</h1>
-      <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+    <div class="links">
+      <div class="findcode-github">
+        <h1>Find this project on</h1>
+        <a href="https://github.com/Reemhi2122/InSheepsClothingShowcase" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+      </div>
+
+      <div class="rewards">
+        <h1>Awards</h1>
+        <a href="https://indigoshowcase.nl/discover/" target="_blank"><img class="reward-img" src="/src/assets/Image/Logos/INDIGO_Selection_black.png"></a>
+      </div>
     </div>
 
     <section class="software-skills">
@@ -83,505 +90,127 @@
       </div>
     </section>
 
+
+
+
     <section class="contribution-section">
       <h2 class="section-header">What I contributed to the project</h2>
       <div class="contribution-element-container">
-        <div class="contribution-element">
-          <p class="contribution-element-title">Voting System</p>
-          <ExpandableImage class="contribution-image" :src="this.contributionImages[0]"/>
-          <p class="contribution-text">The main mechanic in the game is voting, this is where you 
-            as a player are in the spotlight and have to vote the same as the other sheep. This was 
-            done using events, and when a sheep notices you are not voting the correct answer, 
+
+        <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/InSheepsClothingShowcase/blob/main/ISCScripts/Systems/VotingSystem.cs">
+          <template v-slot:Title>
+            Voting System
+          </template>
+
+          <template v-slot:Image>
+            <ExpandableImage class="contribution-image" :src="this.contributionImages[0]"/>
+          </template>
+
+          <template v-slot:Text>
+            The main mechanic in the game is voting, this is where you
+            as a player are in the spotlight and have to vote the same as the other sheep. This was
+            done using events, and when a sheep notices you are not voting the correct answer,
             its suspiciousness will go up.
-          </p>  
-          <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[0]}">
-<code class="language-csharp">public enum VotingState
-{
-	VotingState_None,
-	VotingState_Waiting,
-}
+          </template>
 
-namespace InSheepsClothing
-{
-	public enum Vote
-	{
-		Yes,
-		No,
-		None
-	}
+          <template v-slot:Code>
+            <code0/>
+          </template>
+        </CodeSnippetComponent>
 
-	public class VotingSystem : MonoBehaviour
-	{
-		private VotingState votingState;
-		public VotingState VotingState =&gt; votingState;
-		public List&lt;VotingSheep&gt; votingSheep =&gt; GameManager.Instance.SheepSystem.VotingSheepList;
-		public SheepSystem sheepSystem;
 
-		private Vote expectedVote;
-		public Vote ExpectedVote =&gt; expectedVote;
+        <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/InSheepsClothingShowcase/blob/main/ISCScripts/Sheep/SheepSystem.cs">
+          <template v-slot:Title>
+            Sheep spawning
+          </template>
 
-		private void DisableTimer(ref Timer timer, float time)
-		{
-			timer.Enabled = false;
-			timer.Reset();
-			timer.SetTime(time);
-		}
+          <template v-slot:Image>
+            <ExpandableImage class="contribution-image" :src="this.contributionImages[1]"/>
+          </template>
 
-		[SerializeField]
-		private Timer
-			_voteTimer = new Timer(),
-			_votingTimer = new Timer();
-
-		public Timer VoteTimer =&gt; _voteTimer;
-		public Timer VotingTimer =&gt; _votingTimer;
-
-		private void Awake()
-		{
-			_voteTimer.Enabled = false;
-			_votingTimer.Enabled = false;
-
-			_voteTimer.SetTime(GameplaySettings.TimeToVoteMax);
-			_votingTimer.SetTime(GameplaySettings.TimeTillVotingDelayRoundStart);
-		}
-
-        private void OnEnable()
-		{
-			EventManager.Instance.RoundStart += RoundStart;
-		}
-
-        private void RoundStart(object sender)
-		{
-			EventManager.Instance.RoundStart -= RoundStart;
-
-			EventManager.Instance.Vote += StartVote;
-			EventManager.Instance.PlayerVoted += PlayerVoted;
-
-			_votingTimer.Enabled = true;
-			_votingTimer.TickAction = VotingGracePeriodEnded;
-
-			_voteTimer.SetTime(GameplaySettings.TimeToVoteMax);
-			_votingTimer.SetTime(GameplaySettings.TimeTillVotingDelayRoundStart);
-		}
-
-        private void OnDisable()
-		{
-			EventManager.Instance.Vote -= StartVote;
-			EventManager.Instance.PlayerVoted -= PlayerVoted;
-		}
-
-		private void VotingGracePeriodEnded()
-		{
-			float time = GameplaySettings.TimeTillVotingMax;
-			DisableTimer(ref _votingTimer, time);
-
-			_votingTimer.TickAction = VotingTimerFinished;
-			EventManager.Instance.OnVote(this);
-		}
-
-		private void VotingTimerFinished()
-		{
-			float time = _votingTimer.GetTime() * GameplaySettings.TimeTillVotingMultiplier;
-			time = Mathf.Clamp(time, GameplaySettings.TimeTillVotingMin, GameplaySettings.TimeTillVotingMax);
-			DisableTimer(ref _votingTimer, time);
-
-			EventManager.Instance.OnVote(this);
-		}
-
-		private void Update()
-		{
-			_voteTimer.Update();
-			_votingTimer.Update();
-		}
-
-		public void StartVote(object sender)
-		{
-			if (votingState == VotingState.VotingState_Waiting)
-				return;
-
-			votingState = VotingState.VotingState_Waiting;
-
-			expectedVote = Random.Range(0, 2) == 0 ? Vote.No : Vote.Yes;
-			Debug.Log(expectedVote);
-
-			List&lt;int&gt; SheepLeft = new List&lt;int&gt;();
-
-			Debug.Log(votingSheep.Count + " count of voting sheep");
-			for (int i = 0; i &lt; votingSheep.Count; i++)
-				SheepLeft.Add(i);
-
-			int minimumVotingCorrect = (votingSheep.Count / 2) + 1;
-			int maxVotingCorrect = votingSheep.Count + 1;
-			int amountOfCorrectSheep = Random.Range(minimumVotingCorrect, maxVotingCorrect);
-
-			Debug.Log(amountOfCorrectSheep + " correct sheep");
-
-			for (int i = 0; i &lt; amountOfCorrectSheep; i++)
-			{
-				int currentSheep = Random.Range(0, SheepLeft.Count);
-				votingSheep[SheepLeft[currentSheep]].Vote(expectedVote);
-				SheepLeft.RemoveAt(currentSheep);
-			}
-
-			for (int i = 0; i &lt; SheepLeft.Count; i++)
-				votingSheep[SheepLeft[i]].Vote(expectedVote == Vote.No ? Vote.Yes : Vote.No);
-
-			_voteTimer.Enabled = true;
-			_voteTimer.TickAction = OnVoteEnd;
-		}
-
-		private void OnVoteEnd()
-		{
-			CheckVote(Vote.None);
-		}
-
-		private void PlayerVoted(object sender, PlayerVotedEventArgs e)
-		{
-			if (votingState == VotingState.VotingState_None)
-				return;
-
-			CheckVote(e.vote);
-		}
-
-		public void EndVote()
-        {
-			votingState = VotingState.VotingState_None;
-			for (int i = 0; i &lt; votingSheep.Count; i++)
-				votingSheep[i].EndVote();
-		}
-
-		private void CheckVote(Vote vote)
-		{
-			// Start delay timer again.
-			_votingTimer.Enabled = true;
-
-			// Reset and disable actual voting timer.
-			_voteTimer.Reset();
-			_voteTimer.Enabled = false;
-
-			EndVote();
-
-			if (vote == expectedVote)
-				return;
-
-			for (int i = 0; i &lt; votingSheep.Count; i++)
-				votingSheep[i].AddSuspiciousness();
-			
-			GameManager.Instance.player.Detected();
-
-			float time = _voteTimer.GetTime() * GameplaySettings.TimeToVoteMultiplier;
-			time = Mathf.Clamp(time, GameplaySettings.TimeToVoteMin, GameplaySettings.TimeToVoteMax);
-			_voteTimer.SetTime(time);
-		}
-	}
-}
-            </code>
-          </pre>
-          <div class="code-snippet-button-container">
-            <button type="button" @click="ToggleCodeSnippet(0)" class="code-snippet-button">Toggle Snippet</button>
-            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/VotingSystem.cs" class="code-snippet-button" target="_blank">View on github</a>
-          </div>
-        </div>
-        <div class="contribution-element">
-          <p class="contribution-element-title">Sheep spawning</p>
-          <ExpandableImage class="contribution-image" :src="this.contributionImages[1]"/>
-          <p class="contribution-text"> 
-            We didn't want all sheep to be there all the time, so we decided to 
-            start with a fixed amount of sheep at the beginning of the game and 
-            added more when the player managed to get further into the game. This 
+          <template v-slot:Text>
+            We didn't want all sheep to be there all the time, so we decided to
+            start with a fixed amount of sheep at the beginning of the game and
+            added more when the player managed to get further into the game. This
             would ensure an easy start for the player and gradually make it harder.
-          </p>
-          <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[1]}">
-<code class="language-csharp">namespace InSheepsClothing
-{
-    public class SheepSystem : MonoBehaviour
-    {
-        public List&lt;Sheep&gt; AllSheep;
-        public List&lt;VotingSheep&gt; availableSheep; 
-        public List&lt;VotingSheep&gt; VotingSheepList;
-        public PeekSheep peekSheep;
-        public PresentationSheep presentationSheep;
-        public WindowWashingSheep windowWashingSheep;
+          </template>
 
-        private Timer sheepSpawnTimer = new Timer();
-		
-        private void RoundStart(object sender)
-        {
-            StartTimer(this);
-            EventManager.Instance.PictureTaken += CheckIfSheepLooking;
-			for (int i = 0; i &lt; GameplaySettings.AmountOfStartingSheep; i++)
-			{
-				int randomSheep = Random.Range(0, availableSheep.Count);
-				AllSheep.Add(availableSheep[randomSheep]);
-				VotingSheepList.Add(availableSheep[randomSheep]);
-				availableSheep[randomSheep].transform.parent.gameObject.SetActive(true);
-				availableSheep.RemoveAt(randomSheep);
-			}
+          <template v-slot:Code>
+            <code1/>
+          </template>
+        </CodeSnippetComponent>
 
-			AllSheep.Add(presentationSheep);
-			AllSheep.Add(peekSheep);
-			AllSheep.Add(windowWashingSheep);
+        <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/InSheepsClothingShowcase/blob/main/ISCScripts/Interactables/Ipad.cs">
+          <template v-slot:Title>
+            Suspiciousness
+          </template>
 
-            GameManager.Instance.ipad.UpdateIpadBars();
+          <template v-slot:Image>
+            <ExpandableImage class="contribution-image" :src="this.contributionImages[2]"/>
+          </template>
 
-			sheepSpawnTimer.SetTime(GameplaySettings.ExtraSheepSpawnTimer);
-			sheepSpawnTimer.Enabled = true;
-			sheepSpawnTimer.TickAction = OnSpawnNewSheep;
-		}
-
-        private void OnEnable()
-        {
-            EventManager.Instance.RoundStart += RoundStart;
-        }
-
-        private void OnDisable()
-        {
-            EventManager.Instance.PictureTaken -= CheckIfSheepLooking;
-            EventManager.Instance.RoundStart -= StartTimer;
-        }
-
-        private void Update()
-        {
-            sheepSpawnTimer.Update();
-        }
-
-        public void CheckIfSheepLooking(object a_Sender)
-        {
-            for(int i = 0; i &lt; AllSheep.Count; i++)
-            {
-                if (AllSheep[i].IsSheepLooking())
-                {
-                    AllSheep[i].AddSuspiciousness();
-                    GameManager.Instance.player.Detected();
-                }
-            }
-        }
-
-        public int GetSheepSuspiciousness()
-        {
-            int TotalSuspiciousness = 0;
-            for (int i = 0; i &lt; AllSheep.Count; i++)
-                TotalSuspiciousness += AllSheep[i].GetSuspiciousness();
-            return TotalSuspiciousness;
-        }
-
-        public void StartTimer(object sender)
-        {
-            sheepSpawnTimer.Enabled = true;
-        }
-
-        public void OnSpawnNewSheep()
-        {
-            if (availableSheep.Count &gt; 0) {
-                int randomSheep = Random.Range(0, availableSheep.Count);
-                AllSheep.Add(availableSheep[randomSheep]);
-                VotingSheepList.Add(availableSheep[randomSheep]);
-                availableSheep[randomSheep].transform.parent.gameObject.SetActive(true);
-                availableSheep.RemoveAt(randomSheep);
-
-                sheepSpawnTimer.SetTime(GameplaySettings.ExtraSheepSpawnTimer);
-                GameManager.Instance.ipad.UpdateIpadBars();
-
-                return;
-            }
-
-            sheepSpawnTimer.Enabled = false;
-        }
-    }
-}
-</code>
-          </pre>
-          <div class="code-snippet-button-container">
-            <button type="button" @click="ToggleCodeSnippet(1)" class="code-snippet-button">Toggle Snippet</button>
-            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/SheepSystem.cs" class="code-snippet-button" target="_blank">View on github</a>
-          </div>
-        </div>
-        <div class="contribution-element">
-          <p class="contribution-element-title">Suspiciousness</p>
-          <ExpandableImage class="contribution-image" :src="this.contributionImages[2]"/>
-          <p class="contribution-text">
-            All the sheep have an individual suspiciousness bar, which if full is hard to remove. 
-            All these bars together act as a totally suspicious bar and when this one is full, 
-            the game is over. The sheep will only get more suspicious when they look at the player 
-            while they are doing something suspicious. The suspiciousness is displayed on a dynamic 
+          <template v-slot:Text>
+            All the sheep have an individual suspiciousness bar, which if full is hard to remove.
+            All these bars together act as a totally suspicious bar and when this one is full,
+            the game is over. The sheep will increase in suspicion when they look at the player
+            while they are doing something suspicious. The suspiciousness is displayed on a dynamic
             iPad. This will tell the player all this information without having to add an actual HUD.
-          </p>
-          <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[2]}">
-<code class="language-csharp">namespace InSheepsClothing
-{
-    public class Ipad : MonoBehaviour
-    {
-        public Slider TotalSuspicousness;
-        public Slider[] IndividualSuspicousness = new Slider[11];
-        public GameObject TextBox;
-        public TMP_Text TextPrefab;
+          </template>
 
-        private SheepSystem sheepSystem;
-        private int amountPic = 0;
+          <template v-slot:Code>
+            <code2/>
+          </template>
+        </CodeSnippetComponent>
 
-        public void Start()
-        {
-            sheepSystem = GameManager.Instance.SheepSystem;
-        }
+        <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/InSheepsClothingShowcase/blob/main/ISCScripts/Sheep/PeekSheep.cs">
+          <template v-slot:Title>
+            Fax machine | Decryption machine
+          </template>
 
-        public void UpdateIpadBars()
-        {
-            for (int i = 0; i &lt; sheepSystem.AllSheep.Count; i++)
-                IndividualSuspicousness[i].gameObject.SetActive(true);
-        }
+          <template v-slot:Image>
+            <ExpandableImage class="contribution-image" :src="this.contributionImages[3]"/>
+          </template>
 
-        public void AddPicture()
-        {
-            amountPic++;
-            TMP_Text newText = Instantiate(TextPrefab, TextBox.transform);
-            newText.text = "Picture amount: " + amountPic;
-        }
+          <template v-slot:Text>
+            Because the game was not challenging enough, we decided to add a new feature. This feature 
+            needed to be different than all the others because we wanted more than only one-click actions. 
+            So we came up with the fax/decryptor system. Where the sheep's signs would be encrypted, and 
+            for the player to read them he needed to decrypt the system using a fax machine sent by him on 
+            request. This fax machine would give a number of symbols in sequence depending on the number of 
+            pictures sent by the player.
+          </template>
 
-        public void Update()
-        {
-            float TotalSheepSuspicousness = 0;
+          <template v-slot:Code>
+            <code3/>
+          </template>
+        </CodeSnippetComponent>
 
-            for (int i = 0; i &lt; sheepSystem.AllSheep.Count; i++)
-            {
-                float correctedValue = ((float)sheepSystem.AllSheep[i].GetSuspiciousness()) / 100.0f;
-                IndividualSuspicousness[i].value = correctedValue;
-                TotalSheepSuspicousness += correctedValue;
-            }
+        <CodeSnippetComponent>
+          <template v-slot:Title>
+            Additional features include but are not limited to
+          </template>
 
-            if(Input.GetKeyDown(KeyCode.P))
-                AddPicture();
-
-            TotalSuspicousness.value = TotalSheepSuspicousness / GameManager.Instance.SheepSystem.AllSheep.Count;
-        }
-    }
-}
-</code>
-          </pre>
-          <div class="code-snippet-button-container">
-            <button type="button" @click="ToggleCodeSnippet(2)" class="code-snippet-button">Toggle Snippet</button>
-            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Ipad.cs" class="code-snippet-button" target="_blank">View on github</a>
-          </div>
-        </div>
-        <div class="contribution-element">
-          <p class="contribution-element-title">Peek sheep</p>
-          <ExpandableImage class="contribution-image" :src="this.contributionImages[3]"/>
-          <p class="contribution-text">
-            I also created the peek sheep that you can see in the right corner, 
-            this sheep will peek at you at certain intervals and will make it harder 
-            for the player to do his work and report back to the FBI. This sheep will 
-            start looking at you more the longer the game goes on and had its own suspicious rating.
-          </p>
-          <pre class="code-snippet" :class="{'expanded-code-snippet': contributionState[3]}">
-<code class="language-csharp">namespace InSheepsClothing
-{
-    public class PeekSheep : Sheep
-    {
-        private Animator DoorAnimator;
-
-        [SerializeField]
-        private Timer 
-            _peekSheepTimer = new Timer(),
-            _peekSheepPeekTimer = new Timer();
-
-        private void Awake()
-        {
-            DoorAnimator = gameObject.GetComponent&lt;Animator&gt;();
-
-            _peekSheepTimer.Enabled = false;
-            _peekSheepPeekTimer.Enabled = false;
-
-            _peekSheepTimer.SetTime(GameplaySettings.PeekSheepTimeDelayRoundStart);
-            _peekSheepPeekTimer.SetTime(GameplaySettings.PeekSheepTimeMax);
-            _peekSheepPeekTimer.TickAction = StopPeeking;
-        }
-
-        private new void OnEnable()
-        {
-            base.OnEnable();
-            EventManager.Instance.RoundStart += RoundStart;
-        }
-
-        private new void OnDisable()
-        {
-            base.OnDisable();
-            EventManager.Instance.RoundStart -= RoundStart;
-        }
-
-
-        private new void Update()
-        {
-            base.Update();
-            _peekSheepTimer.Update();
-            _peekSheepPeekTimer.Update();
-        }
-
-        private void RoundStart(object sender)
-        {
-            EventManager.Instance.RoundStart -= RoundStart;
-
-            _peekSheepTimer.Enabled = true;
-            _peekSheepTimer.TickAction = PeekSheepGracePeriodEnded;
-        }
-
-        private void PeekSheepGracePeriodEnded()
-        {
-            float time = GameplaySettings.PeekSheepTimeMax;
-            DisableTimer(ref _peekSheepTimer, time);
-
-            _peekSheepTimer.TickAction = PeekSheepTimerFinished;
-            Peek();
-        }
-
-        private void PeekSheepTimerFinished()
-        {
-            float time = _peekSheepTimer.GetTime() * GameplaySettings.PeekSheepTimeMultiplier;
-            time = Mathf.Clamp(time, GameplaySettings.PeekSheepTimeMin, GameplaySettings.PeekSheepTimeMax);
-            DisableTimer(ref _peekSheepTimer, time);
-
-            Peek();
-        }
-
-        private void Peek()
-        {
-            float time = _peekSheepPeekTimer.GetTime() * GameplaySettings.PeekSheepPeekMultiplier;
-            time = Mathf.Clamp(time, GameplaySettings.PeekSheepPeekMin, GameplaySettings.PeekSheepPeekMax);
-            DisableTimer(ref _peekSheepPeekTimer, time);
-
-            _peekSheepPeekTimer.Enabled = true;
-            DoorAnimator.SetBool("IsPeeking", true);
-        }
-
-        private void StopPeeking()
-        {
-            DoorAnimator.SetBool("IsPeeking", false);
-            _peekSheepPeekTimer.Enabled = false;
-            _peekSheepTimer.Enabled = true;
-        }
-
-        private void DisableTimer(ref Timer timer, float time)
-        {
-            timer.Enabled = false;
-            timer.Reset();
-            timer.SetTime(time);
-        }
-    }
-}
-            </code>
-          </pre>
-          <div class="code-snippet-button-container">
-            <button type="button" @click="ToggleCodeSnippet(3)" class="code-snippet-button">Toggle Snippet</button>
-            <a href="https://github.com/kyliandekker/in-sheeps-clothing/blob/main/Assets/Scripts/Sheep/PeekSheep.cs" class="code-snippet-button" target="_blank">View on github</a>
-          </div>
-        </div>
-
-        <div class="contribution-element">
-          <p class="contribution-element-title">Additional features include but are not limited to</p>
-          <ul>
+          <template v-slot:Text>
+            <ul>
             <li>Designing key game elements</li>
             <li>Returning of objects after falling on the ground</li>
             <li>Sheep looking behavior</li>
             <li>Picture counting</li>
+            <li>Scoreboard counting</li>
+            <li>Scoreboard saving</li>
+            <li>A peeking sheep, which comes by occasionaly</li>
           </ul>
-        </div>
+          </template>
+        </CodeSnippetComponent>
+
+        <CodeSnippetComponent>
+          <template v-slot:Text>
+            <ul>
+            <li>Working on the game states</li>
+            <li>Balancing of events and suspicion</li>
+          </ul>
+          </template>
+        </CodeSnippetComponent>
       </div>
     </section>
 
@@ -620,11 +249,11 @@ namespace InSheepsClothing
         <div class="learned-element">
           <h3>Making a VR game</h3>
           <p>
-            This was my first time stepping into the exciting world of virtual reality. 
-            I was eager to learn and explore this new technology, but I quickly realized 
-            that it was not going to be an easy journey. Despite the steep learning curve, 
-            I was determined to get a grip on it. Luckily I had Kylian as a teammate with 
-            prior experience in VR. This project taught me how to make a game interesting 
+            This was my first time stepping into the exciting world of virtual reality.
+            I was eager to learn and explore this new technology, but I quickly realized
+            that it was not going to be an easy journey. Despite the steep learning curve,
+            I was determined to get a grip on it. Luckily I had Kylian as a teammate with
+            prior experience in VR. This project taught me how to make a game interesting
             and playable for a VR game.
           </p>
         </div>
@@ -658,7 +287,7 @@ namespace InSheepsClothing
 
     <div class="findcode-github">
       <h1>Find this project on</h1>
-      <a href="https://github.com/Reemhi2122/InSheepsClothing" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+      <a href="https://github.com/Reemhi2122/InSheepsClothingShowcase" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
     </div>
     <section class="empty-footer"></section>
 </div>
@@ -669,17 +298,25 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-csharp';
 
-import Image0 from '/src/assets/Image/Portfolio/ISC/Contributions/PeekSheep.jpg'
-import Image1 from '/src/assets/Image/Portfolio/ISC/Contributions/SheepSpawning.jpg'
-import Image2 from '/src/assets/Image/Portfolio/ISC/Contributions/Suspicousness.jpg'
-import Image3 from '/src/assets/Image/Portfolio/ISC/Contributions/VotingSystem.jpg'
-import Image4 from '/src/assets/Image/Portfolio/ISC/main.jpg'
+import Image0 from '/src/assets/Image/Portfolio/ISC/img0.webp'
+import Image1 from '/src/assets/Image/Portfolio/ISC/img1.webp'
+import Image2 from '/src/assets/Image/Portfolio/ISC/img2.webp'
+import Image3 from '/src/assets/Image/Portfolio/ISC/img3.webp'
+import Image4 from '/src/assets/Image/Portfolio/ISC/img4.webp'
+import Image5 from '/src/assets/Image/Portfolio/ISC/img5.webp'
+import Image6 from '/src/assets/Image/Portfolio/ISC/img6.webp'
 
-import con0 from "/src/assets/Image/Portfolio/ISC/contributions/VotingSystem.jpg";
-import con1 from "/src/assets/Image/Portfolio/ISC/contributions/SheepSpawning.jpg";
-import con2 from "/src/assets/Image/Portfolio/ISC/contributions/Suspicousness.jpg";
-import con3 from "/src/assets/Image/Portfolio/ISC/contributions/PeekSheep.jpg";
+import con0 from "/src/assets/Image/Portfolio/ISC/Header.webp";
+import con1 from "/src/assets/Image/Portfolio/ISC/img5.webp";
+import con2 from "/src/assets/Image/Portfolio/ISC/img2.webp";
+import con3 from "/src/assets/Image/Portfolio/ISC/contributions/faxmachine.webp";
 
+import code0 from "../CodeSnippets/ISC/Code0.vue"
+import code1 from "../CodeSnippets/ISC/Code1.vue"
+import code2 from "../CodeSnippets/ISC/Code2.vue"
+import code3 from "../CodeSnippets/ISC/Code3.vue"
+
+import CodeSnippetComponent from '../IndividualComponents/CodeSnippetComponent.vue'
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue';
 import ExpandableImage from '../IndividualComponents/ExpandableImage.vue'
 
@@ -687,12 +324,11 @@ export default {
   data() {
     return {
       name: 'ISC',
-      mobile: false,
       images: [
           {
               src: Image0,
               index: 0
-          },            
+          },
           {
               src: Image1,
               index: 1
@@ -708,42 +344,29 @@ export default {
           {
               src: Image4,
               index: 4
+          },
+          {
+              src: Image5,
+              index: 5
+          },
+          {
+              src: Image6,
+              index: 6
           }
         ],
-      contributionState: [false, false, false, false],
       contributionImages: [
-                con0,
-                con1,
-                con2,
-                con3
-            ],
+            con0,
+            con1,
+            con2,
+            con3
+        ],
+      codefiles: [
+        code0
+      ]
     }
   },
   beforeMount() {
     this.$emit('OpenNavBar');
-  },
-  mounted() {
-    this.IsMobile();
-    window.addEventListener('resize', this.IsMobile);
-    Prism.highlightAll();
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.IsMobile);
-  },
-  updated(){
-    Prism.highlightAll();
-  },
-  methods: {
-    IsMobile() {
-      if (window.innerWidth <= 1000) {
-        this.mobile = true
-      } else {
-        this.mobile = false
-      }
-    },
-    ToggleCodeSnippet(index){
-      this.contributionState[index] = !this.contributionState[index];
-    }
   },
   watch: {
     $route: {
@@ -755,7 +378,12 @@ export default {
   },
   components:{
     CarrouselComp,
-    ExpandableImage
+    ExpandableImage,
+    CodeSnippetComponent,
+    code0,
+    code1,
+    code2,
+    code3
   }
 }
 </script>
@@ -777,7 +405,7 @@ export default {
 }
 
 .header-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/src/assets/Image/Portfolio/ISC/Header.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/src/assets/Image/Portfolio/ISC/Img1.webp");
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -878,10 +506,6 @@ export default {
   width: 80%;
 }
 
-.software-skills-icons{
-
-}
-
 .software-skill-element {
   width: 175px;
   display:inline-block;
@@ -896,7 +520,7 @@ export default {
   width: 50%;
   display:block;
   margin:auto;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .software-skill-title{
@@ -920,62 +544,17 @@ export default {
   margin-left: var(--project-offset-left);
 }
 
-.contribution-element-container {
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(50px, 1fr));
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 50px 5%;
-}
-
-.contribution-element{
-  display: flex;
-  flex-direction: column;
-}
-
-.contribution-element-title {
-  font-weight: 400;
-  font-size: 25px;
-  font-style: italic;
-}
-
 .contribution-image {
   width: 100%;
   overflow: hidden;
 }
 
-.contribution-text {
-  font-size: 20px;
-  flex: 1;
-}
-
-.code-snippet{
-  max-width: 100%;
-  max-height: 200px;
-  margin-top: auto;
-}
-
-.expanded-code-snippet{
-  max-height: 600px;
-}
-
-.code-snippet-button-container{
-  display: flex;
-  justify-content: center;
-}
-
-.code-snippet-button{
-  border: 2px solid black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  padding: 5px 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 120px;
-  white-space: nowrap;
-  font-family: 'Roboto', sans-serif;
-  font-size: 13px;
+.contribution-element-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 50px 5%;
 }
 
 .team-section {
@@ -1038,10 +617,16 @@ export default {
   grid-gap: 50px;
 }
 
+.links{
+  margin-left: 15%;
+  width: 70%;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, auto);
+}
 
 .findcode-github {
-  width: 70%;
-  margin-left: 15%;
   font-style: normal;
   margin-top: 50px;
   text-align: center;
@@ -1056,6 +641,25 @@ export default {
 .findcode-github>a>img {
   margin-top: 0;
   width: 300px;
+}
+
+.rewards{
+  font-style: normal;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 16px;
+
+  display: inline-block;
+}
+
+.rewards>h1 {
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.reward-img{
+  margin-top: 10px;
+  width: 150px;
 }
 
 .itchio{
@@ -1102,10 +706,6 @@ export default {
     margin-top: 8vw;
   }
 
-  .contribution-element {
-    margin-bottom: 10px;
-  }
-
   .team-section {
     margin-top: 20px;
   }
@@ -1140,10 +740,15 @@ export default {
     object-fit: cover;
   }
 
+  .links{
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-rows: repeat(2, auto);
+  }
+
   .itchio{
-  width: 80%;
-  margin-left: 10%;
-}
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1157,5 +762,11 @@ export default {
     width: 45%;
     margin-right: 2.5%;
   }
+}
+</style>
+
+<style scoped>
+.links{
+  grid-template-columns: repeat(2, 1fr);
 }
 </style>

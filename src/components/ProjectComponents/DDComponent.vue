@@ -8,7 +8,7 @@
                 </div>
             </div>
 
-            <video class="project-video" poster="../../assets/Image/Portfolio/DD/DDImage.png" controls>
+            <video class="project-video" poster="../../assets/Image/Portfolio/DD/DDImage.webp" controls>
                 <source src="/src/assets/Image/Portfolio/DD/DDVid.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -89,31 +89,54 @@
         <section class="contribution-section">
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Obstacle spawner tool</p>
-                    <ExpandableImage class="contribution-image"
+                
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        Obstacle spawner tool
+                    </template>
+
+                    <template v-slot:Image>
+                        <ExpandableImage class="contribution-image"
                         :src="this.contributionImages[0]"/>
-                    <p class="contribution-text">For this game, I created an obstacle spawner tool that the
+                    </template>
+
+                    <template v-slot:Text>
+                        For this game, I created an obstacle spawner tool that the
                         designers in my team could use by adjusting all the settings. This tool was used for the
                         falling obstacles, the stars and the powerups. All of these mechanics are seperate spawners
                         that they adjusted to have different amount of spawn points, different heights and how much
                         they encapsulate the donut.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Obstacle gravity</p>
-                    <ExpandableImage class="contribution-image"
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
+                    <!-- <iframe class="blueprint-snippet" src="https://blueprintue.com/render/-mk9b3hz/" scrolling="no" allowfullscreen></iframe> -->
+
+                <CodeSnippetComponent>
+                    <template v-slot:Title>
+                        Obstacle gravity
+                    </template>
+
+                    <template v-slot:Image>
+                        <ExpandableImage class="contribution-image"
                         :src="this.contributionImages[1]"/>
-                    <p class="contribution-text">
+                    </template>
+
+                    <template v-slot:Text>
                         Because the level was a donut, it was a challenge to make the gravity system for it. 
                         What I did to make it work was calculate a circle in the middle of the donut and 
                         calculate the nearest point for every object that was falling towards the donut. 
                         Then I just moved the object towards the nearest point, which looked like realistic 
                         gravity behavior.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
+                <!-- <iframe class="blueprint-snippet" src="https://blueprintue.com/render/h42a_63a/" scrolling="no" allowfullscreen></iframe> -->
             </div>
         </section>
 
@@ -241,15 +264,16 @@
 </template>
 
 <script>
-import Image0 from '/src/assets/Image/Portfolio/DD/img1.jpg'
-import Image1 from '/src/assets/Image/Portfolio/DD/img2.jpg'
-import Image2 from '/src/assets/Image/Portfolio/DD/img3.jpg'
-import Image3 from '/src/assets/Image/Portfolio/DD/img4.jpg'
-import Image4 from '/src/assets/Image/Portfolio/DD/img5.jpg'
+import Image0 from '/src/assets/Image/Portfolio/DD/img1.webp'
+import Image1 from '/src/assets/Image/Portfolio/DD/img2.webp'
+import Image2 from '/src/assets/Image/Portfolio/DD/img3.webp'
+import Image3 from '/src/assets/Image/Portfolio/DD/img4.webp'
+import Image4 from '/src/assets/Image/Portfolio/DD/img5.webp'
 
 import con0 from "/src/assets/Image/Portfolio/DD/contributions/Spawner.gif"
 import con1 from "/src/assets/Image/Portfolio/DD/contributions/Gravity.gif"
 
+import CodeSnippetComponent from '../IndividualComponents/CodeSnippetComponent.vue'
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue'
 import ExpandableImage from '../IndividualComponents/ExpandableImage.vue'
 
@@ -257,7 +281,6 @@ export default {
     data() {
         return {
             name: 'DD',
-            mobile: false,
             images: [
             {
                 src: Image4,
@@ -289,22 +312,6 @@ export default {
     beforeMount() {
         this.$emit('OpenNavBar');
     },
-    mounted() {
-        this.IsMobile();
-        window.addEventListener('resize', this.IsMobile);
-    },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.IsMobile);
-    },
-    methods: {
-        IsMobile() {
-            if (window.innerWidth <= 1000) {
-                this.mobile = true
-            } else {
-                this.mobile = false
-            }
-        }
-    },
     watch: {
         $route: {
             immediate: true,
@@ -315,14 +322,15 @@ export default {
     },
     components:{
         CarrouselComp,
-        ExpandableImage
+        ExpandableImage,
+        CodeSnippetComponent,
     }
 }
 </script>
 
 <style scoped>
 .header-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DD/DDFront.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DD/DDFront.webp');
 }
 
-</style>>
+</style>

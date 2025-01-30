@@ -8,7 +8,7 @@
                 </div>
             </div>
 
-            <video class="project-video" poster="../../assets/Image/Portfolio/COTF/Test.png" controls>
+            <video class="project-video" poster="../../assets/Image/Portfolio/COTF/Test.webp" controls>
                 <source src="/src/assets/Image/Portfolio/COTF/COTF.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -97,39 +97,72 @@
         <section class="contribution-section">
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
-                <div class="contribution-element">
-                    <p class="contribution-element-title">The following wolf</p>
-                    <ExpandableVideo class="contribution-image"
+
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        The following wolf
+                    </template>
+
+                    <template v-slot:Image>
+                        <ExpandableVideo class="contribution-image"
                         :src="this.contributionImages[0]" autoplay loop></ExpandableVideo>
-                    <p class="contribution-text">In the game, we wanted to create a thread for the player while
+                    </template>
+
+                    <template v-slot:Text>
+                        In the game, we wanted to create a thread for the player while
                         traversing the level. This is where we came up with the wolf that would hunt for the fox when it
                         would see it. I created this wolf with visual AI and movement AI. If the wolf would spot you, 
                         it would follow you, and depending on if it will catch you it will attack or lose interest.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">The following bird</p>
-                    <ExpandableVideo class="contribution-image"
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        The following bird
+                    </template>
+
+                    <template v-slot:Image>
+                        <ExpandableVideo class="contribution-image"
                         :src="this.contributionImages[1]" autoplay loop></ExpandableVideo>
-                    <p class="contribution-text">We wanted an NPC to follow the player and show important parts of the
+                    </template>
+
+                    <template v-slot:Text>
+                        We wanted an NPC to follow the player and show important parts of the
                         level to the player. Eventually, we decided this would be a bird that would fly around the player
                         when stationary, when the player would walk it would fly after it and would point out or sit at
                         important parts of the level.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Dialogue system</p>
-                    <ExpandableVideo class="contribution-image"
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        Dialogue system
+                    </template>
+
+                    <template v-slot:Image>
+                        <ExpandableVideo class="contribution-image"
                         :src="this.contributionImages[2]" autoplay loop></ExpandableVideo>
-                    <p class="contribution-text">As an objective, we decided that the player would get requests from
+                    </template>
+
+                    <template v-slot:Text>
+                        As an objective, we decided that the player would get requests from
                         different animals to help them with something they need. If they did this they would get
                         something in return. For example, the bird could give him a key that he couldn't reach, but the
                         player had to do something for the bird first. I created the dialogue system for this.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
             </div>
         </section>
 
@@ -267,17 +300,18 @@
 </template>
 
 <script>
-import Image0 from '/src/assets/Image/Portfolio/COTF/img1.png'
-import Image1 from '/src/assets/Image/Portfolio/COTF/img2.png'
-import Image2 from '/src/assets/Image/Portfolio/COTF/img3.png'
-import Image3 from '/src/assets/Image/Portfolio/COTF/img4.png'
-import Image4 from '/src/assets/Image/Portfolio/COTF/img5.png'
-import Image5 from '/src/assets/Image/Portfolio/COTF/img6.png'
+import Image0 from '/src/assets/Image/Portfolio/COTF/img1.webp'
+import Image1 from '/src/assets/Image/Portfolio/COTF/img2.webp'
+import Image2 from '/src/assets/Image/Portfolio/COTF/img3.webp'
+import Image3 from '/src/assets/Image/Portfolio/COTF/img4.webp'
+import Image4 from '/src/assets/Image/Portfolio/COTF/img5.webp'
+import Image5 from '/src/assets/Image/Portfolio/COTF/img6.webp'
 
 import con0 from "/src/assets/Image/Portfolio/COTF/contributions/COTFWolf.mp4"
 import con1 from "/src/assets/Image/Portfolio/COTF/contributions/COTFCrow.mp4"
 import con2 from "/src/assets/Image/Portfolio/COTF/contributions/COTFDialogue.mp4"
 
+import CodeSnippetComponent from '../IndividualComponents/CodeSnippetComponent.vue'
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue'
 import ExpandableVideo from '../IndividualComponents/ExpandableVideo.vue'
 import ExpandableImage from '../IndividualComponents/ExpandableImage.vue'
@@ -286,8 +320,7 @@ export default {
     data() {
         return {
             name: 'COTF',
-            url: "/src/assets/Image/Portfolio/COTF/Header.png",
-            mobile: false,
+            url: "/src/assets/Image/Portfolio/COTF/Header.webp",
             images: [
             {
                 src: Image0,
@@ -324,22 +357,6 @@ export default {
     beforeMount() {
         this.$emit('OpenNavBar');
     },
-    mounted() {
-        this.IsMobile();
-        window.addEventListener('resize', this.IsMobile);
-    },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.IsMobile);
-    },
-    methods: {
-        IsMobile() {
-            if (window.innerWidth <= 1000) {
-                this.mobile = true
-            } else {
-                this.mobile = false
-            }
-        }
-    },
     watch: {
         $route: {
             immediate: true,
@@ -351,13 +368,14 @@ export default {
     components:{
         CarrouselComp,
         ExpandableVideo,
-        ExpandableImage
+        ExpandableImage,
+        CodeSnippetComponent,
     }
 }
 </script>
 
 <style scoped>
 .header-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/COTF/Header.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/COTF/Header.webp');
 }
 </style>>

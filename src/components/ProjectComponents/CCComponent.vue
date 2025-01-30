@@ -8,7 +8,7 @@
                 </div>
             </div>
 
-            <video class="project-video" poster="../../assets/Image/Portfolio/CC/img4.png" controls>
+            <video class="project-video" poster="../../assets/Image/Portfolio/CC/img4.webp" controls>
                 <source src="/src/assets/Image/Portfolio/CC/CCVideo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -89,11 +89,17 @@
         <section class="contribution-section">
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Pressure plate system</p>
-                    <Expandablevideo class="contribution-image"
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        Pressure plate system
+                    </template>
+
+                    <template v-slot:Image>
+                        <Expandablevideo class="contribution-image"
                         :src="this.contributionImages[0]" autoplay loop></Expandablevideo>
-                    <p class="contribution-text">
+                    </template>
+
+                    <template v-slot:Text>
                         I created a pressure plate system where you can select an interactable, and link it to a pressure plate.
                         This link will ensure the pressure plate will activate the interaction defined on the interactable.
                         The pressure plate has multiple options on how you want to activate the interactable. These options include 
@@ -102,14 +108,25 @@
                         The interactables and pressure 
                         plates have different styling options, that the designer can change like the size of the dispenser shown in 
                         the videos and the indicator and styling of the pressure plate changed by the function.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Moving platform tool</p>
-                    <Expandablevideo class="contribution-image"
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
+                <!-- <iframe class="blueprint-snippet" src="https://blueprintue.com/render/y3p433p_/" scrolling="no" allowfullscreen></iframe> -->
+
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        Moving platform tool
+                    </template>
+
+                    <template v-slot:Image>
+                        <Expandablevideo class="contribution-image"
                         :src="this.contributionImages[1]" autoplay loop></Expandablevideo>
-                    <p class="contribution-text">
+                    </template>
+
+                    <template v-slot:Text>
                         The moving platform was created to elevate the player to new positions and create cool puzzles. 
                         But we needed a system where the designers could change all the properties dynamically. 
                         So I created a platform system where the designers could adjust the path, speed, design, and waiting 
@@ -119,35 +136,58 @@
                         I also had to make sure the player could correctly interact with the platform, pushing the player instead 
                         of going through it. And detect when it would crush the player. This would respawn the player to the 
                         starting position.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Pipe tool</p>
-                    <Expandablevideo class="contribution-image"
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        Pipe tool
+                    </template>
+
+                    <template v-slot:Image>
+                        <Expandablevideo class="contribution-image"
                         :src="this.contributionImages[2]" autoplay loop></Expandablevideo>
-                    <p class="contribution-text">
+                    </template>
+
+                    <template v-slot:Text>
                         The pipe tool was created to provide clarity for the player, so the player could see what the 
                         pressure plate is attached to and indicate if it's activated. I created this tool with the 
                         spline tool integrated into UE4 so the designers and artists could adjust the pipes themself 
                         and change them during playtesting. Later we also added the timer element, which would slowly 
                         fill up the pipe until the timer is up, then it would drain again.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
-                <div class="contribution-element">
-                    <p class="contribution-element-title">Cube moving / selecting</p>
-                    <expandablevideo class="contribution-image"
-                    :src="this.contributionImages[3]" autoplay loop></expandablevideo>
-                    <p class="contribution-text">
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent >
+                    <template v-slot:Title>
+                        Cube moving / selecting
+                    </template>
+
+                    <template v-slot:Image>
+                        <expandablevideo class="contribution-image"
+                        :src="this.contributionImages[3]" autoplay loop></expandablevideo>
+                    </template>
+
+                    <template v-slot:Text>
                         The most important mechanic to get right was to move the block and drag it around the level. 
                         This had to feel right to make the game feel good. I worked on the range and selecting, and 
                         following the cursor. This came with some interesting challenges involving physics in UE4. 
                         After a lot of playtesting and talking to the designers, we got the mechanic down with some 
                         forgiveness in dragging.
-                    </p>
-                    <p>*No code example due to blueprints</p>
-                </div>
+                    </template>
+
+                    <template v-slot:reason-no-code>
+                        <p>*No code example due to blueprints</p>
+                    </template>
+                </CodeSnippetComponent>
             </div>
         </section>
 
@@ -306,20 +346,21 @@
 </template>
 
 <script>
-import Image0 from '/src/assets/Image/Portfolio/CC/img0.png'
-import Image1 from '/src/assets/Image/Portfolio/CC/img1.png'
-import Image2 from '/src/assets/Image/Portfolio/CC/img2.png'
-import Image3 from '/src/assets/Image/Portfolio/CC/img3.png'
-import Image4 from '/src/assets/Image/Portfolio/CC/img4.png'
-import Image5 from '/src/assets/Image/Portfolio/CC/img5.png'
-import Image6 from '/src/assets/Image/Portfolio/CC/img6.png'
-import Image7 from '/src/assets/Image/Portfolio/CC/img7.png'
+import Image0 from '/src/assets/Image/Portfolio/CC/img0.webp'
+import Image1 from '/src/assets/Image/Portfolio/CC/img1.webp'
+import Image2 from '/src/assets/Image/Portfolio/CC/img2.webp'
+import Image3 from '/src/assets/Image/Portfolio/CC/img3.webp'
+import Image4 from '/src/assets/Image/Portfolio/CC/img4.webp'
+import Image5 from '/src/assets/Image/Portfolio/CC/img5.webp'
+import Image6 from '/src/assets/Image/Portfolio/CC/img6.webp'
+import Image7 from '/src/assets/Image/Portfolio/CC/img7.webp'
 
 import con0 from "/src/assets/Image/Portfolio/CC/contributions/pressure_plate.mp4";
 import con1 from "/src/assets/Image/Portfolio/CC/contributions/platform_moving.mp4";
 import con2 from "/src/assets/Image/Portfolio/CC/contributions/pipe.mp4";
 import con3 from "/src/assets/Image/Portfolio/CC/contributions/cube.mp4";
 
+import CodeSnippetComponent from '../IndividualComponents/CodeSnippetComponent.vue'
 import CarrouselComp from '../IndividualComponents/CarrouselComponent.vue'
 import Expandablevideo from '../IndividualComponents/ExpandableVideo.vue'
 
@@ -327,7 +368,6 @@ export default {
     data() {
         return {
             name: 'CC',
-            mobile: false,
             images: [
             {
                 src: Image0,
@@ -373,22 +413,6 @@ export default {
     beforeMount() {
         this.$emit('OpenNavBar');
     },
-    mounted() {
-        this.IsMobile();
-        window.addEventListener('resize', this.IsMobile);
-    },
-    beforeDestroy() {
-        window.removeEventListener('resize', this.IsMobile);
-    },
-    methods: {
-        IsMobile() {
-            if (window.innerWidth <= 1000) {
-                this.mobile = true
-            } else {
-                this.mobile = false
-            }
-        }
-    },
     watch: {
         $route: {
             immediate: true,
@@ -399,14 +423,15 @@ export default {
     },
     components:{
         CarrouselComp,
-        Expandablevideo
+        Expandablevideo,
+        CodeSnippetComponent,
     }
 }
 </script>
 
 <style scoped>
 .header-background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/CC/CCHeader.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/CC/CCHeader.webp');
 }
 
 @media (max-width: 1000px) {

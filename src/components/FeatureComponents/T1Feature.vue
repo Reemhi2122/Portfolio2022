@@ -1,9 +1,10 @@
 <template>
   <RouterLink to="/InSheepsClothing" class="feature-project">
-    <!-- <video class="video" autoplay muted>
-      <source src="/src/assets/Image/Portfolio/ISC/InSheepsClothing.mp4" type="video/mp4" loop>
-    </video> -->
-
+    
+    <div class="feature-awards">
+      <img class="feature-awards-img" src="/src/assets/Image/Logos/INDIGO_Selection_white.png">
+    </div>
+    
     <div class="feature-text-box">
       <h1>In sheep's clothing</h1>
       <h2>VR arcade game</h2>
@@ -43,7 +44,7 @@ export default {
 
 <style scoped>
 .feature-project {
-  background-image: url('/src/Assets/Image/Portfolio/ISC/header.png');
+  background-image: url('/src/Assets/Image/Portfolio/ISC/header.webp');
   width: 100%;
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -73,6 +74,19 @@ export default {
   margin-top: -10px;
 }
 
+.feature-awards{
+  position: absolute;
+  top:0;
+  right: 0;
+
+  margin-right: 25px;
+  margin-top: 25px;
+}
+
+.feature-awards-img{
+  width: 200px;
+}
+
 @media (max-width: 1000px) {
   .feature-project{
     background-position: 80%;
@@ -80,5 +94,14 @@ export default {
   .feature-text-box {
     margin-right: 10px;
   }
+
+  .feature-awards{
+    margin-top: 80px;
+  }
+
+  .feature-awards-img{
+    width: 100px;
+  }
+
 }
 </style>

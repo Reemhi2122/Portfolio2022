@@ -40,6 +40,11 @@
           <div class="portfolio-item medium ISC">
             <RouterLink to="/InSheepsClothing">
               <div class="div-darken"></div>
+              
+              <div class="project-awards">
+                  <img class="project-awards-img" src="/src/assets/Image/Logos/INDIGO_Selection_white.png">
+              </div>
+
               <div class="project-description">
                 <p class="project-title">In sheep's clothing</p>
                 <p class="project-tags">Game | Unity | C#</p>
@@ -356,41 +361,54 @@ export default {
 }
 
 .portfolio-item.ISC {
-  background-image: url(/src/assets/Image/Portfolio/ISC/Main.jpg);
+  background-image: url(/src/assets/Image/Portfolio/ISC/Header.webp);
 }
 
 .portfolio-item.COTF {
-  background-image: url(/src/assets/Image/Portfolio/COTF/Header.png);
+  background-image: url(/src/assets/Image/Portfolio/COTF/Header.webp);
 }
 
 .portfolio-item.GE {
-  background-image: url(/src/assets/Image/Portfolio/GE/GEHeader.jpg);
+  background-image: url(/src/assets/Image/Portfolio/GE/GEHeader.webp);
 }
 
 .portfolio-item.DD {
-  background-image: url(/src/assets/Image/Portfolio/DD/DDFront.jpg);
+  background-image: url(/src/assets/Image/Portfolio/DD/DDFront.webp);
 }
 
 .portfolio-item.DR {
-  background-image: url(/src/assets/Image/Portfolio/DR/Banner.png);
+  background-image: url(/src/assets/Image/Portfolio/DR/Banner.webp);
 }
 .portfolio-item.RT {
-  background-image: url(/src/assets/Image/Portfolio/RT/RT8.jpg);
+  background-image: url(/src/assets/Image/Portfolio/RT/RT8.webp);
 }
 .portfolio-item.RLE {
-  background-image: url(/src/assets/Image/Portfolio/RLE/RLE.jpg);
+  background-image: url(/src/assets/Image/Portfolio/RLE/RLE.webp);
 }
 .portfolio-item.RTSE {
-  background-image: url(/src/assets/Image/Portfolio/RTSE/RTSEngine.jpg);
+  background-image: url(/src/assets/Image/Portfolio/RTSE/RTSEngine.webp);
 }
 .portfolio-item.CC{
-  background-image: url(/src/assets/Image/Portfolio/CC/img1.png);
+  background-image: url(/src/assets/Image/Portfolio/CC/img1.webp);
 }
 
 .portfolio-item>a {
   width: 100%;
   height: 100%;
   text-decoration: none;
+}
+
+.project-awards{
+  position: absolute;
+  top:0;
+  right: 0;
+
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.project-awards-img{
+  width: 150px;
 }
 
 .project-description {
@@ -459,10 +477,10 @@ export default {
   opacity: 0;
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1500px) {
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 250px);
+    grid-template-rows: repeat(7, 300px);
   }
 
   .portfolio-item.small {
@@ -494,12 +512,15 @@ export default {
       margin-left: 5%;
     }
 
+    .projects-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(7, 250px);
+    }
+
     .div-darken {
       background: black;
       opacity: 0.4;
     }
   }
-
-  @media (max-width: 700px) {}
 }
 </style>

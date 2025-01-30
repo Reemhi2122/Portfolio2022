@@ -17,6 +17,17 @@
       </div>
     </div>
 
+
+  <div class="home-social-container">
+    <a href="https://github.com/Reemhi2122" class="home-social" target="_blank">
+      <img class="home-social-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/>
+    </a> 
+
+    <a href="https://www.linkedin.com/in/stanvogels/" class="home-social" target="_blank">
+      <img class="home-social-img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg"/>
+    </a> 
+  </div>
+
     <RouterLink class="mobile-nav-container" :to="GetMobileNavRoute()">
       <div class="mobile-nav-blackline"></div>
       <div class="mobile-nav-blackline"></div>
@@ -213,6 +224,35 @@ export default {
   color: #222222;
   font-weight: 300;
 }
+
+.home-social-container{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.home-social{
+  margin: 0 0 20px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+}
+
+.home-social-img{
+  width: 5vw;
+  min-width: 45px;
+  max-width: 70px;
+  display: inline-block;
+  margin-bottom: 100px;
+  margin:auto;
+  filter: brightness(0) invert(1);
+}
+
 .mobile-nav-container {
   position: absolute;
   top: 0;
@@ -256,36 +296,36 @@ export default {
 }
 
 .slideup-enter-to {
-  position: absolute;
+  position: fixed;
   top: 0%;
 }
 .slideup-enter-from {
-  position: absolute;
+  position: fixed;
   top: 100%;
 }
 .slideup-leave-to {
-  position: absolute;
+  position: fixed;
   bottom: 100%;
 }
 .slideup-leave-from {
-  position: absolute;
+  position: fixed;
   bottom: 0%;
 }
 
 .slidedown-enter-to {
-  position: absolute;
+  position: fixed;
   bottom: 0%;
 }
 .slidedown-enter-from {
-  position: absolute;
+  position: fixed;
   bottom: 100%;
 }
 .slidedown-leave-to {
-  position: absolute;
+  position: fixed;
   top: 100%;
 }
 .slidedown-leave-from {
-  position: absolute;
+  position: fixed;
   top: 0%;
 }
 
@@ -313,5 +353,11 @@ export default {
     font-size: calc(10px + 0.5vw);
     margin-top: -0.8vw;
   }
+}
+
+@media(max-width: 600px){
+.home-social-container{
+  display:block;
+}
 }
 </style>
