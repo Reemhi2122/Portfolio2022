@@ -33,10 +33,7 @@
                             I'm driven to turn my love for gaming into a career in programming and I can't wait to see
                             where this journey will take me.
                             <br><br>
-                            I am currently in my third year of studies and anticipate graduating in July 2024.
-                            <br><br>
-                            <u>I am actively looking for an internship position as a C++ gameplay programmer</u>, ideally for a 
-                            duration of six months to one year. 
+                            I am currently wroking at Climax Studios as C++ programmer.
                         </p>
                     </div>
 
@@ -98,7 +95,7 @@
 </template>
 
 <script>
-import data from '/src/assets/Documents/CV_Stan_Vogels_Portfolio.pdf'
+import data from '/src/assets/Documents/2025_CV_Portfolio.pdf'
 
 export default {
     data() {
