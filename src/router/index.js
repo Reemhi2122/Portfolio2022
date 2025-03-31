@@ -11,6 +11,7 @@ import GudenuffEngine from '../components/ProjectComponents/GEComponent.vue'
 import DDComponent from '../components/ProjectComponents/DDComponent.vue'
 import RTComponent from '../components/ProjectComponents/RTComponent.vue'
 import CCComponent from '../components/ProjectComponents/CCComponent.vue'
+import BBComponent from '../components/ProjectComponents/BBComponent.vue'
 import InProgress from '../components/ProjectComponents/InProgressComponent.vue'
 
 const router = createRouter({
@@ -70,6 +71,11 @@ const router = createRouter({
       path: '/RayTracer',
       name: 'RT',
       component: RTComponent
+    },
+    {
+      path: '/BuildingBlockEngine',
+      name: 'BB',
+      component: BBComponent
     },
     {
       path: '/ColdCandy',

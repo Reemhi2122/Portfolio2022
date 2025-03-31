@@ -37,30 +37,25 @@
         </Transition>
 
         <Transition>
-          <div class="portfolio-item medium ISC">
-            <RouterLink to="/InSheepsClothing">
+          <div class="portfolio-item medium BB">
+            <RouterLink to="/BuildingBlockEngine">
               <div class="div-darken"></div>
-              
-              <div class="project-awards">
-                  <img class="project-awards-img" src="/src/assets/Image/Logos/INDIGO_Selection_white.png">
-              </div>
-
               <div class="project-description">
-                <p class="project-title">In sheep's clothing</p>
-                <p class="project-tags">Game | Unity | C#</p>
+                <p class="project-title">Building Block Engine</p>
+                <p class="project-tags">Custom engine | C++ | DX11</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                    <span class="material-symbols-outlined">engineering</span> Engine programmer
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">group</span> 2 members
+                    <span class="material-symbols-outlined">group</span> 1 member
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">schedule</span> 6 months
+                    <span class="material-symbols-outlined">schedule</span> ~2 years
                   </div>
                   <div class="project-bubbles">
-                    <span class="material-symbols-outlined">calendar_month</span> 2022/2023
+                    <span class="material-symbols-outlined">calendar_month</span> 2023 - 2025
                   </div>
                 </div>
               </div>
@@ -88,6 +83,38 @@
                   </div>
                   <div class="project-bubbles">
                     <span class="material-symbols-outlined">calendar_month</span> 2022
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+        <Transition>
+          <div class="portfolio-item medium ISC">
+            <RouterLink to="/InSheepsClothing">
+              <div class="div-darken"></div>
+              
+              <div class="project-awards">
+                  <img class="project-awards-img" src="/src/assets/Image/Logos/INDIGO_Selection_white.png">
+              </div>
+
+              <div class="project-description">
+                <p class="project-title">In sheep's clothing</p>
+                <p class="project-tags">Game | Unity | C#</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Gameplay programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 2 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 6 months
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2022/2023
                   </div>
                 </div>
               </div>
@@ -313,7 +340,7 @@ export default {
   display: grid;
   height: 100%;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, 200px);
+  grid-template-rows: repeat(10, 200px);
   grid-gap: 10px;
   pointer-events: auto;
   overflow-y: scroll;
@@ -362,6 +389,10 @@ export default {
 
 .portfolio-item.ISC {
   background-image: url(/src/assets/Image/Portfolio/ISC/Header.webp);
+}
+
+.portfolio-item.BB {
+  background-image: url(/src/assets/Image/Portfolio/BB/Header.webp);
 }
 
 .portfolio-item.COTF {
@@ -457,7 +488,7 @@ export default {
   height: 100%;
   background-color: black;
   background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 50%);
-  opacity: 0.4;
+  opacity: 0.6;
   position: absolute;
   transition: 0.4s;
 }
@@ -480,7 +511,7 @@ export default {
 @media (max-width: 1500px) {
   .projects-container {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 300px);
+    grid-template-rows: repeat(8, 300px);
   }
 
   .portfolio-item.small {
@@ -514,7 +545,7 @@ export default {
 
     .projects-container {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(7, 250px);
+      grid-template-rows: repeat(8, 250px);
     }
 
     .div-darken {
