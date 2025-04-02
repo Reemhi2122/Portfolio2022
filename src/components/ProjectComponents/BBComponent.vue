@@ -41,10 +41,10 @@
         <CarrouselComp :cards="this.images" class="carousel-comp"/>
 
         <p class="project-text">
-            Experience the enhanced world of Descent with raytracing technology, now ported over to the PS5. 
-            Immerse yourself in a captivating environment filled with dynamic light and shadow, highly-reflective 
-            surfaces, and intricate details that bring the game to life. Discover Descent that 
-            looks and feels more immersive than ever before.
+            Building Block (BB) is a passion project of mine – a C++ game engine I've been working on, built with DirectX 11. 
+            I wanted to get a better handle on engine and graphics programming, so I decided to build most of it from scratch, with some exceptions like ImGui and stb_image. 
+            BB currently handles GLTF models, custom memory management, self-made data structures, image processing, file I/O, multithreading, and shadow mapping. 
+            This project is still actively in development, with planned DirectX 12 integration.
         </p>
 
         <div class="findcode-github">
