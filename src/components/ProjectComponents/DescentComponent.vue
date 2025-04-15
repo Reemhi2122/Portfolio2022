@@ -4,7 +4,7 @@
             <div class="header-background">
                 <div class="header-text">
                     <h1 class="header-title">Descent raytraced</h1>
-                    <h2 class="header-subtitle">Descent (1995) but raytraced [WIP]</h2>
+                    <h2 class="header-subtitle">Descent (1995) but raytraced</h2>
                 </div>
             </div>
 
@@ -47,9 +47,16 @@
             looks and feels more immersive than ever before.
         </p>
 
-        <div class="findcode-github">
-            <h1>Find this project on</h1>
-            <a href="https://github.com/BredaUniversityGames/DXX-Raytracer" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+        <div class="links">
+            <div class="findcode-github">
+                <h1>Find this project on</h1>
+                <a href="https://github.com/BredaUniversityGames/DXX-Raytracer" target="_blank"><img src="/src/assets/Image/GithubIcon.png"></a>
+            </div>
+
+            <div class="rewards">
+                <h1>Featured in</h1>
+                <a href="https://www.pcgamer.com/descent-ray-tracing/" target="_blank"><img class="reward-img" src="/src/assets/Image/Logos/pcgamer.webp"></a>
+            </div>
         </div>
 
         <section class="software-skills">
@@ -97,6 +104,52 @@
         <section class="contribution-section">
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
+                <CodeSnippetComponent hascode="true">
+                    <template v-slot:Title>
+                        Runtime texture loading
+                    </template>
+
+                    <template v-slot:Image>
+                        <Expandablevideo class="contribution-image"
+                        :src="this.contributionImages[0]" autoplay loop></Expandablevideo>
+                    </template>
+
+                    <template v-slot:Text>
+                        In this project, we wanted artists to upscale the textures to PBR textures so the light would
+                        better interact with the surfaces of the game. This is because the game is quite flat by itself. 
+                        To improve the workflow of the artists I created the runtime texture loading tool, which would upload 
+                        all the adjusted textures in the assets folder and link them to the materials.
+                    </template>
+
+                    <template v-slot:Code>
+                        <code0/>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent hascode="true">
+                    <template v-slot:Title>
+                        Free camera
+                    </template>
+
+                    <template v-slot:Image>
+                        <Expandablevideo class="contribution-image"
+                        :src="this.contributionImages[1]" autoplay loop></Expandablevideo>
+                    </template>
+
+                    <template v-slot:Text>
+                        I created the free camera tool because we wanted to be able to freely roam the level without the boundaries 
+                        and difficulties of the game. This so we can check mistakes in the level loading, texture loading or enemy 
+                        placement or if we needed to create marketing material for the game in the form of pictures or videos. 
+                        The game, when in freemode, would pause and allow the user to make pictures of action shots. There is an 
+                        option for collision to be turned off and on.
+                    </template>
+                    
+                    <template v-slot:Code>
+                        <Code1/>
+                    </template>
+
+                </CodeSnippetComponent>
+
                 <CodeSnippetComponent>
                     <template v-slot:Title>
                         Converting Descent from PC to PS5
@@ -159,57 +212,9 @@
                     </template>
                 </CodeSnippetComponent>
 
-                <CodeSnippetComponent></CodeSnippetComponent>
-
-                <CodeSnippetComponent hascode="true">
-                    <template v-slot:Title>
-                        Runtime texture loading
-                    </template>
-
-                    <template v-slot:Image>
-                        <Expandablevideo class="contribution-image"
-                        :src="this.contributionImages[0]" autoplay loop></Expandablevideo>
-                    </template>
-
-                    <template v-slot:Text>
-                        In this project, we wanted artists to upscale the textures to PBR textures so the light would
-                        better interact with the surfaces of the game. This is because the game is quite flat by itself. 
-                        To improve the workflow of the artists I created the runtime texture loading tool, which would upload 
-                        all the adjusted textures in the assets folder and link them to the materials.
-                    </template>
-
-                    <template v-slot:Code>
-                        <code0/>
-                    </template>
-                </CodeSnippetComponent>
-
-                <CodeSnippetComponent >
-                    <template v-slot:Title>
-                        Free camera
-                    </template>
-
-                    <template v-slot:Image>
-                        <Expandablevideo class="contribution-image"
-                        :src="this.contributionImages[1]" autoplay loop></Expandablevideo>
-                    </template>
-
-                    <template v-slot:Text>
-                        I created the free camera tool because we wanted to be able to freely roam the level without the boundaries 
-                        and difficulties of the game. This so we can check mistakes in the level loading, texture loading or enemy 
-                        placement or if we needed to create marketing material for the game in the form of pictures or videos. 
-                        The game, when in freemode, would pause and allow the user to make pictures of action shots. There is an 
-                        option for collision to be turned off and on.
-                    </template>
-                    
-                    <template v-slot:Code>
-                        <Code1/>
-                    </template>
-
-                </CodeSnippetComponent>
-
                 <CodeSnippetComponent>
                     <template v-slot:Title>
-                        Additional contributions include but are not limited to
+                        Additional contributions include:
                     </template>
 
                     <template v-slot:Text>
@@ -220,6 +225,10 @@
                             <li>A cross-platform timer</li>
                             <li>Abstracting windows dependend systems</li>
                             <li>Researching an old code base</li>
+                            <li>Shareware support implementation</li>
+                            <li>Added splash screen</li>
+                            <li>Texture reworks and emissive adjustments</li>
+                            <li>Light flashing on level endings</li>
                         </ul>
                     </template>
                 </CodeSnippetComponent>
@@ -227,10 +236,7 @@
                 <CodeSnippetComponent>
                     <template v-slot:Text>
                         <ul>
-                            <li>Shareware support implementation</li>
-                            <li>Added splash screen</li>
-                            <li>Texture reworks and emissive adjustments</li>
-                            <li>Light flashing on level endings</li>
+
                         </ul>
                     </template>
                 </CodeSnippetComponent>
@@ -278,26 +284,17 @@
                             <a href="https://www.linkedin.com/in/justin-kujawa-37094718a/" target="_blank"><img
                                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a>
                         </div>
-                        <!-- <p class="team-portfolio"><a
-                                href="https://www.artstation.com/luukouwehand">https://www.artstation.com/luukouwehand</a>
-                        </p> -->
                     </div>
 
                     <div class="team-element">
                         <div class="team-name">
                             <p>Lyobomir Kostadinov | Graphics programmer</p>
-                            <!-- <a href="https://www.linkedin.com/in/olivierdral/"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a> -->
                         </div>
-                        <!-- <p class="team-portfolio"><a
-                                href="https://oli4dral.artstation.com/">https://oli4dral.artstation.com/</a></p> -->
                     </div>
 
                     <div class="team-element">
                         <div class="team-name">
                             <p>Lily Haverlag | Engine / Audio programmer</p>
-                            <!-- <a href="https://www.linkedin.com/in/nathalie-stuit-38250124b/"><img
-                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" /></a> -->
                         </div>
                     </div>
                 </div>
@@ -427,5 +424,9 @@ export default {
 <style scoped>
 .header-background {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/assets/Image/Portfolio/DR/Banner.webp');
+}
+
+.links{
+  grid-template-columns: repeat(2, 1fr);
 }
 </style>

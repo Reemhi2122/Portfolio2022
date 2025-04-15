@@ -4,14 +4,14 @@
             <div class="header-background">
                 <div class="header-text">
                     <h1 class="header-title">Building Block Engine</h1>
-                    <h2 class="header-subtitle">A custom engine created with DX11</h2>
+                    <h2 class="header-subtitle">A custom engine created with DX11 [WIP]</h2>
                 </div>
             </div>
 
-            <video class="project-video" controls>
+            <!-- <video class="project-video" controls>
                 <source src="" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>
+            </video> -->
 
             <div class="indv-project-bubbles-container">
                 <div class="indv-project-bubbles">
@@ -101,6 +101,55 @@
         </section>
 
         <section class="contribution-section">
+            <h2 class="section-header">List of current features</h2>
+            <div class="contribution-element-container">
+                <CodeSnippetComponent>
+                    <template v-slot:Text>
+                        <ul>
+                            <li>DirectX 11 Renderer</li>
+                                <ul>
+                                    <li>Shadow mapping</li>
+                                    <li>Directional, spot & point lights</li>
+                                    <li>Texture loading / GLTF model rendering</li>
+                                </ul>
+                            <li>Custom memory allocators</li>
+                                <ul>
+                                    <li>Stack, Linear/Arena, Free list, Pool & Buddy allocator</li>
+                                </ul>
+                            <li>Self-made data structures</li>
+                                <ul>
+                                    <li>LinkedList, Pool, Queue, Vector</li>
+                                </ul>
+                                <li>File support</li>
+                            <ul>
+                                <li>GLTF model loading & model parsing</li>
+                                <li>BMP files & image processing</li>
+                                <li>JSON files & parsing</li>
+                                <li>WAV files</li>
+                            </ul>
+                        </ul>
+                    </template>
+                </CodeSnippetComponent>
+
+                <CodeSnippetComponent>
+                    <template v-slot:Text>
+                        <ul>
+                            <li>Windows API file I/O (created for cross-platform)</li>
+                            <li>Multi threading worker system</li>
+                            <li>ImGui engine editor</li>
+                                <ul>
+                                    <li>Asset window with working path traversal</li>
+                                    <li>Hierarchy view with children</li>
+                                    <li>Inspector with component view for selected object</li>
+                                    <li>Game view with camera control</li>
+                                </ul>
+                        </ul>
+                    </template>
+                </CodeSnippetComponent>
+            </div>
+        </section>
+
+        <!-- <section class="contribution-section">
             <h2 class="section-header">What I contributed to the project</h2>
             <div class="contribution-element-container">
                 <CodeSnippetComponent>
@@ -241,9 +290,9 @@
                     </template>
                 </CodeSnippetComponent>
             </div>
-        </section>
+        </section> -->
 
-        <section class="learned-section">
+        <!-- <section class="learned-section">
             <h2 class="section-header">What I have learned form this project</h2>
             <div class="learned-container">
                 <div class="learned-element">
@@ -273,7 +322,7 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <div class="findcode-github">
             <h1>Find this project on</h1>
@@ -284,11 +333,12 @@
 </template>
 
 <script>
-import Image0 from '/src/assets/Image/Portfolio/BB/img02.webp'
-import Image1 from '/src/assets/Image/Portfolio/BB/img01.webp'
+import Image0 from '/src/assets/Image/Portfolio/BB/img06.webp'
+import Image1 from '/src/assets/Image/Portfolio/BB/img02.webp'
 import Image2 from '/src/assets/Image/Portfolio/BB/img01.webp'
-import Image3 from '/src/assets/Image/Portfolio/BB/img02.webp'
-import Image4 from '/src/assets/Image/Portfolio/BB/img02.webp'
+import Image3 from '/src/assets/Image/Portfolio/BB/img03.webp'
+import Image4 from '/src/assets/Image/Portfolio/BB/img04.webp'
+import Image5 from '/src/assets/Image/Portfolio/BB/img05.webp'
 
 import con0 from "/src/assets/Image/Portfolio/DR/contributions/DR_CON_1.mp4"
 import con1 from "/src/assets/Image/Portfolio/DR/contributions/DR_CON_2.mp4"
@@ -324,6 +374,10 @@ export default {
             {
                 src: Image4,
                 index: 4
+            },
+            {
+                src: Image5,
+                index: 5
             }
             ],
             contributionImages: [

@@ -1,4 +1,4 @@
-<template>//Funcion loads bitmaps changed in runtime, currently only works for
+<template>	//Funcion loads bitmaps changed in runtime, currently only works for
 	//files using the 0000_x.extension format. It also updates material values
 	//changed in 0000.txt
 
@@ -48,7 +48,6 @@
 
 		//Updating a .png
 		if (strcmp(extension, ".png") == 0) {
-				
 			RT_ResourceHandle texture_handle;
 			int w, h, c;
 
@@ -70,7 +69,7 @@
 				}
 			}
 		}
-		
+			
 		//Updating the material for rendering
 		materials[bm_index] = current_material;
 		RT_UpdateMaterial(bm_index, &current_material);

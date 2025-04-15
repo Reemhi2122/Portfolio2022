@@ -10,8 +10,13 @@
           <div class="portfolio-item large DR">
             <RouterLink to="/DescentRaytraced">
               <div class="div-darken"></div>
+
+              <div class="project-awards">
+                  <img class="project-awards-img" src="/src/assets/Image/Logos/pcgamer.webp">
+              </div>
+
               <div class="project-description">
-                <p class="project-title">Descent raytraced [WIP]</p>
+                <p class="project-title">Descent raytraced</p>
                 <p class="project-tags">Game-rework | C | C++</p>
 
                 <div class="project-bubbles-container">
@@ -41,7 +46,7 @@
             <RouterLink to="/BuildingBlockEngine">
               <div class="div-darken"></div>
               <div class="project-description">
-                <p class="project-title">Building Block Engine</p>
+                <p class="project-title">Building Block Engine [WIP]</p>
                 <p class="project-tags">Custom engine | C++ | DX11</p>
 
                 <div class="project-bubbles-container">
@@ -347,6 +352,20 @@ export default {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+
 #projects-container::-webkit-scrollbar {
   display: none;
 }
@@ -439,7 +458,7 @@ export default {
 }
 
 .project-awards-img{
-  width: 150px;
+  width: 120px;
 }
 
 .project-description {

@@ -199,13 +199,6 @@
             <li>Scoreboard counting</li>
             <li>Scoreboard saving</li>
             <li>A peeking sheep, which comes by occasionaly</li>
-          </ul>
-          </template>
-        </CodeSnippetComponent>
-
-        <CodeSnippetComponent>
-          <template v-slot:Text>
-            <ul>
             <li>Working on the game states</li>
             <li>Balancing of events and suspicion</li>
           </ul>
@@ -603,6 +596,7 @@ export default {
 
 .learned-element>h3 {
   font-size: 25px;
+  font-weight: 500;
 }
 
 .learned-element>p {
@@ -636,6 +630,7 @@ export default {
 .findcode-github>h1 {
   font-weight: 800;
   margin-bottom: 0;
+  font-size: 25px;
 }
 
 .findcode-github>a>img {
@@ -647,7 +642,6 @@ export default {
   font-style: normal;
   margin-top: 50px;
   text-align: center;
-  font-size: 16px;
 
   display: inline-block;
 }
@@ -655,11 +649,12 @@ export default {
 .rewards>h1 {
   font-weight: 800;
   margin-bottom: 0;
+  font-size: 25px;
 }
 
 .reward-img{
   margin-top: 10px;
-  width: 150px;
+  width: 130px;
 }
 
 .itchio{

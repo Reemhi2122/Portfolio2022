@@ -64,7 +64,7 @@ export default {
 }
 
 .contribution-element-title {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 25px;
   font-style: italic;
 }
