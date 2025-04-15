@@ -500,7 +500,7 @@ export default {
 }
 
 .software-skill-element {
-  width: 175px;
+  width: 150px;
   display:inline-block;
   height: auto;
   border: 2px dotted rgb(0, 0, 0);
@@ -547,7 +547,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(6, minmax(50px, 1fr));
   grid-template-rows: repeat(2, auto);
-  grid-gap: 50px 5%;
+  grid-gap: 75px 5%;
 }
 
 .team-section {

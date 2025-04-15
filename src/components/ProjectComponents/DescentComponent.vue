@@ -232,14 +232,6 @@
                         </ul>
                     </template>
                 </CodeSnippetComponent>
-
-                <CodeSnippetComponent>
-                    <template v-slot:Text>
-                        <ul>
-
-                        </ul>
-                    </template>
-                </CodeSnippetComponent>
             </div>
         </section>
 
