@@ -20,20 +20,24 @@
                 <div class="about-container">
                     <div class="about-section">
                         <p class="about-text">
-                            <b>I am a passionate programmer driven by a love for gaming.</b>
-                            <br><br>
-                            
-                            Hi, I'm Stan Vogels, a game programming student at 
-                            Breda University of Applied Sciences
+                            <b>I'm a C++ Engine and Tools Programmer with a focus on robust system architecture.</b>
+                            <br>
+                            Hi, I'm Stan Vogels, a C++ programmer at Climax Studios.
+                            I have studied Game Programming at Breda University of Applied Sciences
                             (<a style="color: white; font-weight: 200;" href="https://www.buas.nl/en/programmes/creative-media-and-game-technologies" target="_blank">BUas</a>)
-                            in the Netherlands. Fueled by my curiosity and love for gaming, 
-                            I discovered my passion for programming. I've
-                            sharpened my skills in both game and web development,
-                            always eager to bring new ideas and experiences to life through code.
-                            I'm driven to turn my love for gaming into a career in programming and I can't wait to see
-                            where this journey will take me.
+                            in the Netherlands.
                             <br><br>
-                            I am currently wroking at Climax Studios as C++ programmer.
+                            I'm a C++ programmer interested in both Engine and Tools programming. I like to work on 
+                            reusable, robust, and intuiative systems that improve the life of both gameplay and graphics programmers. And 
+                            ofcourse provide a flawless experience for the player. I like to work on my custom engine
+                            (<a style="color: white; font-weight: 200;" href="https://stanvogels.com/BuildingBlockEngine" target="_blank">Building Block Engine</a>)
+                            as self study. Where I can improve my skills in both Engine, Tools (GUI), and graphics programming at my own pace.
+                            <br><br>
+                            I am currently working at Climax Studios as a C++ programmer where <b>I am working on a AAA game in a proprietary engine (NDA)</b>.
+                            <br><br>
+                            Check out my 
+                            <a style="color: white; font-weight: 200;" href="https://stanvogels.com/projects" target="_blank">projects page</a>
+                            to learn more about my skills.
                         </p>
                     </div>
 
