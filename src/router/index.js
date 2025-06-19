@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
+// import { createRouter, createWebHashHistory } from 'vue-router'
 import Projects from '../components/ProjectsComponent.vue'
 import Skills from '../components/SkillsComponent.vue'
 import Contact from '../components/ContactComponent.vue'
@@ -15,7 +16,7 @@ import BBComponent from '../components/ProjectComponents/BBComponent.vue'
 import InProgress from '../components/ProjectComponents/InProgressComponent.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',

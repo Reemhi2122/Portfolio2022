@@ -56,7 +56,10 @@ export default {
 .contribution-element{
   display: flex;
   flex-direction: column;
-  grid-column: span 3;
+  grid-column: span 9;
+
+  /* border: solid rgba(112, 128, 144, 0.1) 2px; */
+  /* padding: 10px 20px; */
 }
 
 .contribution-element-big{

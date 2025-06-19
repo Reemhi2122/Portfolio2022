@@ -126,6 +126,8 @@
                     </template>
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-column"></div>
+
                 <CodeSnippetComponent hascode="true">
                     <template v-slot:Title>
                         Free camera
@@ -150,6 +152,8 @@
 
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-row"></div>
+
                 <CodeSnippetComponent>
                     <template v-slot:Title>
                         Converting Descent from PC to PS5
@@ -171,6 +175,8 @@
                         <p>*Cannot show code due to an NDA with PlayStation</p>
                     </template>
                 </CodeSnippetComponent>
+
+                <div class="contribution-black-column"></div>
 
                 <CodeSnippetComponent>
                     <template v-slot:Title>
@@ -195,6 +201,8 @@
                     </template>
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-row"></div>
+
                 <CodeSnippetComponent>
                     <template v-slot:Title>
                         Cross-platform input for PS5
@@ -211,6 +219,8 @@
                         <p>*Cannot show code due to an NDA with PlayStation</p>
                     </template>
                 </CodeSnippetComponent>
+
+                <div class="contribution-black-column"></div>
 
                 <CodeSnippetComponent>
                     <template v-slot:Title>

@@ -545,9 +545,28 @@ export default {
 .contribution-element-container {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(6, minmax(50px, 1fr));
+  grid-template-columns: repeat(20, minmax(5px, 1fr));
   grid-template-rows: repeat(2, auto);
+
+  /* grid-gap: 40px 2%; */
+
   grid-gap: 75px 5%;
+}
+
+.contribution-black-column{
+  width: 2px;
+  height: 100%;
+  background-color: black;
+
+  grid-column: span 1;
+}
+
+.contribution-black-row{
+  width: 100%;
+  height: 2px;
+  background-color: black;
+
+  grid-column: span 20;
 }
 
 .team-section {
