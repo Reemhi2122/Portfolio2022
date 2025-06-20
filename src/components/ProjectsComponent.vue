@@ -69,6 +69,34 @@
         </Transition>
 
         <Transition>
+          <div class="portfolio-item medium TMP">
+            <RouterLink to="">
+              <div class="div-darken"></div>
+              <div class="project-description">
+                <p class="project-title">To be announced AAA</p>
+                <p class="project-tags">Proprietary Engine | C++ | Porting</p>
+
+                <div class="project-bubbles-container">
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">engineering</span> Engine / Generalist programmer
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">group</span> 20 members
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">schedule</span> 2 years
+                  </div>
+                  <div class="project-bubbles">
+                    <span class="material-symbols-outlined">calendar_month</span> 2023 - 2025
+                  </div>
+                </div>
+              </div>
+            </RouterLink>
+          </div>
+        </Transition>
+
+
+        <Transition>
           <div class="portfolio-item medium GE">
             <RouterLink to="/GudenuffEngine">
               <div class="div-darken"></div>
@@ -440,6 +468,10 @@ export default {
 }
 .portfolio-item.CC{
   background-image: url(/src/assets/Image/Portfolio/CC/img1.webp);
+}
+
+.portfolio-item.TMP{
+  background-image: url(/src/assets/Image/Portfolio/TMP/Climax.webp);
 }
 
 .portfolio-item>a {
