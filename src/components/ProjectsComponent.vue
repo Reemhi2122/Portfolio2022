@@ -70,7 +70,7 @@
 
         <Transition>
           <div class="portfolio-item medium TMP">
-            <RouterLink to="">
+            <RouterLink to="/TBAProject">
               <div class="div-darken"></div>
               <div class="project-description">
                 <p class="project-title">To be announced AAA</p>
