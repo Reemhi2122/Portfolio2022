@@ -130,7 +130,7 @@
                         </ul>
                     </template>
                 </CodeSnippetComponent>
-
+                <div class="contribution-black-column"></div>
                 <CodeSnippetComponent>
                     <template v-slot:Text>
                         <ul>

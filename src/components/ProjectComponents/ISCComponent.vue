@@ -118,6 +118,7 @@
           </template>
         </CodeSnippetComponent>
 
+        <div class="contribution-black-column"></div>
 
         <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/InSheepsClothingShowcase/blob/main/ISCScripts/Sheep/SheepSystem.cs">
           <template v-slot:Title>
@@ -140,6 +141,8 @@
           </template>
         </CodeSnippetComponent>
 
+        <div class="contribution-black-row"></div>
+
         <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/InSheepsClothingShowcase/blob/main/ISCScripts/Interactables/Ipad.cs">
           <template v-slot:Title>
             Suspiciousness
@@ -161,6 +164,8 @@
             <code2/>
           </template>
         </CodeSnippetComponent>
+
+        <div class="contribution-black-column"></div>
 
         <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/InSheepsClothingShowcase/blob/main/ISCScripts/Sheep/PeekSheep.cs">
           <template v-slot:Title>
@@ -185,6 +190,8 @@
           </template>
         </CodeSnippetComponent>
 
+        <div class="contribution-black-row"></div>
+
         <CodeSnippetComponent>
           <template v-slot:Title>
             Additional features include but are not limited to
@@ -204,6 +211,9 @@
           </ul>
           </template>
         </CodeSnippetComponent>
+
+        <div class="contribution-black-column"></div>
+
       </div>
     </section>
 
@@ -250,6 +260,9 @@
             and playable for a VR game.
           </p>
         </div>
+        
+        <div class="contribution-black-column"></div>
+
         <div class="learned-element">
           <h3>Quick concepting</h3>
           <p>Because this game was originally made as a game jam, we had to create concepts fast and didn't have time
@@ -259,6 +272,9 @@
             time, make decisions
             on the spot, "kill my darlings" and teamworking.</p>
         </div>
+
+        <div class="contribution-black-row"></div>
+
         <div class="learned-element">
           <h3>Keeping up Unity / C# skills</h3>
           <p>This project was made while I am still studying at Breda University of Applied Sciences (BUas), because on
@@ -267,6 +283,9 @@
             because it was refreshing and maintaining my Unity and C# skills. This will
             help me when I later in my career need to use these skills again.</p>
         </div>
+        
+        <div class="contribution-black-column"></div>
+
         <div class="learned-element">
           <h3>Small team (2 members)</h3>
           <p>Working in teams is important to improve teamwork skills, but there are different
@@ -545,28 +564,31 @@ export default {
 .contribution-element-container {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(20, minmax(5px, 1fr));
+  grid-template-columns: 46.5% 1% 46.5%;
   grid-template-rows: repeat(2, auto);
 
   /* grid-gap: 40px 2%; */
 
-  grid-gap: 75px 5%;
+  grid-gap: 50px 3%;
 }
 
 .contribution-black-column{
   width: 2px;
-  height: 100%;
-  background-color: black;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
 
+  margin: auto;
   grid-column: span 1;
 }
 
 .contribution-black-row{
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
 
-  grid-column: span 20;
+  grid-column: span 3;
 }
 
 .team-section {
@@ -625,9 +647,9 @@ export default {
 
 .learned-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 46.5% 1% 46.5%;
   grid-template-rows: repeat(2, auto);
-  grid-gap: 50px;
+  grid-gap: 50px 3%;
 }
 
 .links{
@@ -703,9 +725,24 @@ export default {
 @media (max-width: 1000px) {
   .contribution-element-container {
     margin-top: 2vw;
-    grid-template-columns: repeat(1, minmax(50px, 1fr));
+    grid-template-columns: 100%;
     grid-template-rows: repeat(4, auto);
     grid-gap: 25px 5%;
+  }
+
+  .contribution-black-column{
+    width: 100%;
+    height: 2px;
+
+    margin: auto;
+    grid-column: span 1;
+  }
+
+  .contribution-black-row{
+    width: 100%;
+    height: 2px;
+
+    grid-column: span 1;
   }
 
   .project-text {
@@ -713,7 +750,7 @@ export default {
   }
 
   .section-header {
-    font-size: calc(12px + 1vw);
+    font-size: calc(15px + 1vw);
   }
 
   .contribution-section {
@@ -721,7 +758,7 @@ export default {
   }
 
   .team-section {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .team-container {
@@ -733,6 +770,16 @@ export default {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-gap: 20px;
+  }
+
+  .learned-element>h3 {
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  .learned-element>p {
+    font-size: 16px;
+    font-style: italic;
   }
 
   .findcode-github>a>img {

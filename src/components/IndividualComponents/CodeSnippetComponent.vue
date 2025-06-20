@@ -56,8 +56,7 @@ export default {
 .contribution-element{
   display: flex;
   flex-direction: column;
-  grid-column: span 9;
-
+  grid-column: span 1;
   /* border: solid rgba(112, 128, 144, 0.1) 2px; */
   /* padding: 10px 20px; */
 }
@@ -157,6 +156,16 @@ export default {
 
   .contribution-element {
     margin-bottom: 10px;
+  }
+
+  .contribution-element-title {
+    font-weight: 500;
+    font-size: 21px;
+    font-style: italic;
+  }
+
+  .contribution-text {
+    font-size: 16px;
   }
 }
 

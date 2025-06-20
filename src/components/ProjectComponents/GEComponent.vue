@@ -116,6 +116,8 @@
                         <code0/>
                     </template>
                 </CodeSnippetComponent>
+
+                <div class="contribution-black-column"></div>
                 
                 <CodeSnippetComponent >
                     <template v-slot:Title>
@@ -135,6 +137,8 @@
                     </template>
                 </CodeSnippetComponent>
                 
+                <div class="contribution-black-row"></div>
+
                 <CodeSnippetComponent hascode="true">
                     <template v-slot:Title>
                         Weapon creation tool
@@ -156,6 +160,8 @@
                         <code1/>
                     </template>
                 </CodeSnippetComponent>
+
+                <div class="contribution-black-column"></div>
 
                 <CodeSnippetComponent hascode="true">
                     <template v-slot:Title>
@@ -179,6 +185,8 @@
                     </template>
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-row"></div>
+
                 <CodeSnippetComponent>
                     <template v-slot:Title>
                         Additional features include but are not limited to
@@ -193,6 +201,8 @@
                         </ul>
                     </template>
                 </CodeSnippetComponent>
+
+                <div class="contribution-black-column"></div>
             </div>
         </section>
 
@@ -316,6 +326,9 @@
                         and improve it where nessesary taught me a lot about reading code bases and adapting to new systems.
                     </p>
                 </div>
+
+                <div class="contribution-black-column"></div>
+
                 <div class="learned-element">
                     <h3>Working with a producer</h3>
                     <p>
@@ -325,6 +338,9 @@
                         I enjoyed having a producer in the team so I could focus myself on programming.
                     </p>
                 </div>
+
+                <div class="contribution-black-row"></div>
+
                 <div class="learned-element">
                     <h3>ECS system</h3>
                     <p>
@@ -333,6 +349,9 @@
                         by my peers I got really excited to implement my own version of an ECS system in my own custom engine.
                     </p>
                 </div>
+
+                <div class="contribution-black-column"></div>
+
             </div>
         </section>
 

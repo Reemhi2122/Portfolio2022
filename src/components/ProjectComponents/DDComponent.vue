@@ -114,6 +114,8 @@
                 </CodeSnippetComponent>
                     <!-- <iframe class="blueprint-snippet" src="https://blueprintue.com/render/-mk9b3hz/" scrolling="no" allowfullscreen></iframe> -->
 
+                <div class="contribution-black-column"></div>
+
                 <CodeSnippetComponent>
                     <template v-slot:Title>
                         Obstacle gravity
@@ -235,6 +237,9 @@
                         working and adjustable game. Even though we only had two weeks for this project, we got some tooling in 
                         for the designers.</p>
                 </div>
+
+                <div class="contribution-black-column"></div>
+
                 <div class="learned-element">
                     <h3>Cross-discipline collaboration</h3>
                     <p>Working in a medium-sized team with multiple disciplines gave me the same experience as working
@@ -244,6 +249,9 @@
                         we prototyped before they got designed and them reworking things after we made them.
                     </p>
                 </div>
+
+                <div class="contribution-black-row"></div>
+
                 <div class="learned-element">
                     <h3>Tool creation in UE4</h3>
                     <p>
@@ -253,6 +261,9 @@
                         adjust all the settings while playtesting.
                     </p>
                 </div>
+
+                <div class="contribution-black-column"></div>
+
             </div>
         </section>
 

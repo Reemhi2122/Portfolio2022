@@ -120,6 +120,8 @@
                     </template>
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-column"></div>
+
                 <CodeSnippetComponent >
                     <template v-slot:Title>
                         The following bird
@@ -142,6 +144,8 @@
                     </template>
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-row"></div>
+
                 <CodeSnippetComponent >
                     <template v-slot:Title>
                         Dialogue system
@@ -163,6 +167,9 @@
                         <p>*No code example due to blueprints</p>
                     </template>
                 </CodeSnippetComponent>
+
+                <div class="contribution-black-column"></div>
+
             </div>
         </section>
 
@@ -260,6 +267,9 @@
                         to be an engine programmer and this can happen in my feature career as well. This project
                         prepared me for when I was needed as a gameplay programmer.</p>
                 </div>
+
+                <div class="contribution-black-column"></div>
+
                 <div class="learned-element">
                     <h3>Cross-discipline collaboration</h3>
                     <p>Working in a medium-sized team with multiple disciplines gives me the same experience as working
@@ -269,6 +279,9 @@
                         we prototyped before they got designed and them reworking things after we made them.
                     </p>
                 </div>
+
+                <div class="contribution-black-row"></div>
+
                 <div class="learned-element">
                     <h3>Unreal Engine 4</h3>
                     <p>
@@ -278,6 +291,9 @@
                         that are used throughout the game.
                     </p>
                 </div>
+
+                <div class="contribution-black-column"></div>
+
                 <div class="learned-element">
                     <h3>Game marmalade</h3>
                     <p>

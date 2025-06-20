@@ -104,6 +104,8 @@
                     </template>
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-column"></div>
+
                 <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/Raytracer/blob/main/RayTracer/RayTracer.cpp">
                     <template v-slot:Title>
                         Illumination and shading
@@ -124,6 +126,8 @@
                     </template>
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-row"></div>
+
                 <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/Raytracer/blob/main/RayTracer/RayTracer.cpp">
                     <template v-slot:Title>
                         Reflection and Refraction and beers law
@@ -143,6 +147,8 @@
                         <code2/>
                     </template>
                 </CodeSnippetComponent>
+
+                <div class="contribution-black-column"></div>
 
                 <CodeSnippetComponent hascode="true" link="https://github.com/Reemhi2122/Raytracer/blob/main/RayTracer/RayTracer.cpp">
                     <template v-slot:Title>
@@ -179,6 +185,9 @@
                         that I can apply to future career in programming.
                     </p>
                 </div>
+
+                <div class="contribution-black-column"></div>
+
                 <div class="learned-element">
                     <h3>Math library</h3>
                     <p>
@@ -188,6 +197,9 @@
                         This task required a strong understanding of linear algebra concepts and their implementation in programming.
                     </p>
                 </div>
+                
+                <div class="contribution-black-row"></div>
+
                 <div class="learned-element">
                     <h3>C++</h3>
                     <p>
@@ -197,6 +209,8 @@
                          that helped me build a solid foundation in programming and develop more advanced projects later on.
                     </p>
                 </div>
+
+                <div class="contribution-black-column"></div>
             </div>
         </section>
 

@@ -325,6 +325,7 @@
                         and platforms like PS5. 
                     </p>
                 </div>
+                <div class="contribution-black-column"></div>
                 <div class="learned-element">
                     <h3>Reading old code bases</h3>
                     <p>
@@ -334,6 +335,7 @@
                         me the experience of working on a pre-existing game, engine, or application. 
                     </p>
                 </div>
+                <div class="contribution-black-row"></div>
                 <div class="learned-element">
                     <h3>C Programming</h3>
                     <p>
@@ -342,6 +344,7 @@
                           and C++. After programming in it for 6+ months I can now say that I am experienced in the C language.
                     </p>
                 </div>
+                <div class="contribution-black-column"></div>
             </div>
         </section>
 

@@ -116,6 +116,8 @@
                 </CodeSnippetComponent>
                 <!-- <iframe class="blueprint-snippet" src="https://blueprintue.com/render/y3p433p_/" scrolling="no" allowfullscreen></iframe> -->
 
+                <div class="contribution-black-column"></div>
+
                 <CodeSnippetComponent >
                     <template v-slot:Title>
                         Moving platform tool
@@ -143,6 +145,8 @@
                     </template>
                 </CodeSnippetComponent>
 
+                <div class="contribution-black-row"></div>
+
                 <CodeSnippetComponent >
                     <template v-slot:Title>
                         Pipe tool
@@ -165,6 +169,8 @@
                         <p>*No code example due to blueprints</p>
                     </template>
                 </CodeSnippetComponent>
+
+                <div class="contribution-black-column"></div>
 
                 <CodeSnippetComponent >
                     <template v-slot:Title>
@@ -316,6 +322,9 @@
                         game development team.
                     </p>
                 </div>
+
+                <div class="contribution-black-column"></div>
+
                 <div class="learned-element">
                     <h3>Cross-discipline collaboration</h3>
                     <p>
@@ -326,6 +335,9 @@
                         valuable experience taught me to work effectively in a multidisciplinary team environment.
                     </p>
                 </div>
+
+                <div class="contribution-black-row"></div>
+
                 <div class="learned-element">
                     <h3>Unreal Engine 4</h3>
                     <p>
@@ -335,6 +347,8 @@
                         project, the skills I acquired when working in UE4 have been useful for later projects in UE5.
                     </p>
                 </div>
+
+                <div class="contribution-black-column"></div>
             </div>
         </section>
 
