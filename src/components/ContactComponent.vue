@@ -263,7 +263,11 @@ a>img {
     .contact-tab {
         width: 90%;
         margin-left: 5%;
-        margin-top: 50px;
+        margin-top: 25px;
+    }
+
+    .scroll-container {
+        height: 95dvh;
     }
 }
 </style>

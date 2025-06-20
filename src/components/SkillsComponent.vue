@@ -213,11 +213,11 @@ export default {
     .about-tab {
         width: 90%;
         margin-left: 5%;
-        margin-top: 50px;
+        margin-top: 25px;
     }
 
     .scroll-container {
-        height: 80vh;
+        height: 85dvh;
     }
 
     .skill-title{

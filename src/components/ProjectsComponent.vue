@@ -556,15 +556,15 @@ export default {
 
   @media (max-width: 1000px) {
     .projects-grid {
-      height: 80vh;
+      height: 90dvh;
       width: 90%;
-      margin-top: 50px;
+      margin-top: 25px;
       margin-left: 5%;
     }
 
     .projects-container {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(8, 250px);
+      grid-template-rows: repeat(8, 325px);
     }
 
     .div-darken {
