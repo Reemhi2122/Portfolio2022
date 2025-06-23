@@ -51,6 +51,22 @@
             </div>
 
             <div class="skill-container">
+                <h1>Render API's</h1>
+                <ul class="SkillIcons">
+                    <li class="TextItem">
+                        <img src="../assets/Image/Logos/directx11.webp" title="DirectX11"/>
+                        <p class="skill-title">DirectX11</p>
+                        <p class="skill-level">intermediate</p>
+                    </li>
+                    <li class="TextItem">
+                        <img src="../assets/Image/Logos/directx12.webp" title="DirectX12"/>
+                        <p class="skill-title">DirectX12</p>
+                        <p class="skill-level">beginner</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="skill-container">
                 <h1>Tools</h1>
                 <ul class="SkillIcons">
                     <li class="TextItem">
