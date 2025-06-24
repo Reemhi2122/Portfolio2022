@@ -210,7 +210,7 @@
                     </p>
                 </div>
 
-                <div class="contribution-black-column"></div>
+                <div class="contribution-black-column hide-on-small"></div>
             </div>
         </section>
 

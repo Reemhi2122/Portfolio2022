@@ -596,7 +596,7 @@ export default {
 
     .projects-container {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(8, 325px);
+      grid-template-rows: repeat(9, 325px);
     }
 
     .div-darken {

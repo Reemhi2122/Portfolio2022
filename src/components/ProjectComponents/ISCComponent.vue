@@ -212,7 +212,7 @@
           </template>
         </CodeSnippetComponent>
 
-        <div class="contribution-black-column"></div>
+        <div class="contribution-black-column hide-on-small"></div>
 
       </div>
     </section>
@@ -743,6 +743,10 @@ export default {
     height: 2px;
 
     grid-column: span 1;
+  }
+
+  .hide-on-small{
+    display: none;
   }
 
   .project-text {
