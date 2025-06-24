@@ -1,9 +1,8 @@
 <template>
     <div class="contact-tab">
+        <h1 class="tab-title">About</h1>
+        <div class="tab-whiteline"></div>
         <div class="scroll-container">
-            <h1 class="tab-title">About</h1>
-            <div class="tab-whiteline"></div>
-
             <div class="about-grid">
                 <div class="about-container">
                     <img class="about-picture" src="/src/assets/Image/Stan/stan.jpg">
@@ -135,7 +134,7 @@ export default {
 
 .scroll-container {
     overflow-y: scroll;
-    height: 90vh;
+    height: 85dvh;
     color: white;
     display: inline-block;
     width: 100%;
