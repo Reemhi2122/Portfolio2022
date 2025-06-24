@@ -42,9 +42,7 @@ export default {
 .feature-project {
   background-image: url('../../Assets/Image/Portfolio/DR/Banner.webp');
   width: 100%;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  min-height: fill-available;
+  height: 100dvh;
   background-size: cover;
   position: fixed;
   color: white;
