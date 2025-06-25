@@ -90,9 +90,6 @@
       </div>
     </section>
 
-
-
-
     <section class="contribution-section">
       <h2 class="section-header">What I contributed to the project</h2>
       <div class="contribution-element-container">
@@ -513,7 +510,7 @@ export default {
 }
 
 .software-skills {
-  margin-top: 50px;
+  margin-top: 100px;
   margin-left: var(--project-offset-left);
   width: 80%;
 }
@@ -592,7 +589,7 @@ export default {
 }
 
 .team-section {
-  margin-top: 50px;
+  margin-top: 100px;
   margin-left: var(--project-offset-left);
 }
 
@@ -630,7 +627,7 @@ export default {
 }
 
 .learned-section {
-  margin-top: 50px;
+  margin-top: 100px;
   width: 80%;
   margin-left: var(--project-offset-left);
 }
@@ -754,20 +751,29 @@ export default {
   }
 
   .section-header {
-    font-size: calc(15px + 1vw);
+    font-size: calc(20px + 1vw);
+    font-weight: 800;
+  }
+
+  .software-skills{
+    margin-top: calc(20px + 8vw);
   }
 
   .contribution-section {
-    margin-top: 8vw;
+    margin-top: calc(20px + 8vw);
   }
 
   .team-section {
-    margin-top: 30px;
+    margin-top: calc(20px + 8vw);
   }
 
   .team-container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(auto-fill, 1fr);
+  }
+
+  .learned-section{
+    margin-top: calc(20px + 8vw);
   }
 
   .learned-container {
