@@ -510,7 +510,7 @@ export default {
 }
 
 .software-skills {
-  margin-top: 100px;
+  margin-top: 75px;
   margin-left: var(--project-offset-left);
   width: 80%;
 }
@@ -548,7 +548,7 @@ export default {
 }
 
 .contribution-section {
-  margin-top: 100px;
+  margin-top: 75px;
   width: 80%;
   margin-left: var(--project-offset-left);
 }
@@ -589,7 +589,7 @@ export default {
 }
 
 .team-section {
-  margin-top: 100px;
+  margin-top: 75px;
   margin-left: var(--project-offset-left);
 }
 
@@ -627,7 +627,7 @@ export default {
 }
 
 .learned-section {
-  margin-top: 100px;
+  margin-top: 75px;
   width: 80%;
   margin-left: var(--project-offset-left);
 }
@@ -650,6 +650,7 @@ export default {
 }
 
 .links{
+  margin-top: 25px;
   margin-left: 15%;
   width: 70%;
 
@@ -660,7 +661,7 @@ export default {
 
 .findcode-github {
   font-style: normal;
-  margin-top: 50px;
+  margin-top: 75px;
   text-align: center;
   font-size: 10px;
 }
