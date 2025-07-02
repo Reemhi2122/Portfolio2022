@@ -28,7 +28,7 @@
                             <br><br>
                             I'm a C++ programmer interested in both Engine and Tools programming. I like to work on 
                             reusable, robust, and intuiative systems that improve the life of both gameplay and graphics programmers. And 
-                            ofcourse provide a flawless experience for the player. I like to work on my custom engine
+                            of course, provide a flawless experience for the player. I like to work on my custom engine
                             (<a style="color: white; font-weight: 200;" href="https://stanvogels.com/BuildingBlockEngine" target="_blank">Building Block Engine</a>)
                             as self study. Where I can improve my skills in both Engine, Tools (GUI), and graphics programming at my own pace.
                             <br><br>

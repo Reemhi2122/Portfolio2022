@@ -13,6 +13,7 @@ import DDComponent from '../components/ProjectComponents/DDComponent.vue'
 import RTComponent from '../components/ProjectComponents/RTComponent.vue'
 import CCComponent from '../components/ProjectComponents/CCComponent.vue'
 import BBComponent from '../components/ProjectComponents/BBComponent.vue'
+import TBAComponent from '../components/ProjectComponents/TBAComponent.vue'
 import InProgress from '../components/ProjectComponents/InProgressComponent.vue'
 
 const router = createRouter({
@@ -72,6 +73,11 @@ const router = createRouter({
       path: '/RayTracer',
       name: 'RT',
       component: RTComponent
+    },
+    {
+      path: '/TBA',
+      name: 'TBA',
+      component: TBAComponent
     },
     {
       path: '/BuildingBlockEngine',

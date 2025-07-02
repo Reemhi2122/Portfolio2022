@@ -47,7 +47,7 @@
               <div class="div-darken"></div>
               <div class="project-description">
                 <p class="project-title">Building Block Engine [WIP]</p>
-                <p class="project-tags">Custom engine | C++ | DX11</p>
+                <p class="project-tags">Custom engine | C++ | DX11 & DX12</p>
 
                 <div class="project-bubbles-container">
                   <div class="project-bubbles">
@@ -70,7 +70,7 @@
 
         <Transition>
           <div class="portfolio-item medium TMP">
-            <RouterLink to="">
+            <RouterLink to="/TBA">
               <div class="div-darken"></div>
               <div class="project-description">
                 <p class="project-title">To be announced AAA</p>

@@ -41,6 +41,11 @@
                         <p class="skill-title">Playstation</p>
                         <p class="skill-level">intermediate</p>
                     </li>
+                    <!-- <li class="TextItem">
+                        <img src="../assets/Image/Logos/xbox.png" title="XBOX" />
+                        <p class="skill-title">XBOX</p>
+                        <p class="skill-level">intermediate</p>
+                    </li> -->
                     <li class="TextItem">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg"
                             title="Raspberry Pi" />
@@ -115,7 +120,7 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg"
                             title="Visual Studio Code" />
                         <p class="skill-title">CMake</p>
-                        <p class="skill-level">Beginner</p>
+                        <p class="skill-level">intermediate</p>
                     </li>
                     <li class="TextItem">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
